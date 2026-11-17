@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}案例 · 832 证据管理{% endblock %}
+{% block body %}
+<div class="head-row">
+  <div>
+    <h1 class="page-title">产业案例</h1>
+    <p class="page-sub">按县、产业、帮扶方式、状态组合检索。多对多关系通过桥表实现，可查出“同时采用两种帮扶方式”的案例。</p>
+  </div>
+  {% if current_user and current_user['role'] in ('admin','leader','member','reviewer') %}
+    <a class="btn primary" href="{{ url_for('case_new') }}">新建案例草稿</a>
+  {% endif %}
+</div>
+
+<form class="card form-row" method="get">
+  <label>县域<input name="county" value="{{ county }}" placeholder="如 霍邱"></label>
+  <label>产业<input name="industry" value="{{ industry }}" placeholder="如 莲藕"></label>
+  <label>帮扶方式
+    <select name="mechanism">
+      <option value="">全部</option>
+      {% for m in mechanisms %}
+        <option value="{{ m['name'] }}" {{ 'selected' if m['name'] == mech else '' }}>{{ m['name'] }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>状态
+    <select name="status">
+      <option value="">全部</option>
+      {% for s in states %}
+        <option value="{{ s }}" {{ 'selected' if s == status else '' }}>{{ s }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <button class="btn primary" type="submit">检索</button>
+  <a class="btn ghost" href="{{ url_for('cases') }}">清空</a>
+</form>
+
+<section class="card">
+  <h2>结果 {{ rows|length }} 条</h2>
+  {% if rows %}
+  <table>
+    <thead><tr><th>编号</th><th>标题</th><th>县域</th><th>产业</th><th>帮扶方式</th><th>状态</th><th>数据性质</th><th>负责人</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      <tr>
+        <td class="nowrap"><a href="{{ url_for('case_detail', case_id=r['case_id']) }}">{{ r['case_id'] }}</a></td>
+        <td>{{ r['title'] }}</td>
+        <td>{{ r['province_raw'] }} · {{ r['county_name_raw'] }}</td>
+        <td>{{ r['industry'] }}</td>
+        <td>{{ r['mechanisms'] or '—' }}</td>
+        <td><span class="tag s-{{ r['status'] }}">{{ r['status'] }}</span></td>
+        <td><span class="tag {{ 'muted' if r['data_kind'] == '课程模拟' else 'ok' }}">{{ r['data_kind'] }}</span></td>
+        <td>{{ r['owner_name'] or '—' }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}<p class="empty">没有符合条件的案例。</p>{% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '0px' }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column', justifyContent: 'center', paddingLeft: 100, paddingRight: 100 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 48 }}>
+            <Text style={{ fontSize: 180, fontWeight: 'bold', color: '#E8EFF8', lineHeight: 1 }}>02</Text>
+            <Box style={{ width: 2, height: 200, background: '#1E4FA8' }} />
+            <Box style={{ flexDirection: 'column', gap: 18, flex: 1 }}>
+                <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold', letterSpacing: 3 }}>CHAPTER TWO</Text>
+                <Text style={{ fontSize: 46, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.25 }}>数据库设计与 E-R</Text>
+                <Text style={{ fontSize: 20, color: '#4A5568', lineHeight: 1.7 }}>
+                    22 张表不是 22 个孤岛：资料怎么进来、案例怎么被审、
+                    <br />
+                    项目钱怎么对上，三个域各自回答一类问题。
+                </Text>
+                <Box style={{ flexDirection: 'row', gap: 10, marginTop: 6 }}>
+                    <Box style={{ paddingTop: 5, paddingBottom: 5, paddingLeft: 12, paddingRight: 12, background: '#F0F5FC', borderRadius: 3 }}>
+                        <Text style={{ fontSize: 14, color: '#1E4FA8' }}>结构：22 表 / 3 视图</Text>
+                    </Box>
+                    <Box style={{ paddingTop: 5, paddingBottom: 5, paddingLeft: 12, paddingRight: 12, background: '#F0F5FC', borderRadius: 3 }}>
+                        <Text style={{ fontSize: 14, color: '#1E4FA8' }}>约束：9 索引 / 1 触发器</Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

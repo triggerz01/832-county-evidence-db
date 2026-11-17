@@ -1,0 +1,64 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            297 篇报道散在网页里，同一个县的说法互相对不上
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 22 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 24, flex: 1 }}>
+            <Box style={{ flex: 1, background: '#F7F9FC', border: '1px solid #E5E7EB', borderRadius: 4, padding: 24, flexDirection: 'column' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 2 }}>问题一</Text>
+                <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1A2230', marginTop: 10, lineHeight: 1.3 }}>出处散了</Text>
+                <Text style={{ fontSize: 19, color: '#4A5568', lineHeight: 1.75, marginTop: 14 }}>
+                    一篇报道一个网页，截图存在微信里，链接存在文档里。
+                    <br />
+                    三个月后要复核一句"合作社统一供苗"，翻不回原文。
+                </Text>
+                <Box style={{ flex: 1 }} />
+                <Box style={{ borderTop: '1px solid #E5E7EB', paddingTop: 14 }}>
+                    <Text style={{ fontSize: 16, color: '#8B97A8', lineHeight: 1.6 }}>库里现状：313 份来源文档，只有 2 份被结构化过</Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, background: '#F7F9FC', border: '1px solid #E5E7EB', borderRadius: 4, padding: 24, flexDirection: 'column' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 2 }}>问题二</Text>
+                <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1A2230', marginTop: 10, lineHeight: 1.3 }}>口径乱了</Text>
+                <Text style={{ fontSize: 19, color: '#4A5568', lineHeight: 1.75, marginTop: 14 }}>
+                    "计划资金"写成"已支付"，"计划接待量"写成"实际接待量"。
+                    <br />
+                    数字没错，含义错了，对外一讲就是事故。
+                </Text>
+                <Box style={{ flex: 1 }} />
+                <Box style={{ borderTop: '1px solid #E5E7EB', paddingTop: 14 }}>
+                    <Text style={{ fontSize: 16, color: '#8B97A8', lineHeight: 1.6 }}>库里现状：1 条退回记录，理由就是口径错位</Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, background: '#F7F9FC', border: '1px solid #E5E7EB', borderRadius: 4, padding: 24, flexDirection: 'column' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8', letterSpacing: 2 }}>问题三</Text>
+                <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1A2230', marginTop: 10, lineHeight: 1.3 }}>责任无痕</Text>
+                <Text style={{ fontSize: 19, color: '#4A5568', lineHeight: 1.75, marginTop: 14 }}>
+                    谁改的、谁审的、改到第几版，全靠群里翻聊天记录。
+                    <br />
+                    交上去的稿子被改了，说不清是哪一版。
+                </Text>
+                <Box style={{ flex: 1 }} />
+                <Box style={{ borderTop: '1px solid #E5E7EB', paddingTop: 14 }}>
+                    <Text style={{ fontSize: 16, color: '#8B97A8', lineHeight: 1.6 }}>库里现状：12 条审计日志，5 条审核动作，4 个版本</Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ marginTop: 22, background: '#F0F5FC', borderRadius: 4, paddingTop: 16, paddingBottom: 16, paddingLeft: 22, paddingRight: 22 }}>
+            <Text style={{ fontSize: 19, color: '#0E3F8C', lineHeight: 1.5 }}>
+                这三件事都不是"再收集点数据"能解决的——缺的是一张有主键、有外键、有约束、有状态的表结构。
+            </Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>04</Text>
+    </Box>
+</Slide>

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}新建任务 · 832 证据管理{% endblock %}
+{% block body %}
+<p class="crumb"><a href="{{ url_for('tasks') }}">任务</a> / 新建</p>
+<h1 class="page-title">新建并指派任务</h1>
+<p class="page-sub">一次写入三张表：<code>field_task</code>、<code>task_assignment</code>、<code>audit_log</code>，同一个事务内完成。</p>
+
+<form class="card form-grid" method="post">
+  <label>县域
+    <select name="county_id" required>
+      <option value="">请选择</option>
+      {% for c in counties %}
+        <option value="{{ c['county_id'] }}">{{ c['province_raw'] }} · {{ c['county_name_raw'] }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>应交材料
+    <select name="required_kind" required>
+      {% for k in kinds %}<option value="{{ k }}">{{ k }}</option>{% endfor %}
+    </select>
+  </label>
+  <label class="span2">任务主题<input name="topic" required placeholder="如 核对城西湖乡莲藕基地的土地流转与就业证据"></label>
+  <label>截止日期<input name="due_at" type="date" required></label>
+  <label>负责人
+    <select name="assignee" required>
+      <option value="">请选择</option>
+      {% for m in members %}<option value="{{ m['user_id'] }}">{{ m['display_name'] }}</option>{% endfor %}
+    </select>
+  </label>
+  <div class="span2 actions">
+    <button class="btn primary" type="submit">创建并指派</button>
+    <a class="btn ghost" href="{{ url_for('tasks') }}">取消</a>
+  </div>
+</form>
+{% endblock %}

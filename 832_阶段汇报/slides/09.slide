@@ -1,0 +1,47 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            拆开看：每个域内部的联系和基数都是清楚的
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 16 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 28 }}>
+            <Box style={{ flexDirection: 'column', width: 566 }}>
+                <Box style={{ border: '1px solid #D6DCE5', borderRadius: 4, padding: 5, background: '#F7F9FC' }}>
+                    <Image src="assets/er_domain1.png" style={{ width: 556, height: 313, objectFit: 'contain' }} />
+                </Box>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#0E3F8C', marginTop: 10 }}>图 2　资料与案例域（10 表）</Text>
+                <Text style={{ fontSize: 15, color: '#4A5568', marginTop: 4 }}>
+                    案例与帮扶方式是 m:n，靠 case_mechanism 桥表；案例与摘录也是 m:n，靠 case_evidence。
+                </Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', width: 566 }}>
+                <Box style={{ border: '1px solid #D6DCE5', borderRadius: 4, padding: 5, background: '#F7F9FC' }}>
+                    <Image src="assets/er_domain2.png" style={{ width: 556, height: 313, objectFit: 'contain' }} />
+                </Box>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#0E3F8C', marginTop: 10 }}>图 3　任务与审核域（7 表）</Text>
+                <Text style={{ fontSize: 15, color: '#4A5568', marginTop: 4 }}>
+                    任务与成员是 m:n（一人多任务、一任务多人），负责人由部分唯一索引只允许一个。
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ marginTop: 20, background: '#F0F5FC', borderRadius: 4, padding: 20, flexDirection: 'row', gap: 20, alignItems: 'center' }}>
+            <Box style={{ flexDirection: 'column', gap: 4, width: 300 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#0E3F8C' }}>图 4　政府项目与核验域（5 表）</Text>
+                <Text style={{ fontSize: 14, color: '#8B97A8', lineHeight: 1.6 }}>同一套画法，见 docs/er/03_政府项目与核验域</Text>
+            </Box>
+            <Box style={{ width: 1, height: 44, background: '#C6D8F2' }} />
+            <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.6, flex: 1 }}>
+                一个项目对应多行实施地点、多个年度快照；存疑记录通过 evidence_issue_source 指回具体来源文档，
+                <span style={{ color: '#D9534F', fontWeight: 'bold' }}>保证每条"这个数不对"的判断都有出处</span>。
+            </Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>09</Text>
+    </Box>
+</Slide>

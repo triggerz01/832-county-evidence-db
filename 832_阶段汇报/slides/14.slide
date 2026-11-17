@@ -1,0 +1,72 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            统计页上每个数字，都是库里一条 SQL 现算的
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 16 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 24, flex: 1 }}>
+            <Box style={{ width: 636, flexDirection: 'column', gap: 12 }}>
+                <Box style={{ flexDirection: 'row', gap: 12, height: 132 }}>
+                    <Box style={{ flex: 1, background: '#F7F9FC', border: '1px solid #E5E7EB', borderRadius: 4, padding: 16, flexDirection: 'column', justifyContent: 'space-between' }}>
+                        <Text style={{ fontSize: 14, color: '#8B97A8' }}>公开报道（GROUP BY 省份）</Text>
+                        <Box style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
+                            <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1 }}>297</Text>
+                            <Text style={{ fontSize: 15, color: '#4A5568', marginLeft: 6, marginBottom: 6 }}>篇 · 17 省</Text>
+                        </Box>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#F7F9FC', border: '1px solid #E5E7EB', borderRadius: 4, padding: 16, flexDirection: 'column', justifyContent: 'space-between' }}>
+                        <Text style={{ fontSize: 14, color: '#8B97A8' }}>涞水 2024 计划资金（SUM + JOIN）</Text>
+                        <Box style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
+                            <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1 }}>19518.39</Text>
+                            <Text style={{ fontSize: 15, color: '#4A5568', marginLeft: 6, marginBottom: 5 }}>万元</Text>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box style={{ flexDirection: 'row', gap: 12, height: 132 }}>
+                    <Box style={{ flex: 1, background: '#F7F9FC', border: '1px solid #E5E7EB', borderRadius: 4, padding: 16, flexDirection: 'column', justifyContent: 'space-between' }}>
+                        <Text style={{ fontSize: 14, color: '#8B97A8' }}>金额勾稽不一致（HAVING 差值）</Text>
+                        <Box style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
+                            <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#2E7D32', lineHeight: 1 }}>0</Text>
+                            <Text style={{ fontSize: 15, color: '#4A5568', marginLeft: 6, marginBottom: 6 }}>处 · 43 项 vs 158 行</Text>
+                        </Box>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#F7F9FC', border: '1px solid #E5E7EB', borderRadius: 4, padding: 16, flexDirection: 'column', justifyContent: 'space-between' }}>
+                        <Text style={{ fontSize: 14, color: '#8B97A8' }}>尚未整理成案例（NOT EXISTS）</Text>
+                        <Box style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
+                            <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#D9534F', lineHeight: 1 }}>295</Text>
+                            <Text style={{ fontSize: 15, color: '#4A5568', marginLeft: 6, marginBottom: 6 }}>篇 · 待整理</Text>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box style={{ background: '#F0F5FC', borderRadius: 4, padding: 16 }}>
+                    <Text style={{ fontSize: 16, color: '#0E3F8C', lineHeight: 1.6 }}>
+                        <span style={{ fontWeight: 'bold' }}>HAVING COUNT(DISTINCT 帮扶方式) = 2</span>
+                        　只命中 1 条：C-003 霍邱城西湖莲藕——同时有就业带动与土地流转。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, flexDirection: 'column' }}>
+                <Box style={{ border: '1px solid #D6DCE5', borderRadius: 4, padding: 5, background: '#F7F9FC' }}>
+                    <Image src="assets/shot_stats.png" style={{ width: 470, height: 366, objectFit: 'cover' }} />
+                </Box>
+                <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 8 }}>图 6　统计与核验页：每块都由一条真实 SQL 在服务端执行</Text>
+            </Box>
+        </Box>
+
+        <Box style={{ marginTop: 14, borderLeft: '3px solid #D9534F', paddingLeft: 14 }}>
+            <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.55 }}>
+                口径纪律：19,518 万元是<span style={{ color: '#D9534F', fontWeight: 'bold' }}>计划资金</span>，不是实际支出也不是农户收入；"0 处"只说明本次金额核对通过，不代表项目效果已被验证。
+            </Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>14</Text>
+    </Box>
+</Slide>

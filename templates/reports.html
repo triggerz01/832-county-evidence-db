@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}资料检索 · 832 证据管理{% endblock %}
+{% block body %}
+<h1 class="page-title">公开资料检索</h1>
+<p class="page-sub">本地清单收录 {{ total }} 篇公开报道，其中 {{ no_case }} 篇尚未整理成案例。这里的数字是<b>报道篇数</b>，不是 832 县的覆盖率。</p>
+
+<form class="card form-row" method="get">
+  <label>关键词<input name="kw" value="{{ kw }}" placeholder="县名或报道标题关键词"></label>
+  <label>省份
+    <select name="province">
+      <option value="">全部</option>
+      {% for p in provinces %}
+        <option value="{{ p['province_raw'] }}" {{ 'selected' if p['province_raw'] == province else '' }}>{{ p['province_raw'] }}（{{ p['n'] }}）</option>
+      {% endfor %}
+    </select>
+  </label>
+  <button class="btn primary" type="submit">查询</button>
+  <a class="btn ghost" href="{{ url_for('reports') }}">清空</a>
+</form>
+
+<section class="card">
+  <h2>检索结果（最多 200 条）</h2>
+  {% if rows %}
+  <table>
+    <thead><tr><th>发布日期</th><th>省份</th><th>县域</th><th>报道标题</th><th>已整理案例</th><th>原文</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      <tr>
+        <td class="nowrap">{{ r['published_date'] }}</td>
+        <td>{{ r['province_raw'] }}</td>
+        <td>{{ r['county_name_raw'] }}</td>
+        <td>{{ r['title'] }}</td>
+        <td>{% if r['case_count'] %}<span class="tag ok">{{ r['case_count'] }} 个</span>{% else %}<span class="tag muted">未整理</span>{% endif %}</td>
+        <td><a href="{{ r['url'] }}" target="_blank" rel="noopener">打开</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="hint">“未整理”只表示本样本库还没为这篇报道建立案例摘录，不代表报道正文没有产业内容。</p>
+  {% else %}<p class="empty">没有匹配的报道。</p>{% endif %}
+</section>
+{% endblock %}

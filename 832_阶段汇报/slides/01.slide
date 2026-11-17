@@ -1,0 +1,48 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '0px' }}>
+    <Box style={{ position: 'absolute', top: 0, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ position: 'absolute', top: 0, left: 0, width: 8, height: 720, background: '#0E3F8C' }} />
+    <Box style={{ position: 'absolute', top: 96, right: 96, width: 260, height: 260, border: '1px solid #E5E7EB', borderRadius: 4 }} />
+    <Box style={{ position: 'absolute', top: 118, right: 118, width: 260, height: 260, border: '1px solid #F0F5FC', borderRadius: 4 }} />
+
+    <Box style={{ flexDirection: 'column', justifyContent: 'space-between', width: 1280, height: 720, paddingTop: 96, paddingBottom: 72, paddingLeft: 100, paddingRight: 100 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+            <Box style={{ paddingTop: 6, paddingBottom: 6, paddingLeft: 16, paddingRight: 16, background: '#E8EFF8', borderRadius: 3 }}>
+                <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold', letterSpacing: 1 }}>课程大作业 · 阶段性汇报</Text>
+            </Box>
+            <Text style={{ fontSize: 15, color: '#8B97A8' }}>《数据库系统概论》· 参考选题一</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'column', gap: 20, marginTop: 8 }}>
+            <Text style={{ fontSize: 64, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2, letterSpacing: 1 }}>
+                832 县域产业证据管理数据库
+            </Text>
+            <Text style={{ fontSize: 22, color: '#4A5568', fontFamily: 'Times New Roman', letterSpacing: 0.5 }}>
+                A Multi-Source Evidence Database for County-Level Industry Research
+            </Text>
+            <Box style={{ width: 120, height: 3, background: '#1E4FA8', marginTop: 6 }} />
+            <Text style={{ fontSize: 24, color: '#1A2230', lineHeight: 1.6 }}>
+                把散在网页里的公开报道，做成一条条能追回原文、能被人审核的产业案例
+            </Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 56 }}>
+            <Box style={{ flexDirection: 'column', gap: 6 }}>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>汇报人</Text>
+                <Text style={{ fontSize: 19, color: '#1A2230' }}>＿＿＿＿＿＿</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 6 }}>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>指导教师</Text>
+                <Text style={{ fontSize: 19, color: '#1A2230' }}>＿＿＿＿＿＿</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 6 }}>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>汇报时间</Text>
+                <Text style={{ fontSize: 19, color: '#1A2230' }}>2026 年 11 月</Text>
+            </Box>
+            <Box style={{ flex: 1 }} />
+            <Box style={{ flexDirection: 'column', gap: 4, alignItems: 'flex-end' }}>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>Flask + SQLite · 22 表</Text>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>真实采集 297 篇报道</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

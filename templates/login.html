@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}登录 · 832 证据管理{% endblock %}
+{% block body %}
+<div class="login-wrap">
+  <form class="card login-card" method="post">
+    <h1>登录</h1>
+    <p class="hint">不同角色登录后看到的数据范围不同，这是系统地权限设计，不是界面摆设。</p>
+    <label>账号
+      <input name="display_name" autocomplete="username" required>
+    </label>
+    <label>口令
+      <input name="password" type="password" autocomplete="current-password" required>
+    </label>
+    <button class="btn primary" type="submit">登录</button>
+    <p class="hint">演示口令统一为 <code>832demo</code></p>
+  </form>
+  <div class="card accounts">
+    <h2>演示账号</h2>
+    <table>
+      <thead><tr><th>账号</th><th>角色</th></tr></thead>
+      <tbody>
+      {% for a in accounts %}
+        <tr><td>{{ a['display_name'] }}</td><td>{{ role_names[a['role']] }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

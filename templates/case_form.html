@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}{{ '修改' if case else '新建' }}案例 · 832 证据管理{% endblock %}
+{% block body %}
+<p class="crumb"><a href="{{ url_for('cases') }}">案例</a> / {{ '修改 ' + case['case_id'] if case else '新建草稿' }}</p>
+<h1 class="page-title">{{ '修改案例' if case else '新建案例草稿' }}</h1>
+<p class="page-sub">草稿只有本人可见、可改、可删；提交后进入审核，状态不再由本人改动。</p>
+
+<form class="card form-grid" method="post">
+  <label>县域
+    <select name="county_id" required>
+      <option value="">请选择</option>
+      {% for c in counties %}
+        <option value="{{ c['county_id'] }}" {{ 'selected' if case and case['county_id'] == c['county_id'] else '' }}>
+          {{ c['province_raw'] }} · {{ c['county_name_raw'] }}
+        </option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>数据性质
+    <select name="data_kind">
+      <option value="公开报道整理" {{ 'selected' if case and case['data_kind'] == '公开报道整理' else '' }}>公开报道整理</option>
+      <option value="课程模拟" {{ 'selected' if not case or case['data_kind'] == '课程模拟' else '' }}>课程模拟</option>
+    </select>
+  </label>
+  <label class="span2">标题<input name="title" value="{{ case['title'] if case else '' }}" required></label>
+  <label>所属产业<input name="industry" value="{{ case['industry'] if case else '' }}" placeholder="如 莲藕" required></label>
+  <label>关联任务
+    <select name="task_id">
+      <option value="">不关联</option>
+      {% for t in tasks %}
+        <option value="{{ t['task_id'] }}" {{ 'selected' if case and case['task_id'] == t['task_id'] else '' }}>{{ t['task_id'] }} · {{ t['topic'] }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label class="span2">说法摘要
+    <textarea name="claim_summary" rows="4" required placeholder="只写公开材料明确支持的说法，不要推断收入或实际支出">{{ case['claim_summary'] if case else '' }}</textarea>
+  </label>
+
+  <fieldset class="span2">
+    <legend>帮扶方式（可多选，m:n）</legend>
+    <div class="chips">
+      {% for m in mechanisms %}
+      <label class="chip">
+        <input type="checkbox" name="mechanism_id" value="{{ m['mechanism_id'] }}" {{ 'checked' if m['mechanism_id'] in selected_mech else '' }}>
+        <span>{{ m['name'] }}</span>
+      </label>
+      {% endfor %}
+    </div>
+  </fieldset>
+
+  <fieldset class="span2">
+    <legend>出处摘录（可多选，m:n）</legend>
+    {% for e in excerpts %}
+    <label class="line">
+      <input type="checkbox" name="excerpt_id" value="{{ e['excerpt_id'] }}" {{ 'checked' if e['excerpt_id'] in selected_excerpts else '' }}>
+      <span><b>{{ e['title'] }}</b> · {{ e['locator'] }} — {{ e['summary'][:60] }}</span>
+    </label>
+    {% endfor %}
+  </fieldset>
+
+  <div class="span2 actions">
+    <button class="btn primary" type="submit">保存草稿</button>
+    <a class="btn ghost" href="{{ url_for('cases') }}">取消</a>
+  </div>
+</form>
+{% endblock %}

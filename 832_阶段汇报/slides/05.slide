@@ -1,0 +1,67 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            四类角色，四种"看得见的东西"
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 20 }} />
+
+        <Box style={{ width: 1160, height: 384 }}>
+            <Table
+                style={{ width: 1160, height: 384 }}
+                defaultTextStyle={{ fontSize: 17, textAlign: 'left', color: '#1A2230' }}
+                defaultCellStyle={{
+                    border: {
+                        left: { width: 0, color: '#FFFFFF' },
+                        right: { width: 0, color: '#FFFFFF' },
+                        top: { width: 0, color: '#FFFFFF' },
+                        bottom: { width: 1, color: '#E5E7EB' },
+                    },
+                }}
+                cells={[
+                    [
+                        { text: '角色', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#1E4FA8' } } },
+                        { text: '他关心的一件事', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+                        { text: '系统给他什么', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+                        { text: '边界：不该看到的', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+                    ],
+                    [
+                        { text: '调研队员', textStyle: { bold: true, color: '#0E3F8C' } },
+                        '我负责的县要交什么、交到第几版',
+                        '自己的任务与自己创建的案例，含草稿',
+                        '别人的草稿与退回稿，直接 404',
+                    ],
+                    [
+                        { text: '审核员', textStyle: { bold: true, color: '#0E3F8C' }, cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '待审的说法有没有挂出处、口径对不对', cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '待审案例与待审版本 + 通过 / 退回', cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '不能发布，不能审自己交的版本', cellStyle: { background: { color: '#F7F9FC' } } },
+                    ],
+                    [
+                        { text: '队长', textStyle: { bold: true, color: '#0E3F8C' } },
+                        '哪条能对外发、谁的活逾期了',
+                        '全队案例与任务、发布按钮、逾期清单',
+                        '能发布，但不能改别人写的说法',
+                    ],
+                    [
+                        { text: '外部读者', textStyle: { bold: true, color: '#0E3F8C' }, cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '这个县的产业到底怎么带动了农户', cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '只能读"已发布"案例，无任何操作入口', cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '草稿、待审、退回的内容完全不可见', cellStyle: { background: { color: '#F7F9FC' } } },
+                    ],
+                ]}
+            />
+        </Box>
+
+        <Box style={{ marginTop: 20, background: '#F0F5FC', borderRadius: 4, paddingTop: 16, paddingBottom: 16, paddingLeft: 22, paddingRight: 22 }}>
+            <Text style={{ fontSize: 19, color: '#0E3F8C', lineHeight: 1.5 }}>
+                所以"面向对象"不是一句场面话：四类人的可见范围，直接决定了表上要挂 owner_id、任务要挂 task_assignment、案例要有 status。
+            </Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>05</Text>
+    </Box>
+</Slide>

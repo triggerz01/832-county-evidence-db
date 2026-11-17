@@ -1,0 +1,90 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            范式到 3NF，剩下的两处冗余是故意留的
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 18 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 28, flex: 1 }}>
+            <Box style={{ width: 250, flexDirection: 'column', background: '#0E3F8C', borderRadius: 4, padding: 22, justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column', gap: 10 }}>
+                    <Text style={{ fontSize: 15, color: '#9DB8DF', letterSpacing: 2 }}>范式判定</Text>
+                    <Box style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
+                        <Text style={{ fontSize: 92, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>16</Text>
+                        <Text style={{ fontSize: 20, color: '#C6D8F2', marginLeft: 8, marginBottom: 10 }}>张</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, color: '#FFFFFF', lineHeight: 1.6 }}>
+                        严格满足 3NF / BCNF
+                        <br />
+                        共 22 张业务表
+                    </Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Box style={{ height: 1, background: '#3D7BD9' }} />
+                    <Text style={{ fontSize: 15, color: '#C6D8F2', lineHeight: 1.7 }}>
+                        其余 6 张的偏差
+                        <br />
+                        逐条写在报告里，不藏
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 12 }}>
+                <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 4, padding: 16, flexDirection: 'column', gap: 8 }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                        <Box style={{ paddingTop: 3, paddingBottom: 3, paddingLeft: 10, paddingRight: 10, background: '#E8EFF8', borderRadius: 3 }}>
+                            <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>受控冗余 2 处</Text>
+                        </Box>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>有意反规范化，理由可写在答辩里</Text>
+                    </Box>
+                    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.65 }}>
+                        <span style={{ fontWeight: 'bold' }}>deliverable_version.kind</span>
+                        　版本记录存一份材料类型快照：任务事后改了应交类型，历史版本仍能证明"当时交的是资料包"。
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.65 }}>
+                        <span style={{ fontWeight: 'bold' }}>project_snapshot.budget_wan</span>
+                        　年度资金快照：年初批复与年中调整数值不同，只存现值会丢掉前一期口径。
+                    </Text>
+                </Box>
+
+                <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 4, padding: 16, flexDirection: 'column', gap: 8 }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                        <Box style={{ paddingTop: 3, paddingBottom: 3, paddingLeft: 10, paddingRight: 10, background: '#FDECEA', borderRadius: 3 }}>
+                            <Text style={{ fontSize: 14, color: '#D9534F', fontWeight: 'bold' }}>1NF 让步 2 处</Text>
+                        </Box>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>不是没发现，是权衡后的选择</Text>
+                    </Box>
+                    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.65 }}>
+                        <span style={{ fontWeight: 'bold' }}>evidence_issue.facts_json</span>
+                        　存 JSON 数组以保留人工核对时的原始结构；代价是不能用 SQL 直接查单个字段。
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.65 }}>
+                        <span style={{ fontWeight: 'bold' }}>project_location</span>
+                        　有 1 行同时写了 9 个村名；一旦要按村统计，必须拆成多行。
+                    </Text>
+                </Box>
+
+                <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 4, padding: 16, flexDirection: 'column', gap: 8 }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                        <Box style={{ paddingTop: 3, paddingBottom: 3, paddingLeft: 10, paddingRight: 10, background: '#E8F5E9', borderRadius: 3 }}>
+                            <Text style={{ fontSize: 14, color: '#2E7D32', fontWeight: 'bold' }}>已按分析改掉 2 处</Text>
+                        </Box>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>范式分析不是写完就归档</Text>
+                    </Box>
+                    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.65 }}>
+                        删掉 <span style={{ fontWeight: 'bold' }}>public_report.title</span>：与 source_document.title 实测 297 / 297 完全相同，属传递依赖。
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.65 }}>
+                        补 <span style={{ fontWeight: 'bold' }}>UNIQUE INDEX(report_id, person_name)</span>：同一篇报道里同一人物不该重复登记，实测重复插入被拒。
+                    </Text>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>10</Text>
+    </Box>
+</Slide>

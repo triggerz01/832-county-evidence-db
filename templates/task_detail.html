@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}{{ task['task_id'] }} · 任务详情{% endblock %}
+{% block body %}
+<p class="crumb"><a href="{{ url_for('tasks') }}">任务</a> / {{ task['task_id'] }}</p>
+<h1 class="page-title">{{ task['topic'] }}</h1>
+<p class="page-sub">
+  {{ task['province_raw'] }} · {{ task['county_name_raw'] }} ·
+  应交 {{ task['required_kind'] }} ·
+  截止 {{ task['due_at'] }} ·
+  <span class="tag s-{{ task['state'] }}">{{ task['state'] }}</span>
+</p>
+
+<div class="two-col">
+  <section class="card">
+    <h2>分派情况</h2>
+    <table>
+      <thead><tr><th>成员</th><th>角色</th></tr></thead>
+      <tbody>
+      {% for a in assignments %}
+        <tr><td>{{ a['display_name'] }}</td><td>{{ '负责人' if a['is_lead'] else '参与' }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <p class="hint">一个任务只能有一个负责人：由部分唯一索引 <code>idx_one_task_lead</code> 保证。</p>
+  </section>
+
+  <section class="card">
+    <h2>可执行操作</h2>
+    {% if can_submit %}
+      <form class="stack" method="post" action="{{ url_for('task_submit', task_id=task['task_id']) }}">
+        <label>材料标题<input name="title" required placeholder="如 城西湖乡莲藕基地证据整理（第2版）"></label>
+        <label>版本说明<input name="note" required placeholder="本版改了什么"></label>
+        <label>关联案例
+          <select name="case_id">
+            <option value="">不关联</option>
+            {% for c in cases %}<option value="{{ c['case_id'] }}">{{ c['case_id'] }} · {{ c['title'] }}</option>{% endfor %}
+          </select>
+        </label>
+        <button class="btn primary" type="submit">提交版本</button>
+      </form>
+    {% elif can_review %}
+      <form class="stack" method="post" action="{{ url_for('task_review', task_id=task['task_id']) }}">
+        <p class="hint">待审版本：第 {{ latest['version_no'] }} 版 · {{ latest['title'] }}</p>
+        <label>审核意见（退回必填）<textarea name="reason" rows="2"></textarea></label>
+        <div class="actions">
+          <button class="btn primary" name="decision" value="通过">通过</button>
+          <button class="btn danger" name="decision" value="退回">退回补正</button>
+        </div>
+      </form>
+    {% elif can_publish %}
+      <form method="post" action="{{ url_for('task_publish', task_id=task['task_id']) }}">
+        <p class="hint">审核已通过，可以发布。发布后关联案例对公众可见。</p>
+        <button class="btn primary" type="submit">发布成果</button>
+      </form>
+    {% else %}
+      <p class="empty">当前状态下你的角色没有可执行的操作。</p>
+    {% endif %}
+  </section>
+</div>
+
+<section class="card">
+  <h2>提交版本（{{ versions|length }}）</h2>
+  {% if versions %}
+  <table>
+    <thead><tr><th>版本</th><th>材料标题</th><th>类型</th><th>说明</th><th>提交人</th><th>提交时间</th></tr></thead>
+    <tbody>
+    {% for v in versions %}
+      <tr>
+        <td class="nowrap">第 {{ v['version_no'] }} 版</td>
+        <td>{{ v['title'] }}</td>
+        <td>{{ v['kind'] }}</td>
+        <td>{{ v['note'] }}</td>
+        <td>{{ v['submitter'] }}</td>
+        <td class="nowrap">{{ v['submitted_at'] }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}<p class="empty">还没有提交过版本。</p>{% endif %}
+</section>
+
+<div class="two-col">
+  <section class="card">
+    <h2>审核记录（{{ reviews|length }}）</h2>
+    {% if reviews %}
+    <table>
+      <thead><tr><th>版本</th><th>决定</th><th>理由</th><th>审核人</th><th>时间</th></tr></thead>
+      <tbody>
+      {% for r in reviews %}
+        <tr>
+          <td class="nowrap">第 {{ r['version_no'] }} 版</td>
+          <td><span class="tag {{ 'ok' if r['decision'] == '通过' else 'bad' }}">{{ r['decision'] }}</span></td>
+          <td>{{ r['reason'] }}</td>
+          <td class="nowrap">{{ r['reviewer'] }}</td>
+          <td class="nowrap">{{ r['acted_at'] }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="empty">暂无审核记录。</p>{% endif %}
+  </section>
+
+  <section class="card">
+    <h2>操作流水（{{ logs|length }}）</h2>
+    {% if logs %}
+    <table>
+      <thead><tr><th>时间</th><th>操作人</th><th>动作</th></tr></thead>
+      <tbody>
+      {% for l in logs %}<tr><td class="nowrap">{{ l['acted_at'] }}</td><td>{{ l['display_name'] }}</td><td>{{ l['action'] }}</td></tr>{% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="empty">暂无记录。</p>{% endif %}
+  </section>
+</div>
+{% endblock %}

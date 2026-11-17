@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>832 工程调研县帮扶项目资金与进度核验｜新版选题原型</title>
+  <style>
+    :root{--navy:#15333a;--navy2:#20464a;--teal:#176f67;--teal2:#e6f3ef;--ink:#1b3436;--muted:#6a7e7b;--line:#dce6df;--paper:#f5f5ef;--white:#fffefa;--orange:#bb7846;--orange2:#fff0e3;--red:#a9524b;--red2:#faeeea;--blue:#476f96;--blue2:#eaf1f7;--shadow:0 16px 42px rgba(16,54,56,.07)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:13px/1.7 "Microsoft YaHei","PingFang SC",system-ui,sans-serif}a{color:var(--teal);text-underline-offset:3px}button,input,select{font:inherit}button{cursor:pointer}
+    .shell{display:grid;grid-template-columns:244px minmax(0,1fr);min-height:100vh}.side{background:var(--navy);color:#eff7f2;padding:27px 17px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;overflow:auto}.logo{display:flex;align-items:center;gap:10px;margin:0 9px 36px}.logo-mark{width:44px;height:44px;border-radius:12px;background:#d5a76b;color:#22372f;display:grid;place-items:center;font:700 19px Georgia,serif}.logo strong{display:block;font-size:14px;line-height:1.35}.logo small{display:block;color:#a4c0b8;font-size:10px;letter-spacing:.12em;margin-top:3px}.side-label{font-size:10px;color:#95b9ae;letter-spacing:.13em;margin:0 12px 11px;font-weight:800}.nav{display:grid;gap:4px}.nav button{width:100%;text-align:left;border:0;background:transparent;color:#bad1c8;border-radius:10px;padding:11px 13px;display:flex;align-items:center;gap:12px;font-size:12px}.nav button:hover,.nav button.active{background:rgba(255,255,255,.11);color:white}.nav button.active{box-shadow:inset 3px 0 #e5ba7b}.nav span:first-child{font-size:16px;width:18px;text-align:center;color:#acd2c5}.side-note{margin-top:auto;border-top:1px solid rgba(255,255,255,.16);padding:17px 11px 0;color:#abc6ba;font-size:10px;line-height:1.8}.side-note strong{display:block;color:white;font-size:11px;margin-bottom:5px}
+    main{min-width:0;max-width:1600px;padding:0 clamp(19px,4vw,56px) 55px;margin:auto;width:100%}.top{min-height:91px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:15px}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;color:#6c9486;text-transform:uppercase}.top h1{font:700 clamp(24px,2.4vw,33px)/1.3 Georgia,"Songti SC","SimSun",serif;margin:2px 0 0}.top-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:end}.tag{border:1px solid #bed9c9;border-radius:30px;padding:6px 10px;font-size:10px;color:#35735f;background:#eef6ed;font-weight:800;white-space:nowrap}.tag.plain{border-color:var(--line);color:var(--muted);background:var(--white)}
+    .page{display:none}.page.active{display:block}.hero{background:linear-gradient(125deg,#153943,#1c5655);color:white;border-radius:20px;padding:clamp(27px,3.5vw,46px);margin-top:26px;display:grid;grid-template-columns:1fr .75fr;gap:30px;box-shadow:var(--shadow);overflow:hidden}.hero .eyebrow{color:#a9cdbd}.hero h2{font:700 clamp(31px,3vw,44px)/1.16 Georgia,"Songti SC","SimSun",serif;margin:8px 0 15px}.hero p{color:#c7dfd5;line-height:1.9;max-width:620px;margin:0 0 21px}.hero-actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid transparent;border-radius:9px;padding:10px 14px;font-size:11px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:6px}.btn.gold{background:#e7b979;color:#20372e}.btn.gold:hover{background:#f4c787}.btn.ghost{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.24);color:white}.btn.outline{background:white;border-color:#b9d2c2;color:#236a5a}.btn.outline:hover{background:#eef7f1}.hero-visual{align-self:stretch;border:1px solid rgba(255,255,255,.17);border-radius:15px;padding:20px;background:rgba(6,37,37,.25);display:grid;gap:7px;align-content:center}.hero-visual h3{margin:0 0 3px;font-size:11px;letter-spacing:.06em;color:#bbd7cd}.visual-row{display:grid;grid-template-columns:85px 1fr auto;align-items:center;gap:7px;background:rgba(255,255,255,.075);border-radius:8px;padding:9px 11px;font-size:10px}.visual-row b{color:#f4ca8b}.visual-row em{font-style:normal;color:#a7d7bf}.visual-note{color:#dceadd;font-size:10px;margin-top:6px;line-height:1.7}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:15px}.stat{border:1px solid var(--line);border-radius:13px;background:var(--white);padding:17px 19px}.stat .n{font:700 29px/1.1 Georgia,serif;color:var(--navy)}.stat .l{font-weight:800;font-size:11px;margin-top:7px}.stat .s{font-size:10px;color:var(--muted);margin-top:3px}.section{margin-top:30px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:15px}.section-head h2{font:700 clamp(21px,2vw,27px)/1.35 Georgia,"Songti SC","SimSun",serif;margin:3px 0 0}.section-head p{color:var(--muted);font-size:11px;max-width:560px;margin:0}.card{background:var(--white);border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 5px 20px rgba(16,54,56,.03)}.card h3{font-size:15px;line-height:1.45;margin:0 0 9px}.card p{color:var(--muted);font-size:11px;line-height:1.8;margin:5px 0}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:13px}.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.note{background:#e9f3ee;border:1px solid #cbded1;border-radius:10px;padding:13px 15px;color:#3b6b55;font-size:11px;line-height:1.8}.note.warn{background:#fff4e8;border-color:#eacba8;color:#855b33}.note strong{display:block;margin-bottom:3px}
+    .comparison{display:grid;grid-template-columns:1fr 1fr;gap:13px}.comparison .card:first-child{opacity:.83}.compare-label{font-size:10px;font-weight:800;letter-spacing:.12em;color:#789487}.comparison h3{font:700 21px Georgia,"Songti SC",serif;margin:10px 0}.comparison ul{padding-left:18px;color:#526c66;font-size:11px;line-height:1.9;margin:0}.comparison li{margin:3px 0}.process{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.process-item{border:1px solid var(--line);background:var(--white);border-radius:10px;padding:13px}.process-item b{display:grid;place-items:center;border-radius:6px;width:22px;height:22px;background:var(--teal2);color:var(--teal);font:700 10px Georgia,serif}.process-item strong{display:block;font-size:11px;margin-top:9px}.process-item small{display:block;color:var(--muted);font-size:10px;line-height:1.6;margin-top:4px}
+    .lead{font-size:12px;color:var(--muted);line-height:1.9;margin:17px 0 0;max-width:850px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;padding:13px;background:var(--white);border:1px solid var(--line);border-radius:13px}.field{display:grid;gap:5px;flex:1 1 155px}.field.wide{flex:2 1 260px}.field label{font-size:10px;font-weight:800;color:#617b71}.field input,.field select{height:39px;width:100%;border:1px solid #d7e1d9;border-radius:8px;background:white;color:var(--ink);padding:0 10px;font-size:11px;outline:none}.field input:focus,.field select:focus{border-color:#70aa91;box-shadow:0 0 0 3px rgba(82,152,116,.14)}.result-count{font-size:10px;color:var(--muted);margin:13px 2px}.table-wrap{overflow-x:auto;border-radius:13px;border:1px solid var(--line);background:var(--white)}table{width:100%;border-collapse:collapse}th{background:#ecf2eb;color:#55786a;font-size:10px;font-weight:800;text-align:left;white-space:nowrap;padding:12px 13px}td{border-top:1px solid #edf0eb;padding:12px 13px;font-size:11px;vertical-align:middle}tbody tr:hover{background:#fbfdf9}.money{font:700 16px Georgia,serif;color:var(--navy);white-space:nowrap}.muted{color:var(--muted)}.small{font-size:10px}.nowrap{white-space:nowrap}.status{display:inline-block;font-size:10px;font-weight:800;padding:3px 8px;border-radius:20px;color:#35735b;background:#e8f3e9;white-space:nowrap}.status.warn{color:#996238;background:#fff0df}.status.gray{color:#667b78;background:#edf0ed}.text-btn{border:0;background:none;color:var(--teal);font-size:10px;font-weight:800;padding:0}.text-btn:hover{text-decoration:underline}.empty{padding:30px;text-align:center;color:var(--muted);font-size:11px}
+    .audit-switch{display:flex;gap:7px;flex-wrap:wrap}.audit-switch button,.sql-tabs button{border:1px solid var(--line);background:var(--white);color:#5a756b;border-radius:8px;padding:8px 11px;font-size:10px;font-weight:800}.audit-switch button.active,.sql-tabs button.active{background:var(--teal2);border-color:#a4d0b9;color:#246d53}.audit-board{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:12px}.evidence{background:var(--white);border:1px solid var(--line);border-top:3px solid #7fab96;border-radius:10px;padding:17px}.evidence.plan{border-top-color:#6d91b1}.evidence.target{border-top-color:#a07cb0}.evidence.progress{border-top-color:#60a18a}.evidence strong{display:block;font-size:12px;line-height:1.5}.evidence .type{font-size:9px;color:#69877c;font-weight:800;letter-spacing:.1em;margin-bottom:7px}.evidence p{color:var(--muted);font-size:11px;line-height:1.7;min-height:56px}.evidence a{font-size:10px;font-weight:800}.audit-summary{background:var(--orange2);border:1px solid #eaceb1;border-radius:11px;padding:16px 18px;margin-top:12px;font-size:11px;color:#805a37;line-height:1.8}.audit-summary b{display:block;color:#74472d;margin-bottom:3px}.review-line{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:12px}.review-line small{font-size:10px;color:var(--muted)}.review-line button{border:1px solid #d5b78d;background:white;color:#805737;border-radius:8px;padding:7px 11px;font-size:10px;font-weight:800}
+    .query-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:13px}.query-list{display:grid;gap:7px;align-content:start}.query-list button{border:1px solid var(--line);background:var(--white);color:#4e6b62;border-radius:9px;padding:11px;text-align:left;font-size:11px;font-weight:800}.query-list button.active{border-color:#9cc8ad;background:#e9f3ed;color:#1f6b52}.query-panel{min-width:0}.query-panel h3{margin:0 0 4px;font-size:15px}.query-panel p{color:var(--muted);font-size:11px;line-height:1.7}.query-result{padding:13px;background:#f2f7f1;border:1px solid #d9e8db;border-radius:8px;font-size:11px;line-height:1.7}.query-result strong{display:block;color:#2a644d;margin-bottom:4px}.sql{background:#172f32;color:#dfebe6;border-radius:10px;overflow:hidden;margin-top:10px}.sql-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #34545a;padding:8px 12px;font-size:10px;color:#afd4c8}.sql-head button{border:1px solid #68847e;border-radius:5px;color:#dbe9e2;background:transparent;padding:3px 8px;font-size:10px}pre{margin:0;padding:15px;overflow:auto;font:11px/1.65 Consolas,"Courier New",monospace}
+    .er{border:1px solid #d5e3d9;border-radius:14px;background:#f9fbf7;padding:19px;overflow-x:auto}.er-line{display:flex;gap:9px;align-items:stretch;min-width:700px}.er-node{flex:1;background:white;border:1px solid #b9d2c3;border-radius:9px;padding:11px}.er-node strong{display:block;font-size:11px}.er-node small{display:block;color:var(--muted);font-size:9px;line-height:1.5;margin-top:4px}.er-arrow{align-self:center;color:#81a998;font-weight:800}.er-caption{font-size:10px;font-weight:800;color:#658f79;text-align:center;margin:9px 0}.entity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.entity{background:var(--white);border:1px solid var(--line);border-radius:9px;padding:12px}.entity strong{font-size:11px;display:block}.entity code{display:block;font:10px/1.6 Consolas,"Courier New",monospace;color:#657f70;margin-top:4px;white-space:normal}.entity small{font-size:9px;color:#8a9a8d}.rule-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.rule{background:#eff5ee;border-left:3px solid #7cab8e;padding:10px 12px;font-size:10px;color:#526b5a}.rule strong{display:block;font-size:11px;color:#30684b}
+    .source-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.source-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:14px 15px}.source-card .kind{font-size:9px;font-weight:800;color:#72907e;letter-spacing:.08em}.source-card strong{display:block;font-size:12px;line-height:1.6;margin:5px 0}.source-card p{font-size:10px;color:var(--muted);line-height:1.65;margin:0 0 8px}.source-card a{font-size:10px;font-weight:800}.foot{font-size:10px;line-height:1.8;color:#809085;margin:24px 0}
+    dialog{border:1px solid #d3e0d7;border-radius:15px;padding:0;width:min(650px,calc(100vw - 24px));max-height:85vh;box-shadow:0 30px 80px rgba(8,36,31,.25)}dialog::backdrop{background:rgba(10,36,37,.5)}.dialog-body{padding:23px;max-height:85vh;overflow:auto}.dialog-top{display:flex;align-items:start;justify-content:space-between;gap:15px}.dialog-top h2{font:700 22px/1.35 Georgia,"Songti SC",serif;margin:3px 0}.dialog-close{width:28px;height:28px;border:0;background:#edf4ed;color:#376451;border-radius:6px;font-size:18px}.dialog-content{font-size:11px;color:#536960;line-height:1.85;margin-top:16px}.dialog-content h3{font-size:12px;color:var(--ink);margin:18px 0 6px}.dialog-content ul{padding-left:18px}.dialog-content li{margin:4px 0}.dialog-content .source-row{border:1px solid #dce8de;background:#f5f9f4;padding:10px;border-radius:7px;margin-top:7px}
+    @media(max-width:1070px){.shell{grid-template-columns:73px minmax(0,1fr)}.side{padding:20px 8px}.logo{justify-content:center;margin:0 0 28px}.logo div:last-child,.side-label,.side-note,.nav button span:last-child{display:none}.nav button{justify-content:center}.hero{grid-template-columns:1fr}}
+    @media(max-width:760px){.shell{display:block}.side{position:relative;height:auto;display:flex;flex-direction:row;gap:10px;padding:8px 10px;overflow-x:auto}.logo{margin:0}.logo-mark{width:34px;height:34px;font-size:15px}.nav{display:flex;white-space:nowrap}.nav button{min-width:37px}.nav button span:last-child{display:inline}main{padding:0 14px 35px}.top{min-height:76px}.top-tags .plain{display:none}.stats,.comparison,.cols2,.audit-board,.source-grid,.rule-grid{grid-template-columns:1fr 1fr}.cols3,.entity-grid,.process{grid-template-columns:repeat(2,1fr)}.query-layout{grid-template-columns:1fr}.query-list{display:flex;flex-wrap:wrap}.section-head{display:block}.section-head p{margin-top:5px}}
+    @media(max-width:520px){.hero{padding:23px;min-width:0}.hero>*{min-width:0}.hero h2{overflow-wrap:anywhere}.visual-row{grid-template-columns:65px minmax(0,1fr) auto}.visual-row span{overflow-wrap:anywhere}.stats,.comparison,.cols2,.audit-board,.source-grid,.rule-grid,.cols3,.entity-grid,.process{grid-template-columns:1fr}.top h1{font-size:23px}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div class="logo"><div class="logo-mark">832</div><div><strong>项目核验工作台</strong><small>RESEARCH DATABASE · V2</small></div></div>
+    <div class="side-label">设计原型</div>
+    <nav class="nav" id="nav">
+      <button class="active" data-page="overview"><span>◫</span><span>选题总览</span></button>
+      <button data-page="projects"><span>▥</span><span>项目检索</span></button>
+      <button data-page="audit"><span>◇</span><span>跨表核验</span></button>
+      <button data-page="queries"><span>⌘</span><span>分析查询</span></button>
+      <button data-page="schema"><span>▦</span><span>关系模型</span></button>
+      <button data-page="sources"><span>↗</span><span>数据来源</span></button>
+    </nav>
+    <div class="side-note"><strong>课程作业 · 第二版选题</strong>展示真实公开资料样本与可操作原型。表中的计划预算、目标、进度、实际评价分开存储；本页尚未连接数据库。</div>
+  </aside>
+  <main>
+    <header class="top"><div><div class="eyebrow">832 PROJECT / DESIGN REVISION</div><h1 id="pageTitle">选题总览</h1></div><div class="top-tags"><span class="tag">建议换题</span><span class="tag plain">真实来源样本 · 静态原型</span></div></header>
+
+    <section id="overview" class="page active">
+      <div class="hero">
+        <div><div class="eyebrow">推荐方向 · 832 工程调研县</div><h2>帮扶项目资金、目标与进度核验系统</h2><p>研究员看柞水木耳产业时，不只看到“做了什么”，还能追到某个具体项目的计划预算来自哪里、绩效目标写了什么、公开进度到哪一步，以及不同公示表之间为何出现数字差异。</p><div class="hero-actions"><button class="btn gold" data-go="audit">看一个真实跨表差异 ↗</button><button class="btn ghost" data-go="projects">浏览项目样本 ↗</button></div></div>
+        <div class="hero-visual"><h3>同一个项目 · 不同公开表</h3><div class="visual-row"><b>项目库</b><span>金米村木耳种植 · 预算 60 万</span><em>计划</em></div><div class="visual-row"><b>绩效批复</b><span>预期带动 30 户 114 人</span><em>目标</em></div><div class="visual-row"><b>进度表</b><span>建设状态标为“完工”</span><em>进度</em></div><div class="visual-note">项目库目标文字写“97 户 383 人、户均增收 1000 元”，批复写“30 户 114 人、户均增收 2000 元”。完工不证明目标已实现。</div></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">485</div><div class="l">柞水 2024 项目库条目</div><div class="s">官方汇总表的计划项目数</div></div>
+        <div class="stat"><div class="n">260</div><div class="l">其中产业发展项目</div><div class="s">可先聚焦这个子集</div></div>
+        <div class="stat"><div class="n">86,756.56</div><div class="l">项目库预算总投资 · 万元</div><div class="s">储备预算，非已支出金额</div></div>
+        <div class="stat"><div class="n">57,104.16</div><div class="l">产业发展计划预算 · 万元</div><div class="s">来源：同一官方汇总表</div></div>
+      </div>
+      <div class="section">
+        <div class="section-head"><div><div class="eyebrow">为什么调整</div><h2>数据库要解决的任务变了</h2></div><p>旧版 HTML 仍保留，可用来对照两个方向。</p></div>
+        <div class="comparison"><div class="card"><div class="compare-label">原方案 · 案例与产值档案</div><h3>以整理和检索为主</h3><ul><li>录入报道、提取案例、标注帮扶方式。</li><li>补充县域年度产值，核对来源。</li><li>主要查询是县、产业、标签筛选与简单统计。</li></ul></div><div class="card"><div class="compare-label">新版 · 项目计划与进度核验</div><h3>自然产生跨表业务问题</h3><ul><li>项目库、绩效批复、进度表要匹配成同一项目。</li><li>预算按资金来源拆分，目标按发布版本保留。</li><li>自动提示金额、受益人数、建设内容的差异。</li><li>追踪“完工”后是否已有实际成效证据。</li></ul></div></div>
+      </div>
+      <div class="section">
+        <div class="section-head"><div><div class="eyebrow">真实业务链</div><h2>从项目库到可复核的结论</h2></div></div>
+        <div class="process"><div class="process-item"><b>1</b><strong>采集原始表</strong><small>项目库、批复表和进度表保存原始行号、文件地址。</small></div><div class="process-item"><b>2</b><strong>匹配同一项目</strong><small>按年度、镇村、名称、建设内容生成候选，人工确认。</small></div><div class="process-item"><b>3</b><strong>拆分资金与目标</strong><small>中央、省级、自筹分表；目标记录版本与单位。</small></div><div class="process-item"><b>4</b><strong>跟踪进度</strong><small>“开工/完工”只记录建设状态，不代替验收或拨款。</small></div><div class="process-item"><b>5</b><strong>核验与查询</strong><small>发现差异、记录审核意见、按村镇和类别统计。</small></div></div>
+      </div>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">服务 832 工程调研</div><h2>调研队拿它做什么</h2></div></div><div class="cols3"><div class="card"><h3>调研前选点</h3><p>按县、镇村、产业和计划预算筛项目；找预算集中但公开进度或绩效目标尚未匹配的地方，形成实地走访清单。</p></div><div class="card"><h3>访谈时带着问题</h3><p>例如金米村木耳项目：项目库户均增收目标 1000 元，批复为 2000 元。研究员可带原文和行号核问口径、版本与实施情况。</p></div><div class="card"><h3>调研后核对成果</h3><p>将人大公开报道作为县域产业背景。报道提到金米村木耳产业时，只建立“可能相关”的线索；具体政府项目须有项目级证据才确认关联。</p></div></div></div>
+      <div class="section note"><strong>和人大“832工程”的关系</strong>中国人民大学的调研报道说明柞水是“832工程”调研县，并记录了金米村木耳产业。政府项目表提供该县项目计划、目标与进度。两类材料按县域、地点和产业相互参考；同村同产业不自动证明报道中的基地就是某个具体政府项目。</div>
+    </section>
+
+    <section id="projects" class="page">
+      <p class="lead">下面是已核对原文的项目样本。原型内部编号用于连接不同文件的行号，不是政府公布的统一项目编号。项目库预算是计划值；实际投入或受益人数只有来源明确披露时才入库。</p>
+      <div class="section"><div class="toolbar"><div class="field wide"><label for="projectSearch">项目、村名或产业</label><input id="projectSearch" type="search" placeholder="如：金米、木耳、产业桥"></div><div class="field"><label for="projectCounty">县区</label><select id="projectCounty"><option value="">全部县区</option></select></div><div class="field"><label for="projectType">本系统分类</label><select id="projectType"><option value="">全部类型</option></select></div><div class="field"><label for="projectStatus">公开进度</label><select id="projectStatus"><option value="">全部状态</option></select></div></div><div class="result-count" id="projectCount"></div><div class="table-wrap"><table><thead><tr><th>项目 / 地点</th><th>本系统分类</th><th>项目库预算</th><th>预计受益人数</th><th>公开进度</th><th>来源与差异</th><th>详情</th></tr></thead><tbody id="projectRows"></tbody></table></div><div class="note" style="margin-top:12px">此处仅展示少量已经人工核对的项目。本系统分类用于筛选，政府原表类别保留在来源行。官方 485 条是项目库规模，原型中不声称已完整入库；进度表是另一份较小的公开集合，不能用 165 行直接除以 485 计算完工率。</div></div>
+    </section>
+
+    <section id="audit" class="page">
+      <p class="lead">这里展示真正需要数据库做的核验：同一项目分散在多份公开表，行号不同，金额和目标有时也不同。系统保留每份材料的原始说法，把差异交给审核员处理。</p>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">差异工作台</div><h2 id="auditTitle">跨表核验</h2></div><span class="status warn" id="auditStatus">待核验</span></div><div class="audit-switch" id="auditSwitch"></div><div class="audit-board" id="auditBoard"></div><div class="audit-summary" id="auditSummary"></div><div class="review-line"><small>原型中的审核状态仅保存在当前浏览器，正式系统须写入审核日志与数据库。</small><button type="button" id="reviewButton">标记为已阅读</button></div></div>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">关键规则</div><h2>先核对，再计算</h2></div></div><div class="cols3"><div class="card"><h3>项目匹配</h3><p>同名不够。年度、镇村、建设内容和预算共同参与匹配；无法确认的关系保留候选状态。</p></div><div class="card"><h3>资金口径</h3><p>项目库总预算、分级资金、进度表预算分别保存。预算变化先查调整批复，不直接认定错误。</p></div><div class="card"><h3>绩效口径</h3><p>“预计受益”“目标户均增收”和“实际评价”使用不同记录类型。按方式列出的受益人数可能重叠，不能相加去重。</p></div></div></div>
+    </section>
+
+    <section id="queries" class="page">
+      <p class="lead">新版查询直接服务研究和核验：哪些计划项目缺少匹配进度、哪些目标在不同文件里不一致、资金投向哪些村镇，以及已完工项目是否有实际成效记录。</p>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">SQL 工作台</div><h2>选择一个实际问题</h2></div><p>示例结果只基于页面中已核对的样本；正式系统要在后端关系数据库运行 SQL。</p></div><div class="query-layout"><div class="query-list" id="queryList"></div><div class="card query-panel"><h3 id="queryTitle"></h3><p id="queryDescription"></p><div class="query-result" id="queryResult"></div><div class="sql"><div class="sql-head"><span>PostgreSQL 查询示意</span><button id="copySql" type="button">复制 SQL</button></div><pre id="queryCode"></pre></div></div></div></div>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">多角色流程</div><h2>输入、审核、查询各有职责</h2></div></div><div class="cols3"><div class="card"><h3>资料员</h3><p>导入 PDF 原行，登记来源；处理项目名称、镇村与金额的初步字段拆分。</p></div><div class="card"><h3>核验员</h3><p>确认跨表匹配，核对预算分项和目标口径；填写差异处理意见与审核记录。</p></div><div class="card"><h3>研究员与公众</h3><p>按项目、区域、类别和阶段检索；研究员看原始证据，公众只看已审核记录。</p></div></div></div>
+    </section>
+
+    <section id="schema" class="page">
+      <p class="lead">这里的核心是“一个内部项目 ID 关联多个来源行”。原始表的行号只在各自文件中有效，例如清水村产业桥在项目库为 275、绩效批复为 100、进度表为 107。</p>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">概念关系</div><h2>一个项目，多个版本和证据</h2></div></div><div class="er"><div class="er-line"><div class="er-node"><strong>县域 / 镇村</strong><small>一个项目可覆盖多个村</small></div><div class="er-arrow">N — M</div><div class="er-node"><strong>统一项目 project</strong><small>内部主键，不使用 PDF 行号</small></div><div class="er-arrow">1 — N</div><div class="er-node"><strong>计划 / 目标 / 进度</strong><small>按来源、发布版本分别保存</small></div></div><div class="er-caption">项目和实施地点、资金来源分别用关联表；项目与原始文件行通过“匹配审核表”关联</div><div class="er-line"><div class="er-node"><strong>来源文件</strong><small>标题、机构、网址、发布日期</small></div><div class="er-arrow">1 — N</div><div class="er-node"><strong>原始行 source_row</strong><small>页码、行号、原文、汇总/明细类型</small></div><div class="er-arrow">N — M</div><div class="er-node"><strong>项目匹配审核</strong><small>候选、确认、拒绝、审核人</small></div></div></div></div>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">关系模式草案</div><h2>能支撑实际查询的表</h2></div><p>正式作业将补全字段类型、DDL、约束和教材式 E-R 图。</p></div><div class="entity-grid">
+        <div class="entity"><strong>01 县域与镇村 region</strong><code>region_id PK · parent_id FK · region_level · name · region_code</code></div><div class="entity"><strong>02 项目 project</strong><code>project_id PK · project_year · county_id FK · project_name · category_id FK</code></div><div class="entity"><strong>03 来源文件 source_document</strong><code>document_id PK · title · document_kind · publisher · published_at · url UNIQUE</code></div><div class="entity"><strong>04 原始行 source_row</strong><code>row_id PK · document_id FK · page_no · row_no · row_type · raw_text</code><small>row_type 区分汇总行与项目行</small></div><div class="entity"><strong>05 项目来源匹配 project_source_match</strong><code>project_id FK · row_id FK · match_status · reviewer_id FK</code></div><div class="entity"><strong>06 项目计划快照 plan_snapshot</strong><code>plan_id PK · project_id FK · row_id FK · version · budget_total DECIMAL</code></div><div class="entity"><strong>07 资金来源 fund_source</strong><code>fund_source_id PK · level · name UNIQUE</code></div><div class="entity"><strong>08 项目资金分项 fund_component</strong><code>(plan_id, fund_source_id) PK/FK · amount DECIMAL</code><small>同一项目可有中央、省级、自筹等来源</small></div><div class="entity"><strong>09 绩效目标 target_snapshot</strong><code>target_id PK · project_id FK · row_id FK · version_label · issued_at · metric_name · value · unit · qualifier</code></div><div class="entity"><strong>10 进度记录 progress_snapshot</strong><code>progress_id PK · project_id FK · row_id FK · stage · observed_at</code></div><div class="entity"><strong>11 实际成效 outcome_record</strong><code>outcome_id PK · project_id FK · row_id FK · metric_name · actual_value · unit</code><small>只收录报告明确给出的实际值</small></div><div class="entity"><strong>12 核验问题 audit_issue</strong><code>issue_id PK · project_id FK · issue_type · status · reviewer_id FK</code></div><div class="entity"><strong>13 用户 user_account</strong><code>user_id PK · role · login_name UNIQUE · password_hash</code></div><div class="entity"><strong>14 帮扶方式关联</strong><code>mechanism · project_mechanism · (project_id, mechanism_id) PK</code></div><div class="entity"><strong>15 项目类别 project_category</strong><code>category_id PK · name UNIQUE · parent_id FK</code></div><div class="entity"><strong>16 项目实施地点 project_region</strong><code>(project_id, region_id) PK/FK · relation_type</code><small>全县或多村项目不能硬塞到单村</small></div><div class="entity"><strong>17 审核操作流水 review_action</strong><code>action_id PK · issue_id FK · actor_id FK · action · comment · acted_at</code><small>保留每次处理，不覆盖历史意见</small></div>
+      </div></div>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">数据库知识点</div><h2>设计中真正需要的约束</h2></div></div><div class="rule-grid"><div class="rule"><strong>主键与外键</strong>跨文件使用内部 project_id；原始行保留 document_id 和行号。县域、项目、来源及审核人之间用外键约束。</div><div class="rule"><strong>多对多</strong>项目可覆盖多个村、使用多种资金，也可能同时有就业、土地流转和分红等帮扶方式，分别用关联表保存。</div><div class="rule"><strong>预算一致性</strong>资金分项合计与项目预算需在事务或触发器中核验；跨行求和不能仅靠单行 CHECK。</div><div class="rule"><strong>范式与数据版本</strong>项目、来源、资金类型分表；计划、年中目标、进度、实际评价不覆盖，避免历史版本丢失。</div><div class="rule"><strong>防重复统计</strong>“总计/产业发展”汇总行与项目明细行分开；多村项目不能按村直接重复加总全额预算。</div><div class="rule"><strong>权限和审计</strong>资料员录入、核验员确认匹配和问题处理，公众只查看已审核记录；每次变更写 review_action。</div></div></div>
+    </section>
+
+    <section id="sources" class="page">
+      <p class="lead">新版选题使用的核心数据是政府公开的项目表。人大“832工程”报道用于说明调研县与产业背景，并不表示人大团队实施了这些政府项目。</p>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">可直接打开的原文</div><h2>具体数据从哪里来</h2></div><p>政府附件为宽表 PDF；若直链暂时无法下载，可在县政府网站按完整表名搜索。</p></div><div class="source-grid" id="sourceGrid"></div></div>
+      <div class="section"><div class="section-head"><div><div class="eyebrow">采集边界</div><h2>课程版如何做得下去</h2></div></div><div class="cols2"><div class="card"><h3>建议的首轮真实数据</h3><p>先手工校对柞水 2024 年产业及配套项目 30—50 条，逐条保存项目库行、目标批复行和可匹配的进度行。再选 2023/2025 年少量同类项目、霍邱绩效评价作为扩展。</p><p>107 页项目库需要表格提取和人工复核；不能承诺一键得到干净 CSV。</p></div><div class="card"><h3>真实、目标与演示数据分开</h3><p>项目预算、目标和“完工”状态来自公开文件；只有绩效评价报告明确写出的 520 人等数据才标为实际成效。页面的“已阅读”按钮状态只在浏览器里模拟，正式系统须存入数据库。</p><p>同村同产业的人大调研案例只能作为候选背景关联，必须经具体项目证据确认。</p></div></div></div>
+      <p class="foot">作业交付仍需真实 PostgreSQL/SQLite 数据库、至少五个业务实体、DDL 与约束、教材式 E-R 图、范式分析、后端执行的 SQL、不同角色功能、效果截图、运行说明、演示视频和汇报 PPT。本 HTML 是选题及交互设计原型。</p>
+    </section>
+  </main>
+</div>
+<dialog id="detailDialog"><div class="dialog-body"><div class="dialog-top"><div><div class="eyebrow" id="dialogEyebrow"></div><h2 id="dialogTitle"></h2></div><button class="dialog-close" id="dialogClose" aria-label="关闭">×</button></div><div class="dialog-content" id="dialogContent"></div></div></dialog>
+<script>
+  const sourceDocs = {
+    library24: {
+      kind: "政府项目库 · 2024",
+      title: "柞水县2024年度县级巩固拓展脱贫攻坚成果和乡村振兴项目库汇总表",
+      publisher: "柞水县人民政府",
+      use: "485 个计划项目、预算和项目明细；本原型只人工核对其中少量行。107 页宽表 PDF。",
+      url: "https://www.snzs.gov.cn/virtual_attach_file.vsb?afc=1LRUm8Lz9sLNlDnNz-so7Q2MlrRLmATfLllPnlL8UmW7M8-0gihxQInXCIQXp2l0_tAAvDAiqShiv2P0CIU0LmGYMR7PLz-0MmLZMmCbozNbMz9ZMmCZozUsLzlPoRCaokbaQ2Ceo4Oe_tAAvDAiqShXptQ0g47sLR70LzCiLzv4gtA8pUtcc&e=.pdf&nid=165173&oid=2125440145&tid=1701"
+    },
+    progress24: {
+      kind: "政府进度表 · 2024",
+      title: "柞水县2024年度财政衔接资金项目进度表",
+      publisher: "柞水县人民政府",
+      use: "项目建设内容、预算构成、开工完工日期和公开建设状态；与项目库并非同一完整集合。",
+      url: "https://www.snzs.gov.cn/virtual_attach_file.vsb?afc=_LzCFinzV2LRWVL9RffLmCDUzUZLzvAPUmLaUz7bLNr7nRv0gihxQInXCIQXp2l0_tAAvDAiqShiv2P0CIU0LmGYMR7YLmU0MmLZM4GDMzvaLzLZLzG8M4lZLmUboRvZoSbaQ2Ceo4Oe_tAAvDAiqShXptQ0g47sLR70LzCiMz74gtA8pU1cc&e=.pdf&nid=165513&oid=2125440145&tid=1701"
+    },
+    targetInitial24: {
+      kind: "绩效目标批复 · 年初",
+      title: "柞水县2024年度统筹整合财政涉农资金项目绩效目标批复表",
+      publisher: "柞水县人民政府",
+      use: "按项目列预算与预期受益户数、人数、增收目标等，作为目标版本保存。",
+      url: "https://www.snzs.gov.cn/virtual_attach_file.vsb?afc=ZnlLb8UmNDL8-4UENQkLmLbnzGiol-eiL4GsL8U4olMfM4L0gihxQInXCIQXp2l0_tAAvDAiqShiv2P0CIU0LmGYMR7YLmL0MmLZM4GiM4L8Mm9DozlPoR7iMR7DL49bMkbaQ2Ceo4Oe_tAAvDAiqShXptQ0g47iL470LzlboRL4gtA8pUycc&e=.pdf&nid=159833&oid=2125440145&tid=1531"
+    },
+    targetMid24: {
+      kind: "绩效目标批复 · 年中",
+      title: "柞水县2024年度（年中调整）统筹整合财政涉农资金项目绩效目标批复表",
+      publisher: "柞水县人民政府",
+      use: "与年初批复分版本保留；即使数值相同，也不覆盖已有记录。",
+      url: "https://www.snzs.gov.cn/virtual_attach_file.vsb?afc=bLRTEkLR-ZUm-DLemlbMNVVMmNYLRLybUm7DUlUbLzC4U4U0gihxQInXCIQXp2l0_tAAvDAiqShiv2P0CIU0LmGYMR7YLmL0MmLZM4GiM4L4oR-8L4-PMmGsoR-ZMRlaoSbaQ2Ceo4Oe_tAAvDAiqShXptQ0g47iL470LzlbozG4gtA8pUhcc&e=.pdf&nid=159903&oid=2125440145&tid=1531"
+    },
+    library23: {
+      kind: "政府项目库 · 扩展",
+      title: "柞水县2023年度县级巩固拓展脱贫攻坚成果和乡村振兴项目库汇总表",
+      publisher: "柞水县人民政府",
+      use: "可用于跨年度对照；同名项目必须连同年度与地点一起匹配。",
+      url: "https://www.snzs.gov.cn/virtual_attach_file.vsb?afc=TM8lt4ozLDUmUZLjzf2nzLaL8lDMlCwYozrkLN-aLmrRL4U0gihxQInXCIQXp2l0_tAAvDAiqShiv2P0CIU0LmGYMR7PLzL0MmLZMmvaoR-aMRCaMR-YLR9iMR9DoR7iM1baQ2Ceo4Oe_tAAvDAiqShXptQ0g47sLR70LzC8oRL4gtA8pUXcc&e=.pdf&nid=164833&oid=2125440145&tid=1701"
+    },
+    library25: {
+      kind: "政府项目库 · 扩展",
+      title: "农业农村局2025年度县级巩固拓展脱贫攻坚成果和乡村振兴项目库汇总表",
+      publisher: "柞水县人民政府",
+      use: "农业农村局口径的后续年份扩展附件；不作为 2024 项目数或全县 2025 总量的分母。",
+      url: "https://www.snzs.gov.cn/virtual_attach_file.vsb?afc=_o77FsLmW2MmM7U98MRMRTVnR74MNMA7oR-YLmAfUlVVLl70gihxQInXCIQXp2l0_tAAvDAiqShiv2P0CIU0LmGYMR7PLR70MmLZMmCaMR98Lm7PLzCDMRliLzlPLz9bokbaQ2Ceo4Oe_tAAvDAiqShXptQ0g47sLR70LzCiL4N4gtA8pU1cc&e=.pdf&nid=165393&oid=2125440145&tid=1701"
+    },
+    huoqiuEval: {
+      kind: "政府绩效评价 · 实际值",
+      title: "2024年度财政衔接推进乡村振兴补助资金项目绩效评价报告",
+      publisher: "霍邱县人民政府",
+      use: "霍邱县县域屋顶分布式光伏开发项目；报告提供计划 500 人、实际 520 人等结果，可演示目标与实际的区别。",
+      url: "https://www.huoqiu.gov.cn/group3/M00/88/A4/wKgSG2jU6GSAPMAoAAHZCj9xVtw856.pdf"
+    },
+    rucZhashui: {
+      kind: "832 工程调研背景",
+      title: "中国人民大学 832 工程柞水县调研报道",
+      publisher: "中国人民大学应用经济学院",
+      use: "说明调研与金米村木耳产业背景；不作为政府项目的实施、资金或成效证据。",
+      url: "https://ae.ruc.edu.cn/xwzx/xydt/c9da52ef58f847e9b1a06c72c6428539.htm"
+    },
+    laishui: {
+      kind: "其他县扩展渠道",
+      title: "涞水县 2024 年衔接资金项目计划公示及 Excel 附件",
+      publisher: "涞水县人民政府",
+      use: "公开网页和电子表格，适合在柞水试点完成后跨县扩展。",
+      url: "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content"
+    }
+  };
+
+  const projects = [
+    {
+      id: "ZS24-001", name: "小岭镇金米村木耳种植项目", county: "柞水县", town: "小岭镇", village: "金米村",
+      type: "特色种植", budget: 60, people: 114, progress: "完工", issueCount: 1,
+      plan: "项目库第 6 行：预算 60 万元，中央资金 60 万元；预计受益人数栏 114 人，绩效目标文字又写 97 户 383 人、户均增收 1000 元。",
+      target: "年初批复第 78 行、年中批复第 67 行：预期带动 30 户 114 人，目标户均增收 2000 元。两批复在这些数字上相同。",
+      progressText: "进度表第 61 行：同名项目、预算 60 万元，建设状态为“完工”。",
+      caution: "进度完工不证明 30 户 114 人已经受益，也不证明收入目标已经实现。",
+      rows: [["library24", "项目库第 6 行"], ["targetInitial24", "年初批复第 78 行"], ["targetMid24", "年中批复第 67 行"], ["progress24", "进度表第 61 行"]]
+    },
+    {
+      id: "ZS24-002", name: "凤凰镇清水村产业桥建设项目", county: "柞水县", town: "凤凰镇", village: "清水村",
+      type: "产业配套", budget: 35, people: 86, progress: "完工", issueCount: 1,
+      plan: "项目库第 275 行：预算 35 万元、预计受益 25 户 86 人，目标户均增收 2000 元。",
+      target: "年初绩效目标批复第 100 行：预算 35 万元、预期带动 18 户 65 人，目标户均增收 260 元。",
+      progressText: "进度表第 107 行：预算 35 万元，计划日期 2024-05-01 至 2024-07-30，建设状态“完工”。",
+      caution: "受益对象和增收目标在不同文件中不一致；要查是否有正式调整文件，不能直接归为错报。",
+      rows: [["library24", "项目库第 275 行"], ["targetInitial24", "年初批复第 100 行"], ["progress24", "进度表第 107 行"]]
+    },
+    {
+      id: "ZS24-003", name: "小岭镇罗庄社区种植业项目", county: "柞水县", town: "小岭镇", village: "罗庄社区",
+      type: "特色种植", budget: 100, people: 273, progress: "完工", issueCount: 1,
+      plan: "项目库第 5 行：预算 100 万元，资金来源标为省级 100 万元；建设内容含油料 80 亩、木耳 30 万袋、中药材 165 亩。",
+      target: "年中调整目标批复第 32 行：预算仍为 100 万元，建设内容写木耳 30 万袋、中药材 245 亩；未列中央、省级资金拆分。",
+      progressText: "进度表第 26 行：预算 100 万元，其中中央 45 万元、省级 55 万元；建设内容为木耳 30 万袋、中药材 245 亩及配套设施，状态“完工”。",
+      caution: "年中批复与进度表的建设内容接近，但项目库中的资金级别和建设内容不同；需核对调整依据。",
+      rows: [["library24", "项目库第 5 行"], ["targetMid24", "年中批复第 32 行"], ["progress24", "进度表第 26 行"]]
+    },
+    {
+      id: "ZS24-004", name: "凤凰镇大寺沟村连翘种植项目", county: "柞水县", town: "凤凰镇", village: "大寺沟村",
+      type: "特色种植", budget: 30, people: 60, progress: "完工", issueCount: 0,
+      plan: "项目库第 120 行：预算 30 万元，连翘种植 50 亩，预计受益 60 人。",
+      target: "年中调整目标批复第 31 行：连翘 56 亩、预算 45 万元，与进度表的规模和预算一致。",
+      progressText: "进度表第 25 行：预算 45 万元，连翘种植 56 亩，状态“完工”。",
+      caution: "项目库是 30 万 / 50 亩，年中调整批复和进度表是 45 万 / 56 亩；版本变化有来源，实际支出金额仍未披露。",
+      rows: [["library24", "项目库第 120 行"], ["targetMid24", "年中批复第 31 行"], ["progress24", "进度表第 25 行"]]
+    },
+    {
+      id: "ZS24-005", name: "小岭镇常湾村种植业项目", county: "柞水县", town: "小岭镇", village: "常湾村",
+      type: "特色种植", budget: 120, people: 338, progress: "完工", issueCount: 1,
+      plan: "项目库第 7 行：预算 120 万元，预计受益 338 人；建设内容为油料 300 亩、中药材 1700 亩。",
+      target: "年中目标批复第 28 行可匹配项目名和原计划内容，但实施单位字段出现“罗庄社区股份经济合作社”，需进一步核对。",
+      progressText: "进度表第 22 行：预算 120 万元，建设内容主要为地栽木耳 40 万袋、吊袋木耳 20 万袋，状态“完工”。",
+      caution: "内容和实施单位应逐项复核，不能仅按同名自动合并所有记录。",
+      rows: [["library24", "项目库第 7 行"], ["targetMid24", "年中批复第 28 行"], ["progress24", "进度表第 22 行"]]
+    },
+    {
+      id: "ZS24-006", name: "小岭镇金米村木耳种植基地综合提升项目", county: "柞水县", town: "小岭镇", village: "金米村",
+      type: "基地提升", budget: 240, people: 120, progress: "样本未匹配", issueCount: 0,
+      plan: "项目库第 23 行：预算 240 万元，其中财政 200 万元、自筹 40 万元；预计受益 120 人。",
+      target: "本原型尚未核定该项目的绩效批复行。",
+      progressText: "本原型尚未核定可匹配的进度表行；这不等于该项目没有进展。",
+      caution: "这是独立项目，不能与“金米村木耳种植项目”60 万元预算合并。",
+      rows: [["library24", "项目库第 23 行"]]
+    }
+  ];
+
+  const audits = [
+    {
+      id: "A-01", short: "金米 · 受益目标", title: "金米村木耳种植：同一项目的受益目标口径",
+      evidence: [
+        {type:"项目库 · 第 6 行", className:"plan", headline:"预算 60 万；人数栏 114 人", detail:"同一行的绩效目标文字另写“97 户 383 人、户均增收 1000 元”。应保留字段与原文。", doc:"library24"},
+        {type:"绩效批复 · 年初 78 / 年中 67", className:"target", headline:"预期带动 30 户 114 人", detail:"两份批复均写目标户均增收 2000 元；这里没有证据表明年中发生了目标调整。", doc:"targetInitial24"},
+        {type:"进度表 · 第 61 行", className:"progress", headline:"建设状态：完工", detail:"预算 60 万元，与项目库金额一致；没有披露实际受益人数或实际户均增收。", doc:"progress24"}
+      ],
+      summary: "核验点：项目库同一行的人数栏与目标文字口径不同；项目库户均增收目标 1000 元，批复为 2000 元。要保留原始来源行、目标版本和疑点处理记录。禁止把“完工”直接写成“目标达成”。"
+    },
+    {
+      id: "A-02", short: "清水 · 目标差异", title: "清水村产业桥：项目库与批复目标不同",
+      evidence: [
+        {type:"项目库 · 第 275 行", className:"plan", headline:"35 万；25 户 86 人", detail:"目标户均增收 2000 元。属于项目库的计划或目标口径。", doc:"library24"},
+        {type:"年初绩效批复 · 第 100 行", className:"target", headline:"35 万；18 户 65 人", detail:"目标户均增收 260 元。预算相同，受益对象和增收目标不同。", doc:"targetInitial24"},
+        {type:"进度表 · 第 107 行", className:"progress", headline:"35 万；状态为完工", detail:"进度表列计划开工 2024-05-01、完工 2024-07-30；未给出实际增收。", doc:"progress24"}
+      ],
+      summary: "核验点：同一项目的预期受益户数、人数和户均增收目标存在跨文件差异。系统可以提示并追溯原文；是否经过正式调整，需要审核员另找调整批复。"
+    },
+    {
+      id: "A-03", short: "罗庄 · 资金拆分", title: "罗庄社区种植业：资金来源和建设内容变化",
+      evidence: [
+        {type:"项目库 · 第 5 行", className:"plan", headline:"总预算 100 万；省级 100 万", detail:"建设内容含油料 80 亩、木耳 30 万袋、中药材 165 亩。", doc:"library24"},
+        {type:"年中调整批复 · 第 32 行", className:"target", headline:"100 万；木耳 30 万袋 / 药材 245 亩", detail:"建设内容接近进度表，但批复只列总金额，不列中央、省级分项。", doc:"targetMid24"},
+        {type:"进度表 · 第 26 行", className:"progress", headline:"总预算 100 万；中央 45 + 省级 55", detail:"建设内容写木耳 30 万袋、中药材 245 亩及设施；建设状态“完工”。", doc:"progress24"}
+      ],
+      summary: "核验点：总预算一致；项目库资金构成与进度表不同。年中调整批复可佐证建设内容版本变化，但未解释资金分项。查询应按文件版本比较，不宜覆盖项目库记录。"
+    },
+    {
+      id: "A-04", short: "大寺沟 · 版本", title: "大寺沟村连翘：年中调整版本与进度一致", resolved: true,
+      evidence: [
+        {type:"项目库 · 第 120 行", className:"plan", headline:"30 万元 · 连翘 50 亩", detail:"项目库预计受益 60 人，这是计划值。", doc:"library24"},
+        {type:"年中调整批复 · 第 31 行", className:"target", headline:"45 万元 · 连翘 56 亩", detail:"调整版绩效批复与进度表采用相同的预算和种植面积。", doc:"targetMid24"},
+        {type:"进度表 · 第 25 行", className:"progress", headline:"45 万元 · 连翘 56 亩", detail:"进度表标示“完工”；该状态不表示项目实际支出 45 万元。", doc:"progress24"}
+      ],
+      summary: "版本关系已定位：项目库 30 万 / 50 亩，年中调整批复和进度表均为 45 万 / 56 亩。展示时要分清早期项目库与年中批复；45 万是进度表预算，不能称为实际支付。"
+    },
+    {
+      id: "A-05", short: "常湾 · 内容", title: "常湾村种植业：建设内容及实施单位待核",
+      evidence: [
+        {type:"项目库 · 第 7 行", className:"plan", headline:"油料 300 亩 · 中药材 1700 亩", detail:"预算 120 万元、预计受益 338 人。", doc:"library24"},
+        {type:"年中绩效批复 · 第 28 行", className:"target", headline:"项目名常湾；实施单位出现罗庄", detail:"目标表写“罗庄社区股份经济合作社”，需要核对其是否为合法实施主体或表格口径。", doc:"targetMid24"},
+        {type:"进度表 · 第 22 行", className:"progress", headline:"木耳地栽 40 万袋 · 吊袋 20 万袋", detail:"预算仍为 120 万元，建设状态“完工”，但建设内容明显不同。", doc:"progress24"}
+      ],
+      summary: "核验点：同名项目的建设内容不一致，实施单位字段也需要复核。项目匹配应允许“候选”状态与人工确认，不应只靠项目名称自动合并。"
+    }
+  ];
+
+  const queryExamples = [
+    {
+      title:"找跨文件目标差异",
+      description:"把项目库目标与绩效批复目标按内部项目 ID 和指标名连接，列出同一指标值不一致的项目。需要先确认两份文件的项目匹配关系。",
+      result:"样本结果：金米村木耳种植项目的户均增收目标为项目库 1000 元、绩效批复 2000 元；清水村产业桥的受益户数、人数及户均增收目标跨表不同。金米项目库同一行 114 与 383 的口径差异还需原文规则单独核验。",
+      sql:[
+        "SELECT p.project_name, l.metric_name,",
+        "       l.value AS library_value, t.value AS approved_value,",
+        "       dl.title AS library_document, dt.title AS target_document",
+        "FROM project p",
+        "JOIN target_snapshot l ON l.project_id = p.project_id",
+        "JOIN source_row rl ON rl.row_id = l.row_id",
+        "JOIN source_document dl ON dl.document_id = rl.document_id",
+        "JOIN target_snapshot t ON t.project_id = p.project_id",
+        "  AND t.metric_name = l.metric_name AND t.unit = l.unit",
+        "JOIN source_row rt ON rt.row_id = t.row_id",
+        "JOIN source_document dt ON dt.document_id = rt.document_id",
+        "WHERE dl.document_kind = '项目库'",
+        "  AND dt.document_kind = '绩效目标批复'",
+        "  AND l.value IS DISTINCT FROM t.value;"
+      ].join("\n")
+    },
+    {
+      title:"查预算与资金来源差异",
+      description:"逐项目比较项目库与进度表的总预算，以及中央、省级、自筹等资金分项。资金字段必须带来源版本。",
+      result:"样本结果：罗庄社区种植业项目总预算均为 100 万，但项目库为省级 100 万，进度表为中央 45 万、省级 55 万；大寺沟连翘项目库 30 万，年中调整批复和进度表均为 45 万。",
+      sql:[
+        "WITH ranked AS (",
+        "  SELECT ps.plan_id, ps.project_id, ps.budget_total,",
+        "         d.document_kind,",
+        "         ROW_NUMBER() OVER (",
+        "           PARTITION BY ps.project_id, d.document_kind",
+        "           ORDER BY d.published_at DESC NULLS LAST, ps.plan_id DESC",
+        "         ) AS rn",
+        "  FROM plan_snapshot ps",
+        "  JOIN source_row r ON r.row_id = ps.row_id",
+        "  JOIN source_document d ON d.document_id = r.document_id",
+        "  WHERE d.document_kind IN ('项目库','进度表')",
+        "),",
+        "chosen AS (SELECT * FROM ranked WHERE rn = 1),",
+        "funds AS (",
+        "  SELECT c.project_id, c.document_kind,",
+        "         fs.name AS fund_source, fc.amount",
+        "  FROM chosen c",
+        "  JOIN fund_component fc ON fc.plan_id = c.plan_id",
+        "  JOIN fund_source fs ON fs.fund_source_id = fc.fund_source_id",
+        "  UNION ALL",
+        "  SELECT c.project_id, c.document_kind, '总预算',",
+        "         c.budget_total FROM chosen c",
+        "),",
+        "lib AS (SELECT * FROM funds WHERE document_kind = '项目库'),",
+        "prog AS (SELECT * FROM funds WHERE document_kind = '进度表'),",
+        "paired AS (",
+        "  SELECT project_id FROM lib",
+        "  INTERSECT SELECT project_id FROM prog",
+        ")",
+        "SELECT p.project_name, COALESCE(l.fund_source, g.fund_source)",
+        "       AS fund_source, l.amount AS library_amount,",
+        "       g.amount AS progress_amount",
+        "FROM lib l FULL OUTER JOIN prog g",
+        "  ON l.project_id = g.project_id",
+        " AND l.fund_source = g.fund_source",
+        "JOIN project p ON p.project_id = COALESCE(l.project_id,g.project_id)",
+        "JOIN paired x ON x.project_id = p.project_id",
+        "WHERE l.amount IS DISTINCT FROM g.amount;"
+      ].join("\n")
+    },
+    {
+      title:"查已完工但仍有待核问题",
+      description:"进度表标注“完工”时，核验问题仍可能存在。查询给审核员一个有处理优先级的列表。",
+      result:"样本结果：金米、清水、罗庄、常湾四个已标“完工”的样本仍有待核差异。大寺沟的预算和面积版本变化已有年中调整批复佐证，不列入本查询的待核队列。",
+      sql:[
+        "WITH latest_progress AS (",
+        "  SELECT pr.*, ROW_NUMBER() OVER (",
+        "    PARTITION BY pr.project_id",
+        "    ORDER BY pr.observed_at DESC NULLS LAST,",
+        "             pr.progress_id DESC",
+        "  ) AS rn FROM progress_snapshot pr",
+        ")",
+        "SELECT p.project_name, i.issue_type, i.status,",
+        "       pr.stage, pr.observed_at",
+        "FROM project p",
+        "JOIN latest_progress pr ON pr.project_id = p.project_id",
+        "  AND pr.rn = 1",
+        "JOIN audit_issue i ON i.project_id = p.project_id",
+        "WHERE pr.stage = '完工'",
+        "  AND i.status IN ('待核验','待补充来源')",
+        "ORDER BY pr.observed_at DESC NULLS LAST, p.project_name;"
+      ].join("\n")
+    },
+    {
+      title:"按镇村统计单村项目预算",
+      description:"只汇总项目库的项目明细行，用窗口函数取最新一版。跨多个村的项目不把全额预算重复算到各村，另作县级统计。",
+      result:"本页六条项目库样本合计 585 万元，仅是样本计划预算，不是柞水县全部项目的支出或投资实际值。",
+      sql:[
+        "WITH latest_library AS (",
+        "  SELECT ps.project_id, ps.budget_total,",
+        "         ROW_NUMBER() OVER (",
+        "           PARTITION BY ps.project_id",
+        "           ORDER BY d.published_at DESC NULLS LAST,",
+        "                    ps.plan_id DESC",
+        "         ) AS rn",
+        "  FROM plan_snapshot ps",
+        "  JOIN source_row r ON r.row_id = ps.row_id",
+        "  JOIN source_document d ON d.document_id = r.document_id",
+        "  WHERE d.document_kind = '项目库'",
+        "    AND r.row_type = '项目明细'",
+        "),",
+        "single_village AS (",
+        "  SELECT pr.project_id, MIN(pr.region_id) AS region_id",
+        "  FROM project_region pr",
+        "  JOIN region v ON v.region_id = pr.region_id",
+        "  WHERE pr.relation_type = '实施地点'",
+        "    AND v.region_level = '村/社区'",
+        "  GROUP BY pr.project_id",
+        "  HAVING COUNT(DISTINCT pr.region_id) = 1",
+        ")",
+        "SELECT town.name AS town_name, cat.name AS category,",
+        "       COUNT(*) AS project_count,",
+        "       SUM(ps.budget_total) AS planned_budget_wan",
+        "FROM project p",
+        "JOIN single_village sv ON sv.project_id = p.project_id",
+        "JOIN region village ON village.region_id = sv.region_id",
+        "JOIN region town ON town.region_id = village.parent_id",
+        "JOIN project_category cat ON cat.category_id = p.category_id",
+        "JOIN latest_library ps ON ps.project_id = p.project_id",
+        "  AND ps.rn = 1",
+        "WHERE p.project_year = 2024",
+        "GROUP BY town.name, cat.name",
+        "ORDER BY planned_budget_wan DESC;"
+      ].join("\n")
+    },
+    {
+      title:"找未匹配进度的项目",
+      description:"对已经导入的项目库明细，用 NOT EXISTS 找出当前数据库中没有匹配进度行的项目，作为补录或匹配任务。",
+      result:"样本结果：金米村木耳种植基地综合提升项目（240 万元）在本原型尚未核定进度表对应行。这只说明“样本未匹配”，不能推断项目未开工。",
+      sql:[
+        "WITH library AS (",
+        "  SELECT ps.project_id, ps.budget_total,",
+        "         ROW_NUMBER() OVER (",
+        "           PARTITION BY ps.project_id",
+        "           ORDER BY d.published_at DESC NULLS LAST,",
+        "                    ps.plan_id DESC",
+        "         ) AS rn",
+        "  FROM plan_snapshot ps",
+        "  JOIN source_row r ON r.row_id = ps.row_id",
+        "  JOIN source_document d ON d.document_id = r.document_id",
+        "  WHERE d.document_kind = '项目库'",
+        "    AND r.row_type = '项目明细'",
+        ")",
+        "SELECT p.project_name, lib.budget_total",
+        "FROM project p",
+        "JOIN library lib ON lib.project_id = p.project_id",
+        "  AND lib.rn = 1",
+        "WHERE NOT EXISTS (",
+        "    SELECT 1 FROM progress_snapshot pr",
+        "    WHERE pr.project_id = p.project_id",
+        "  );"
+      ].join("\n")
+    },
+    {
+      title:"目标与实际成效对照",
+      description:"只有正式绩效评价给出实际值，才把实际受益人数与目标人数放在同一张结果表里；建设进度不能代替实际成效。",
+      result:"霍邱县县域屋顶分布式光伏开发项目评价：目标受益 500 人，评价报告写实际 520 人；其中脱贫人口目标 150 人、实际 160 人。此项目是跨县扩展示例，未计入柞水样本预算。",
+      sql:[
+        "SELECT p.project_name, t.metric_name,",
+        "       t.value AS target_value, o.actual_value, t.unit,",
+        "       o.actual_value - t.value AS difference",
+        "FROM project p",
+        "JOIN target_snapshot t ON t.project_id = p.project_id",
+        "JOIN outcome_record o ON o.project_id = p.project_id",
+        " AND o.metric_name = t.metric_name AND o.unit = t.unit",
+        "WHERE p.project_year = 2024",
+        "  AND p.project_name LIKE '%光伏开发%';"
+      ].join("\n")
+    }
+  ];
+
+  const pageNames = {overview:"选题总览",projects:"项目检索",audit:"跨表核验",queries:"分析查询",schema:"关系模型",sources:"数据来源"};
+  let activeAudit = 0;
+  let activeQuery = 0;
+  function el(id){ return document.getElementById(id); }
+  function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+  function sourceLink(key, label){
+    const s = sourceDocs[key];
+    return '<a href="' + esc(s.url) + '" target="_blank" rel="noopener noreferrer">' + esc(label || s.title) + ' ↗</a>';
+  }
+  function showPage(name){
+    if(!pageNames[name]) name = "overview";
+    document.querySelectorAll(".page").forEach(x => x.classList.toggle("active", x.id === name));
+    document.querySelectorAll("[data-page]").forEach(x => x.classList.toggle("active", x.dataset.page === name));
+    el("pageTitle").textContent = pageNames[name];
+    if(location.hash.slice(1) !== name) history.replaceState(null, "", "#" + name);
+    window.scrollTo({top:0,behavior:"instant"});
+  }
+  function renderProjects(){
+    const needle = el("projectSearch").value.trim().toLowerCase();
+    const county = el("projectCounty").value;
+    const type = el("projectType").value;
+    const status = el("projectStatus").value;
+    const list = projects.filter(p =>
+      (!needle || (p.name + p.town + p.village + p.type).toLowerCase().includes(needle)) &&
+      (!county || p.county === county) &&
+      (!type || p.type === type) &&
+      (!status || p.progress === status)
+    );
+    el("projectCount").textContent = "当前显示 " + list.length + " / " + projects.length + " 条人工核对样本；金额单位：万元。";
+    el("projectRows").innerHTML = list.length ? list.map(p =>
+      '<tr><td><strong>' + esc(p.name) + '</strong><div class="muted small">' + esc(p.id + " · " + p.county + " / " + p.town + " / " + p.village) + '</div></td>' +
+      '<td>' + esc(p.type) + '</td><td><span class="money">' + p.budget + '</span> 万</td>' +
+      '<td>' + p.people + ' 人 <span class="muted small">（预计）</span></td>' +
+      '<td><span class="status ' + (p.progress === "完工" ? "" : "gray") + '">' + esc(p.progress) + '</span></td>' +
+      '<td>' + p.rows.length + ' 条来源行' + (p.issueCount ? ' · <span class="status warn">待核差异</span>' : '') + '</td>' +
+      '<td><button class="text-btn" data-detail="' + esc(p.id) + '">查看证据 ↗</button></td></tr>'
+    ).join("") : '<tr><td class="empty" colspan="7">没有符合筛选条件的样本项目。</td></tr>';
+    document.querySelectorAll("[data-detail]").forEach(b => b.addEventListener("click", () => openProject(b.dataset.detail)));
+  }
+  function openProject(id){
+    const p = projects.find(x => x.id === id);
+    if(!p) return;
+    el("dialogEyebrow").textContent = p.id + " · " + p.county + " / " + p.town + " / " + p.village;
+    el("dialogTitle").textContent = p.name;
+    el("dialogContent").innerHTML =
+      '<div class="note warn"><strong>读取提示</strong>' + esc(p.caution) + '</div>' +
+      '<h3>项目库：计划预算与预期</h3><p>' + esc(p.plan) + '</p>' +
+      '<h3>绩效批复：目标版本</h3><p>' + esc(p.target) + '</p>' +
+      '<h3>进度表：建设阶段</h3><p>' + esc(p.progressText) + '</p>' +
+      '<h3>逐行原文</h3>' + p.rows.map(row => '<div class="source-row">' + sourceLink(row[0], row[1] + " · " + sourceDocs[row[0]].title) + '</div>').join("");
+    el("detailDialog").showModal();
+  }
+  function readState(id){
+    try { return localStorage.getItem("832-v2-read-" + id) === "1"; } catch(e) { return false; }
+  }
+  function renderAudit(){
+    const a = audits[activeAudit];
+    el("auditSwitch").innerHTML = audits.map((x,i) =>
+      '<button type="button" class="' + (i===activeAudit ? "active" : "") + '" data-audit="' + i + '">' + esc(x.short) + '</button>'
+    ).join("");
+    el("auditTitle").textContent = a.title;
+    el("auditBoard").innerHTML = a.evidence.map(x =>
+      '<article class="evidence ' + esc(x.className) + '"><div class="type">' + esc(x.type) + '</div><strong>' + esc(x.headline) + '</strong><p>' + esc(x.detail) + '</p>' +
+      sourceLink(x.doc, "查看官方原文") + '</article>'
+    ).join("");
+    el("auditSummary").innerHTML = '<b>数据库需要处理的问题</b>' + esc(a.summary);
+    const isRead = readState(a.id);
+    el("auditStatus").textContent = a.resolved ? (isRead ? "已阅读 · 版本已定位" : "版本已定位") : (isRead ? "已阅读 · 未解决" : "待阅读 · 待核验");
+    el("auditStatus").className = a.resolved ? "status" : "status warn";
+    el("reviewButton").textContent = isRead ? "取消已阅读标记" : "标记为已阅读";
+    document.querySelectorAll("[data-audit]").forEach(b => b.addEventListener("click", () => {
+      activeAudit = Number(b.dataset.audit); renderAudit();
+    }));
+  }
+  function renderQueries(){
+    el("queryList").innerHTML = queryExamples.map((q,i) =>
+      '<button type="button" class="' + (i===activeQuery ? "active" : "") + '" data-query="' + i + '">' +
+      String(i+1).padStart(2,"0") + "　" + esc(q.title) + '</button>'
+    ).join("");
+    const q = queryExamples[activeQuery];
+    el("queryTitle").textContent = q.title;
+    el("queryDescription").textContent = q.description;
+    el("queryResult").innerHTML = '<strong>基于当前样本的示意结果</strong>' + esc(q.result);
+    el("queryCode").textContent = q.sql;
+    document.querySelectorAll("[data-query]").forEach(b => b.addEventListener("click", () => {
+      activeQuery = Number(b.dataset.query); renderQueries();
+    }));
+  }
+  function renderSources(){
+    el("sourceGrid").innerHTML = Object.values(sourceDocs).map(s =>
+      '<article class="source-card"><div class="kind">' + esc(s.kind) + " · " + esc(s.publisher) + '</div>' +
+      '<strong>' + esc(s.title) + '</strong><p>' + esc(s.use) + '</p>' +
+      '<a href="' + esc(s.url) + '" target="_blank" rel="noopener noreferrer">打开公开来源 ↗</a></article>'
+    ).join("");
+  }
+  function init(){
+    const unique = key => [...new Set(projects.map(p => p[key]))];
+    for(const [id,key] of [["projectCounty","county"],["projectType","type"],["projectStatus","progress"]]){
+      el(id).innerHTML += unique(key).map(x => '<option value="' + esc(x) + '">' + esc(x) + '</option>').join("");
+      el(id).addEventListener("change", renderProjects);
+    }
+    el("projectSearch").addEventListener("input", renderProjects);
+    document.querySelectorAll("[data-page]").forEach(b => b.addEventListener("click", () => showPage(b.dataset.page)));
+    document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => showPage(b.dataset.go)));
+    el("reviewButton").addEventListener("click", () => {
+      const id = audits[activeAudit].id;
+      try { localStorage.setItem("832-v2-read-" + id, readState(id) ? "0" : "1"); } catch(e) {}
+      renderAudit();
+    });
+    el("copySql").addEventListener("click", async () => {
+      const b = el("copySql");
+      try { await navigator.clipboard.writeText(queryExamples[activeQuery].sql); b.textContent = "已复制"; }
+      catch(e) { b.textContent = "请选中下方 SQL 复制"; }
+      setTimeout(() => b.textContent = "复制 SQL", 1800);
+    });
+    el("dialogClose").addEventListener("click", () => el("detailDialog").close());
+    el("detailDialog").addEventListener("click", e => { if(e.target === el("detailDialog")) el("detailDialog").close(); });
+    window.addEventListener("hashchange", () => showPage(location.hash.slice(1)));
+    renderProjects(); renderAudit(); renderQueries(); renderSources();
+    showPage(location.hash.slice(1) || "overview");
+    setTimeout(() => window.scrollTo(0,0), 30);
+  }
+  init();
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '0px' }}>
+    <Box style={{ flexDirection: 'row', width: 1280, height: 720 }}>
+        <Box style={{ width: 360, height: 720, background: '#0E3F8C', flexDirection: 'column', justifyContent: 'space-between', padding: 48 }}>
+            <Box style={{ flexDirection: 'column', gap: 10 }}>
+                <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#FFFFFF', letterSpacing: 4 }}>目录</Text>
+                <Text style={{ fontSize: 15, color: '#9DB8DF', fontFamily: 'Times New Roman', letterSpacing: 2 }}>CONTENTS</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 14 }}>
+                <Box style={{ width: 48, height: 2, background: '#3D7BD9' }} />
+                <Text style={{ fontSize: 15, color: '#9DB8DF', lineHeight: 1.7 }}>
+                    全篇 18 页
+                    <br />
+                    建议讲述 10–12 分钟
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ flex: 1, flexDirection: 'column', paddingTop: 76, paddingLeft: 64, paddingRight: 76 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 24, paddingBottom: 18, borderBottom: '1px solid #D6DCE5' }}>
+                <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#E8EFF8', lineHeight: 1 }}>01</Text>
+                <Box style={{ flexDirection: 'column', gap: 6, paddingBottom: 6 }}>
+                    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1A2230' }}>场景与对象</Text>
+                    <Text style={{ fontSize: 17, color: '#4A5568' }}>这个库解决什么问题，四类角色各自看到什么　　P03–P05</Text>
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 24, paddingTop: 30, paddingBottom: 18, borderBottom: '1px solid #D6DCE5' }}>
+                <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#E8EFF8', lineHeight: 1 }}>02</Text>
+                <Box style={{ flexDirection: 'column', gap: 6, paddingBottom: 6 }}>
+                    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1A2230' }}>数据库设计与 E-R</Text>
+                    <Text style={{ fontSize: 17, color: '#4A5568' }}>22 张表分三个域，三条主链，范式取舍　　P06–P10</Text>
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 24, paddingTop: 30, paddingBottom: 18, borderBottom: '1px solid #D6DCE5' }}>
+                <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#E8EFF8', lineHeight: 1 }}>03</Text>
+                <Box style={{ flexDirection: 'column', gap: 6, paddingBottom: 6 }}>
+                    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1A2230' }}>功能实现</Text>
+                    <Text style={{ fontSize: 17, color: '#4A5568' }}>五步状态流转、需求落点、统计与约束　　P11–P15</Text>
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 24, paddingTop: 30 }}>
+                <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#E8EFF8', lineHeight: 1 }}>04</Text>
+                <Box style={{ flexDirection: 'column', gap: 6, paddingBottom: 6 }}>
+                    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#1A2230' }}>进展与边界</Text>
+                    <Text style={{ fontSize: 17, color: '#4A5568' }}>已经能跑什么，明确不做什么　　P16–P17</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

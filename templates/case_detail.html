@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}{{ case['case_id'] }} · 案例详情{% endblock %}
+{% block body %}
+<div class="head-row">
+  <div>
+    <p class="crumb"><a href="{{ url_for('cases') }}">案例</a> / {{ case['case_id'] }}</p>
+    <h1 class="page-title">{{ case['title'] }}</h1>
+    <p class="page-sub">
+      {{ case['province_raw'] }} · {{ case['county_name_raw'] }} ·
+      产业 {{ case['industry'] }} ·
+      <span class="tag s-{{ case['status'] }}">{{ case['status'] }}</span>
+      <span class="tag {{ 'muted' if case['data_kind'] == '课程模拟' else 'ok' }}">{{ case['data_kind'] }}</span>
+    </p>
+  </div>
+  <div class="actions">
+    {% if can_edit %}
+      <a class="btn" href="{{ url_for('case_edit', case_id=case['case_id']) }}">修改</a>
+      <form method="post" action="{{ url_for('case_delete', case_id=case['case_id']) }}" onsubmit="return confirm('确认删除该草稿？')">
+        <button class="btn danger" type="submit">删除草稿</button>
+      </form>
+      <form method="post" action="{{ url_for('case_submit', case_id=case['case_id']) }}">
+        <button class="btn primary" type="submit">提交审核</button>
+      </form>
+    {% endif %}
+    {% if current_user and current_user['role'] in ('reviewer','admin') and case['status'] == '待审核' and case['owner_id'] != current_user['user_id'] %}
+      <form class="inline-form" method="post" action="{{ url_for('case_review', case_id=case['case_id']) }}">
+        <input name="reason" placeholder="审核意见（退回必填）">
+        <button class="btn" name="decision" value="通过">通过</button>
+        <button class="btn danger" name="decision" value="退回">退回</button>
+      </form>
+    {% endif %}
+    {% if current_user and current_user['role'] in ('leader','admin') and case['status'] == '已审核' %}
+      <form method="post" action="{{ url_for('case_publish', case_id=case['case_id']) }}">
+        <button class="btn primary" type="submit">发布</button>
+      </form>
+    {% endif %}
+  </div>
+</div>
+
+<div class="two-col">
+  <section class="card">
+    <h2>说法摘要</h2>
+    <p class="claim">{{ case['claim_summary'] }}</p>
+    <h2>帮扶方式（m:n）</h2>
+    <p>{% for m in mechanisms %}<span class="tag mech">{{ m['name'] }}</span>{% else %}<span class="empty">尚未标注</span>{% endfor %}</p>
+    <p class="hint">同一条案例可挂多种方式，这就是桥表 <code>case_mechanism</code> 的作用。</p>
+  </section>
+
+  <section class="card">
+    <h2>出处摘录（{{ excerpts|length }} 条）</h2>
+    {% if excerpts %}
+      {% for e in excerpts %}
+      <div class="excerpt">
+        <div class="excerpt-head">{{ e['title'] }} · {{ e['locator'] }}</div>
+        <p>{{ e['summary'] }}</p>
+        <a href="{{ e['url'] }}" target="_blank" rel="noopener">核对原文</a>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p class="empty">还没有挂出处。没有出处的说法不能提交审核。</p>
+    {% endif %}
+  </section>
+</div>
+
+<section class="card">
+  <h2>操作记录</h2>
+  {% if history %}
+  <table>
+    <thead><tr><th>时间</th><th>操作人</th><th>动作</th></tr></thead>
+    <tbody>
+    {% for h in history %}<tr><td class="nowrap">{{ h['acted_at'] }}</td><td>{{ h['display_name'] }}</td><td>{{ h['action'] }}</td></tr>{% endfor %}
+    </tbody>
+  </table>
+  {% else %}<p class="empty">暂无记录。</p>{% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,68 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            能跑的已经有，不能跑的说清楚
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 16 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 24, height: 348 }}>
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 4, padding: 20, flexDirection: 'column', background: '#FFFFFF' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                    <Box style={{ paddingTop: 3, paddingBottom: 3, paddingLeft: 12, paddingRight: 12, background: '#E8F5E9', borderRadius: 3 }}>
+                        <Text style={{ fontSize: 14, color: '#2E7D32', fontWeight: 'bold' }}>现在就能点着测</Text>
+                    </Box>
+                    <Text style={{ fontSize: 15, color: '#8B97A8' }}>本地起服务即可复现</Text>
+                </Box>
+                <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.9, marginTop: 12 }}>
+                    · 六角色登录与权限隔离，越权访问返回 404
+                    <br />
+                    · 案例：新建 → 提交 → 退回 → 再提交 → 通过 → 发布
+                    <br />
+                    · 任务：分派、多版本提交、审核、发布、逾期判定
+                    <br />
+                    · 统计：5 组指标全部由真实 SQL 现算
+                    <br />
+                    · 结构：22 表 / 3 视图 / 9 索引 / 1 触发器，外键检查无违规
+                    <br />
+                    · 测试：29 项端到端断言 + 14 项流程断言全部通过
+                </Text>
+            </Box>
+
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 4, padding: 20, flexDirection: 'column', background: '#FFFFFF' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                    <Box style={{ paddingTop: 3, paddingBottom: 3, paddingLeft: 12, paddingRight: 12, background: '#FDECEA', borderRadius: 3 }}>
+                        <Text style={{ fontSize: 14, color: '#D9534F', fontWeight: 'bold' }}>明确没做 / 做不到</Text>
+                    </Box>
+                    <Text style={{ fontSize: 15, color: '#8B97A8' }}>写在报告"已知边界"一节</Text>
+                </Box>
+                <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.9, marginTop: 12 }}>
+                    · 报道正文没入库，所以没有全文检索（需中文分词 + FTS5）
+                    <br />
+                    · 不传文件，材料只登记"标题 + 说明"
+                    <br />
+                    · SQLite 没有 GRANT，权限靠应用层 WHERE 实现
+                    <br />
+                    · 列表最多 200 条，没有分页
+                    <br />
+                    · 表单无 CSRF token，目前只在本地演示
+                    <br />
+                    · 案例只有 6 条，样本量不足以做县域层面推断
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ marginTop: 18, background: '#F0F5FC', borderRadius: 4, paddingTop: 16, paddingBottom: 16, paddingLeft: 22, paddingRight: 22, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#0E3F8C' }}>接下来三件事</Text>
+            <Box style={{ width: 1, height: 30, background: '#C6D8F2' }} />
+            <Text style={{ fontSize: 16, color: '#1A2230', flex: 1 }}>
+                ① 报告正文补齐（含与 AI 协作中的分歧记录）　② 3–5 分钟演示视频　③ 交前加固：密钥外置、加 CSRF、关 debug
+            </Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>17</Text>
+    </Box>
+</Slide>

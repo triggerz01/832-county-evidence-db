@@ -1,0 +1,38 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '0px' }}>
+    <Box style={{ position: 'absolute', top: 0, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ position: 'absolute', top: 0, left: 0, width: 8, height: 720, background: '#0E3F8C' }} />
+
+    <Box style={{ flexDirection: 'column', justifyContent: 'center', width: 1280, height: 720, paddingLeft: 100, paddingRight: 100 }}>
+        <Box style={{ flexDirection: 'column', gap: 22 }}>
+            <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold', letterSpacing: 3 }}>THANKS FOR YOUR TIME</Text>
+            <Text style={{ fontSize: 56, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.25 }}>
+                请老师和同学批评指正
+            </Text>
+            <Box style={{ width: 120, height: 3, background: '#1E4FA8' }} />
+            <Text style={{ fontSize: 20, color: '#4A5568', lineHeight: 1.7, marginTop: 4 }}>
+                下一步补报告正文与演示视频；材料上传、全文检索视时间推进。
+                <br />
+                代码、DDL、建库脚本与 E-R 图都随报告一并提交，可现场运行。
+            </Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', gap: 56, marginTop: 56 }}>
+            <Box style={{ flexDirection: 'column', gap: 4 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1E4FA8' }}>22</Text>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>业务表</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 4 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1E4FA8' }}>297</Text>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>篇真实报道</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 4 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1E4FA8' }}>6</Text>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>条已发布案例</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 4 }}>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1E4FA8' }}>29</Text>
+                <Text style={{ fontSize: 14, color: '#8B97A8' }}>项端到端断言</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

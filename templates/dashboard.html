@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}总览 · 832 证据管理{% endblock %}
+{% block body %}
+<h1 class="page-title">系统总览</h1>
+<p class="page-sub">当前身份：{{ role_names[current_user['role']] if current_user else '公众访问者' }}。下列数字来自 SQLite 实库，按你的可见范围统计。</p>
+
+<div class="grid">
+  <div class="stat"><span class="n">{{ stats.reports }}</span><span class="l">公开报道（篇）</span></div>
+  <div class="stat"><span class="n">{{ stats.counties }}</span><span class="l">县域（个）</span></div>
+  <div class="stat"><span class="n">{{ stats.documents }}</span><span class="l">来源文档（份）</span></div>
+  <div class="stat"><span class="n">{{ stats.cases }}</span><span class="l">可见案例（个）</span></div>
+  <div class="stat"><span class="n">{{ stats.projects }}</span><span class="l">涞水项目（个）</span></div>
+  <div class="stat"><span class="n">{{ stats.locations }}</span><span class="l">实施地点行</span></div>
+  <div class="stat"><span class="n">{{ stats.funding }}</span><span class="l">计划资金（万元）</span></div>
+  <div class="stat"><span class="n">{{ stats.tasks }}</span><span class="l">可见任务（个）</span></div>
+</div>
+
+<div class="two-col">
+  <section class="card">
+    <h2>逾期未交指定材料</h2>
+    {% if overdue %}
+    <table>
+      <thead><tr><th>任务</th><th>县域</th><th>负责人</th><th>应交</th><th>截止</th></tr></thead>
+      <tbody>
+      {% for r in overdue %}
+        <tr>
+          <td><a href="{{ url_for('task_detail', task_id=r['task_id']) }}">{{ r['task_id'] }}</a></td>
+          <td>{{ r['county_name_raw'] }}</td>
+          <td>{{ r['lead_name'] }}</td>
+          <td>{{ r['required_kind'] }}</td>
+          <td class="warn">{{ r['due_at'] }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <p class="hint">判定方式：截止日已过，且不存在“材料类型一致、提交时间不晚于截止日”的提交版本（<code>NOT EXISTS</code>）。</p>
+    {% else %}<p class="empty">没有逾期任务。</p>{% endif %}
+  </section>
+
+  <section class="card">
+    <h2>任务状态分布</h2>
+    <table>
+      <thead><tr><th>状态</th><th>数量</th></tr></thead>
+      <tbody>
+      {% for r in states %}<tr><td>{{ r['state'] }}</td><td>{{ r['n'] }}</td></tr>{% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>
+
+{% if my_tasks %}
+<section class="card">
+  <h2>我负责的任务</h2>
+  <table>
+    <thead><tr><th>任务</th><th>主题</th><th>县域</th><th>状态</th><th>截止</th></tr></thead>
+    <tbody>
+    {% for t in my_tasks %}
+      <tr>
+        <td><a href="{{ url_for('task_detail', task_id=t['task_id']) }}">{{ t['task_id'] }}</a></td>
+        <td>{{ t['topic'] }}</td>
+        <td>{{ t['county_name_raw'] }}</td>
+        <td><span class="tag s-{{ t['state'] }}">{{ t['state'] }}</span></td>
+        <td class="{{ 'warn' if t['due_at'] < today else '' }}">{{ t['due_at'] }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+{% endblock %}

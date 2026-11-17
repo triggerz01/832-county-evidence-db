@@ -1,0 +1,91 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            权限写在 WHERE 里，约束交给数据库自己拦
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 18 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 24, flex: 1 }}>
+            <Box style={{ width: 560, flexDirection: 'column', gap: 12 }}>
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#0E3F8C' }}>一 · 可见范围当条件用</Text>
+                <Box style={{ background: '#0E3F8C', borderRadius: 4, padding: 18, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 13, color: '#9DB8DF', fontFamily: 'Consolas', marginBottom: 8 }}>app.py</Text>
+                    <Text style={{ fontSize: 14, color: '#E8EFF8', fontFamily: 'Consolas', lineHeight: 1.75 }}>
+                        def case_scope():
+                        <br />
+                        　if user is None:　# 未登录访客
+                        <br />
+                        　　return "ic.status = '已发布'", ()
+                        <br />
+                        　if role in ("admin","leader","reviewer"):
+                        <br />
+                        　　return "1 = 1", ()
+                        <br />
+                        　return "(ic.status='已发布' OR ic.owner_id=?)", (uid,)
+                    </Text>
+                </Box>
+                <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.65 }}>
+                    这个条件被拼进每条 SELECT 的 WHERE：看不见的行在数据库层就取不出来，不是先全查回来再用 Python 过滤。
+                </Text>
+                <Box style={{ flex: 1 }} />
+                <Box style={{ background: '#F0F5FC', borderRadius: 4, padding: 14 }}>
+                    <Text style={{ fontSize: 15, color: '#0E3F8C', lineHeight: 1.6 }}>
+                        越权访问返回 404 而不是 403——连"这条存在但你无权"都不告诉对方。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ width: 1, background: '#E5E7EB' }} />
+
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 10 }}>
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#0E3F8C' }}>二 · 数据库自己拦下来的四件事</Text>
+                <Box style={{ flexDirection: 'row', gap: 10, alignItems: 'flex-start', paddingTop: 8, paddingBottom: 8, borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 6, height: 6, background: '#D9534F', marginTop: 9 }} />
+                    <Box style={{ flexDirection: 'column', gap: 3, flex: 1 }}>
+                        <Text style={{ fontSize: 17, color: '#1A2230', fontWeight: 'bold' }}>退回不写理由</Text>
+                        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.5 }}>
+                            review_action 表级 CHECK：decision 为退回时 reason 去空格后必须非空。
+                        </Text>
+                    </Box>
+                </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, alignItems: 'flex-start', paddingTop: 8, paddingBottom: 8, borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 6, height: 6, background: '#D9534F', marginTop: 9 }} />
+                    <Box style={{ flexDirection: 'column', gap: 3, flex: 1 }}>
+                        <Text style={{ fontSize: 17, color: '#1A2230', fontWeight: 'bold' }}>提交人自己审自己</Text>
+                        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.5 }}>
+                            触发器 prevent_self_review 抛 ABORT：submitter cannot review own version。
+                        </Text>
+                    </Box>
+                </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, alignItems: 'flex-start', paddingTop: 8, paddingBottom: 8, borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 6, height: 6, background: '#D9534F', marginTop: 9 }} />
+                    <Box style={{ flexDirection: 'column', gap: 3, flex: 1 }}>
+                        <Text style={{ fontSize: 17, color: '#1A2230', fontWeight: 'bold' }}>一个任务挂两个负责人</Text>
+                        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.5 }}>
+                            部分唯一索引 idx_one_task_lead ... WHERE is_lead = 1，第二个负责人插不进去。
+                        </Text>
+                    </Box>
+                </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, alignItems: 'flex-start', paddingTop: 8, paddingBottom: 8, borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 6, height: 6, background: '#D9534F', marginTop: 9 }} />
+                    <Box style={{ flexDirection: 'column', gap: 3, flex: 1 }}>
+                        <Text style={{ fontSize: 17, color: '#1A2230', fontWeight: 'bold' }}>同一报道里同一人物重复登记</Text>
+                        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.5 }}>
+                            idx_mention_unique(report_id, person_name)，这条是范式分析之后补的。
+                        </Text>
+                    </Box>
+                </Box>
+                <Box style={{ flex: 1 }} />
+                <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6 }}>
+                    测试时用 sqlite3 直接跑违规 SQL，四条全部被拒；<span style={{ fontWeight: 'bold', color: '#0E3F8C' }}>PRAGMA foreign_key_check</span> 返回空。
+                </Text>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>15</Text>
+    </Box>
+</Slide>

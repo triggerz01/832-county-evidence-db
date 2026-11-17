@@ -1,0 +1,37 @@
+# ---- 内部工作文件（不公开）----
+# 助手的工作记忆，属于个人笔记
+.workbuddy/
+# PPT 工具日志
+.slidep/
+
+# ---- 临时产物 ----
+tmp/
+*.log
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# ---- 数据库 ----
+# 测试库可由 make_test_data.py 重新生成，不入库
+832_test_playground.sqlite
+
+# ---- 早期调试用的 DOM 快照与校验脚本 ----
+# 体积大、无长期价值
+v3_dom.html
+v3_check.js
+db_demo_check.js
+
+# ---- 临时预览截图 ----
+# 正式截图在 docs/screenshots/
+preview_*.png
+review_v3_tasks.png
+
+# ---- 系统文件 ----
+.DS_Store
+Thumbs.db
+
+# ---- 工具缓存 ----
+.cache/

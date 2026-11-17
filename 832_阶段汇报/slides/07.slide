@@ -1,0 +1,101 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            22 张表分三个域，一个域回答一类问题
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 18 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 16, height: 92 }}>
+            <Box style={{ flex: 1, background: '#0E3F8C', borderRadius: 4, paddingLeft: 20, paddingTop: 14, flexDirection: 'row', alignItems: 'flex-end' }}>
+                <Text style={{ fontSize: 62, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>22</Text>
+                <Text style={{ fontSize: 17, color: '#C6D8F2', marginLeft: 10, marginBottom: 8 }}>业务表</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F0F5FC', borderRadius: 4, paddingLeft: 20, paddingTop: 14, flexDirection: 'row', alignItems: 'flex-end' }}>
+                <Text style={{ fontSize: 62, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>3</Text>
+                <Text style={{ fontSize: 17, color: '#4A5568', marginLeft: 10, marginBottom: 8 }}>视图</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F0F5FC', borderRadius: 4, paddingLeft: 20, paddingTop: 14, flexDirection: 'row', alignItems: 'flex-end' }}>
+                <Text style={{ fontSize: 62, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>9</Text>
+                <Text style={{ fontSize: 17, color: '#4A5568', marginLeft: 10, marginBottom: 8 }}>索引</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F0F5FC', borderRadius: 4, paddingLeft: 20, paddingTop: 14, flexDirection: 'row', alignItems: 'flex-end' }}>
+                <Text style={{ fontSize: 62, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1 }}>1</Text>
+                <Text style={{ fontSize: 17, color: '#4A5568', marginLeft: 10, marginBottom: 8 }}>触发器</Text>
+            </Box>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', gap: 20, marginTop: 18, height: 336 }}>
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 4, padding: 22, flexDirection: 'column', background: '#FFFFFF' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#0E3F8C' }}>资料与案例域</Text>
+                    <Text style={{ fontSize: 15, color: '#8B97A8' }}>10 表</Text>
+                </Box>
+                <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.7, marginTop: 10 }}>
+                    从"抓到的网页"到"能对外讲的一句说法"，中间每一步都留一条记录。
+                </Text>
+                <Box style={{ flex: 1 }} />
+                <Text style={{ fontSize: 14, color: '#1E4FA8', lineHeight: 1.7, fontFamily: 'Consolas' }}>
+                    county · county_alias
+                    <br />
+                    source_document · public_report · source_excerpt
+                    <br />
+                    person_mention
+                    <br />
+                    industry_case · case_evidence
+                    <br />
+                    mechanism · case_mechanism
+                </Text>
+            </Box>
+
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 4, padding: 22, flexDirection: 'column', background: '#FFFFFF' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#0E3F8C' }}>任务与审核域</Text>
+                    <Text style={{ fontSize: 15, color: '#8B97A8' }}>7 表</Text>
+                </Box>
+                <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.7, marginTop: 10 }}>
+                    谁派给谁、交到第几版、谁审的、结果如何——四个问题四张表。
+                </Text>
+                <Box style={{ flex: 1 }} />
+                <Text style={{ fontSize: 14, color: '#1E4FA8', lineHeight: 1.7, fontFamily: 'Consolas' }}>
+                    team · user_account
+                    <br />
+                    field_task · task_assignment
+                    <br />
+                    deliverable_version · review_action
+                    <br />
+                    audit_log
+                </Text>
+            </Box>
+
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 4, padding: 22, flexDirection: 'column', background: '#FFFFFF' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#0E3F8C' }}>政府项目与核验域</Text>
+                    <Text style={{ fontSize: 15, color: '#8B97A8' }}>5 表</Text>
+                </Box>
+                <Text style={{ fontSize: 18, color: '#4A5568', lineHeight: 1.7, marginTop: 10 }}>
+                    项目计划多少钱、落在哪几个村、金额能不能对上、哪条被标为存疑。
+                </Text>
+                <Box style={{ flex: 1 }} />
+                <Text style={{ fontSize: 14, color: '#1E4FA8', lineHeight: 1.7, fontFamily: 'Consolas' }}>
+                    government_project · project_location
+                    <br />
+                    project_snapshot
+                    <br />
+                    evidence_issue · evidence_issue_source
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ marginTop: 12, background: '#F0F5FC', borderRadius: 4, paddingTop: 14, paddingBottom: 14, paddingLeft: 22, paddingRight: 22 }}>
+            <Text style={{ fontSize: 18, color: '#0E3F8C', lineHeight: 1.5 }}>
+                三个域不是切开的：一条案例能挂到任务上，一份来源文档能同时被报道和案例引用，一个县串起三域的全部记录。
+            </Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>07</Text>
+    </Box>
+</Slide>

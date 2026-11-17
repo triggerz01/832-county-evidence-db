@@ -1,0 +1,3033 @@
+{
+  "dataset_id": "laishui_2024_official_fiscal_linkage_project_plan",
+  "source_documents": [
+    {
+      "id": "xlsx",
+      "title": "涞水县2024年财政衔接资金项目计划清单",
+      "url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "format": "XLSX",
+      "download_bytes": 36476,
+      "sha256": "ad73b31239d2a0141ab247ae9d698a99f94b5c5b0fefe4311b900f32cd9599d0",
+      "local_copy": "E:\\832-statistc\\tmp\\laishui_plan_2024.xlsx"
+    },
+    {
+      "id": "html",
+      "title": "涞水县2024年度财政衔接资金项目计划",
+      "url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "format": "HTML",
+      "sha256": "59df0a364f81a994ab2c12effc088665ffb4a8b44c1f1254a1539899988996c6",
+      "local_copy": "E:\\832-statistc\\tmp\\laishui_plan_2024.html"
+    }
+  ],
+  "validation": {
+    "xlsx_worksheet_name": "Sheet1",
+    "xlsx_physical_rows_including_titles_and_blank_tail": 165,
+    "xlsx_data_rows": 158,
+    "distinct_xlsx_project_numbers": 43,
+    "xlsx_project_number_cells_including_repeats": 51,
+    "html_project_paragraphs": 43,
+    "html_numbering_differs_from_xlsx": true,
+    "html_name_similarity_under_0_8": [
+      {
+        "xlsx_project_no": 11,
+        "html_project_no": 7,
+        "xlsx_name": "2024年养鸡场建设项目",
+        "html_name": "2024年养鸡场建设项目（跨年度项目）",
+        "ratio": 0.774
+      }
+    ],
+    "planned_2024_funding_total_wan": 19518,
+    "government_html_reported_2024_funds_arrived_wan": 19518,
+    "category_summary": {
+      "产业项目": {
+        "project_count": 23,
+        "planned_2024_funding_wan": 11548.386018
+      },
+      "补贴类": {
+        "project_count": 2,
+        "planned_2024_funding_wan": 229
+      },
+      "驻村工作队经费": {
+        "project_count": 2,
+        "planned_2024_funding_wan": 672
+      },
+      "基础设施": {
+        "project_count": 16,
+        "planned_2024_funding_wan": 7068.613982
+      }
+    }
+  },
+  "limitations": [
+    "这是2024年度财政衔接资金项目计划，不是结算、实际产值或实际增收记录。",
+    "这些是涞水县政府公开项目数据；不能仅凭县域重合认定项目由人大832工程资助或调研。",
+    "项目资金字段取XLSX‘安排资金（万元）’列；跨年度项目的该列是2024年度安排，不能当作全周期总投资。",
+    "XLSX按村等实施地点拆行；43个项目对应158个数据行。多个项目的受益人口可能重叠，不能直接相加。",
+    "XLSX和HTML的编号排序不同；本文件通过项目名称、2024安排金额及地点逐项核对后保存两套原编号。",
+    "HTML正文对两个多村项目的村数与XLSX行数不同：太阳能路灯项目13 vs XLSX14；龙门乡-其中口乡道路项目22 vs XLSX23。不能自动判定哪一方正确。",
+    "implementation_location_raw是政府表格原文，不保证每行都是规范行政村；全县/县内、多个村的概括性记录仍须进一步标准化。"
+  ],
+  "projects": [
+    {
+      "project_id": "LS-2024-001",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "涞水农特产品批发市场项目（跨年度项目）",
+      "xlsx_project_name": "涞水农特产品批发市场项目（跨年度实施）",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 3150,
+      "funding_unit": "万元",
+      "xlsx_project_no": 1,
+      "html_project_no": 1,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        4
+      ],
+      "implementation_locations_raw": [
+        "涞水镇北关村"
+      ],
+      "html_project_text_excerpt": "1.涞水农特产品批发市场项目（跨年度项目）。项目总计安排资金10522万元，2024年安排资金3150万元。此项目为跨年度项目，2023年已安排资金7371.912652万元。建设地点在涞水镇北关村（拱辰街北侧、泰安路东侧）。用于建设地上四层、地下一层的展销大厅、核雕及核桃加工车间、销售直播间及配套设施。形成的资产所有权确权到全县284个村集体。按照每年6%的保底回报率收取收益，带动全县284个村，农户125067户322487人，其中脱贫户5892户10945人，防贫监测对象1714户3689人增收。管护权和经营",
+      "first_xlsx_construction_task_excerpt": "此项目为2023年跨年度项目，2024年安排资金3150万元。建设地点在涞水镇北关村（拱辰街北侧、泰安路东侧）,用于建设地上四层、地下一层的展销大厅、核雕及核桃加工车间、销售直播间及配套设施。形成的资产所有权确权到全县284个村集体。按照每年6%的保底回报率收取收益，带动全县284个村，农户125067户322487人；其中脱贫户5892户10945人；防返",
+      "responsible_unit_raw": "农业农村局遒瑞公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "跨年度项目；本字段只记录2024年安排资金，非项目全周期投资。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-002",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "涞水农特产品批发市场建设项目二期（跨年度项目）",
+      "xlsx_project_name": "涞水农特产品批发市场建设项目二期（跨年度实施）",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 1388,
+      "funding_unit": "万元",
+      "xlsx_project_no": 2,
+      "html_project_no": 2,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        5
+      ],
+      "implementation_locations_raw": [
+        "涞水镇北关村"
+      ],
+      "html_project_text_excerpt": "2.涞水农特产品批发市场建设项目二期（跨年度项目）。此项目为跨年度项目，计划总投资5000万元，2024年安排资金1388万元，2025年根据实际情况再行安排。建设地点在涞水镇北关村和东租村（拱辰街北侧、泰安路东侧），项目占地面积约为29.14亩，主要建设商铺和适合核农批发零售的大棚及配套设施，其中商铺建筑面积约4400平方米，大棚面积约6700平方米。形成的资产所有权确权到全县284个村集体。按照每年6%的保底回报率收取收益，带动全县284个村，农户125067户322487人；其中脱贫户5892户10945人；",
+      "first_xlsx_construction_task_excerpt": "此项目为2024年跨年度项目，2024年安排资金1388万元，2025年再行安排。建设地点在涞水镇北关村和东租村（拱辰街北侧、泰安路东侧），建设期限为2024年5月至2025年5月，项目占地面积约为29.14亩，主要建设商铺和适合核农批发零售的大棚及配套实施，其中商铺建筑面积约4400平米，大棚面积约6700平米。形成的资产所有权确权到全县284个村集体。按",
+      "responsible_unit_raw": "农业农村局遒瑞公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "跨年度项目；本字段只记录2024年安排资金，非项目全周期投资。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-003",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "涞水县桑园涧林场黑水寺林区酸枣产业基地建设项目",
+      "xlsx_project_name": "涞水县桑园涧林场黑水寺林区酸枣产业基地建设项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 274,
+      "funding_unit": "万元",
+      "xlsx_project_no": 3,
+      "html_project_no": 3,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        6
+      ],
+      "implementation_locations_raw": [
+        "九龙镇黑水寺林区"
+      ],
+      "html_project_text_excerpt": "3.涞水县桑园涧林场黑水寺林区酸枣产业基地建设项目。建设地点在涞水县国营桑园涧林场黑水寺林区，安排资金274万元，建设产业区围栏3000米，机井一眼、150立方米蓄水池一个及节水灌溉系统配套设施；完成项目区1000亩栽植、浇水与示范区技术管理任务，发展酸枣产业，带动区域经济。带动当地农民110-150人就业增收。（实施单位：自规局）",
+      "first_xlsx_construction_task_excerpt": "设地点在涞水县国营桑园涧林场黑水寺林区，安排资金274万元，建设产业区围栏3000米，机井一眼、150立方米蓄水池一个及节水灌溉系统配套设施；完成项目区1000亩栽植、浇水与示范区技术管理任务，发展酸枣产业，带动区域经济。带动当地农民110-150人就业增收。",
+      "responsible_unit_raw": "自规局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-004",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "自有产业补贴项目",
+      "xlsx_project_name": "自有产业补贴项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 346.8457,
+      "funding_unit": "万元",
+      "xlsx_project_no": 4,
+      "html_project_no": 4,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        7
+      ],
+      "implementation_locations_raw": [
+        "县内"
+      ],
+      "html_project_text_excerpt": "4.自有产业补贴项目。预计使用财政衔接资金346.8457万元。用于脱贫户、防返贫监测对象种植、养殖到户补贴，计划补贴4500余户，年度补贴资金每户不超过1200元，种植业/亩200元-300元、林果业/亩200元-300元、养殖业200-300元/（只、头、羽）。用于提高脱贫户、防返贫监测对象发展种植、养殖积极性。（实施单位：农业农村局）",
+      "first_xlsx_construction_task_excerpt": "安排衔接资金346.8457万元。用于脱贫户、防返贫监测对象种植、养殖到户补贴，计划补贴4500余户，年度补贴资金每户不超过1200元，种植业/亩200元-300元、林果业/亩200元-300元、养殖业200-300元/（只、头、羽）。用于提高脱贫户、防返贫监测对象发展种植、养殖积极性。",
+      "responsible_unit_raw": "农业农村局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-005",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "小额信贷贴息项目",
+      "xlsx_project_name": "小额信贷贴息项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 37.029819,
+      "funding_unit": "万元",
+      "xlsx_project_no": 5,
+      "html_project_no": 5,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        8
+      ],
+      "implementation_locations_raw": [
+        "县内"
+      ],
+      "html_project_text_excerpt": "5.小额信贷贴息项目。安排财政衔接资金37.029819万元，计划用于120户脱贫户、防返贫监测对象发展产业项目的小额信贷贴息，年利率3.85%或4.75%。（实施单位：农业农村局）",
+      "first_xlsx_construction_task_excerpt": "安排财政衔接资金37.029819万元，计划用于120户脱贫户、防返贫监测对象发展产业项目的小额信贷贴息，年利率3.85%或4.75%。",
+      "responsible_unit_raw": "农业农村局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-006",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "产销对接项目",
+      "xlsx_project_name": "产销对接项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 20,
+      "funding_unit": "万元",
+      "xlsx_project_no": 6,
+      "html_project_no": 6,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        9
+      ],
+      "implementation_locations_raw": [
+        "县内"
+      ],
+      "html_project_text_excerpt": "6.产销对接项目。安排财政衔接资金20万元，持续开展消费帮扶活动，通过农产品宣传推介等活动，着力畅通农副产品销售渠道，不断提高我县农特产品知名度，带动农户增收。（实施单位：农业农村局）",
+      "first_xlsx_construction_task_excerpt": "安排财政衔接资金20万元，持续开展消费帮扶活动，通过农产品宣传推介等活动，着力畅通农副产品销售渠道，不断提高我县农特产品知名度，带动农户增收。",
+      "responsible_unit_raw": "农业农村局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-007",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "稳岗就业交通补贴项目",
+      "xlsx_project_name": "稳岗就业交通补贴项目",
+      "category": "补贴类",
+      "planned_2024_funding_wan": 119.5,
+      "funding_unit": "万元",
+      "xlsx_project_no": 7,
+      "html_project_no": 40,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        10
+      ],
+      "implementation_locations_raw": [
+        "县内"
+      ],
+      "html_project_text_excerpt": "40.稳岗就业交通补贴项目。预计使用财政衔接资金119.5万元。对我县约980名脱贫户和防返贫监测对象就业人员给予交通补贴。根据务工地点，按省外、市外省内两个标准给予一次性稳岗就业交通补贴：省外务工的，补贴标准为1000元；市外省内务工的，补贴标准为500元。落实脱贫劳动力稳岗就业交通补贴，提高就业能力，促进就业增收，巩固脱贫成果。（实施单位：人社局）",
+      "first_xlsx_construction_task_excerpt": "预计使用财政衔接资金119.5万元。对我县约980名脱贫户和防返贫监测对象就业人员给予交通补贴。根据务工地点，按省外、市外省内两个标准给予一次性稳岗就业交通补贴：省外务工的，补贴标准为1000元；市外省内务工的，补贴标准为500元。落实脱贫劳动力稳岗就业交通补贴，提高就业能力，促进就业增收，巩固脱贫成果。",
+      "responsible_unit_raw": "人社局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-008",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "雨露计划项目",
+      "xlsx_project_name": "雨露计划项目",
+      "category": "补贴类",
+      "planned_2024_funding_wan": 109.5,
+      "funding_unit": "万元",
+      "xlsx_project_no": 8,
+      "html_project_no": 41,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        11
+      ],
+      "implementation_locations_raw": [
+        "县内"
+      ],
+      "html_project_text_excerpt": "41.雨露计划项目。预计使用财政衔接资金109.5万元。计划对2023年秋季学期和2024年春季学期两个学期接受中高等职业教育的400名脱贫户和防返贫监测对象学生分学期给予相应补助，每生每学期补贴1500元，减轻因学支出压力。（实施单位：农业农村局）",
+      "first_xlsx_construction_task_excerpt": "预计使用财政衔接资金109.5万元。计划对2023年秋季学期和2024年春季学期两个学期接受中高等职业教育的400名脱贫户和防返贫监测对象学生分学期给予相应补助，每生每学期补贴1500元，减轻因学支出压力。",
+      "responsible_unit_raw": "农业农村局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-009",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年县级驻村工作队工作经费",
+      "xlsx_project_name": "2024年县级驻村工作队工作经费",
+      "category": "驻村工作队经费",
+      "planned_2024_funding_wan": 528,
+      "funding_unit": "万元",
+      "xlsx_project_no": 9,
+      "html_project_no": 42,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        12
+      ],
+      "implementation_locations_raw": [
+        "10个乡镇66个脱贫村"
+      ],
+      "html_project_text_excerpt": "42.2024年县级驻村工作队工作经费。安排资金528万元，用于我县山区丘陵10个乡镇66个脱贫村驻村工作队综合经费，每个工作队8万元。（实施单位：农业农村局、相关乡镇政府）",
+      "first_xlsx_construction_task_excerpt": "安排资金528万元，用于我县龙门乡、其中口乡、赵各庄镇、三坡镇、九龙镇、一渡镇、娄村镇、永阳镇、东文山镇、石亭镇等10个乡镇66个脱贫村县级驻村工作队综合经费，每个工作队8万元。",
+      "responsible_unit_raw": "农业农村局相关乡镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-010",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "涞水镇片农业配套设施建设项目（跨年度项目）",
+      "xlsx_project_name": "涞水镇片农业配套设施建设项目（跨年度项目）",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 161.946708,
+      "funding_unit": "万元",
+      "xlsx_project_no": 10,
+      "html_project_no": 36,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        13
+      ],
+      "implementation_locations_raw": [
+        "义安镇南白堡村等8个乡镇28个村"
+      ],
+      "html_project_text_excerpt": "36.涞水镇片农业配套设施建设项目（跨年度项目）。项目总计安排资金161.946708万元，主要用于①建设灌溉排水与节水设施：包含农用井工程、管灌工程与喷灌工程；②农田输配电：架设高压、敷设地埋低压电缆、新建变压器。形成的资产所有权确权到8个镇28个行政村，并负责管护。覆盖农户17693户49622人；其中脱贫户452户937人；防返贫监测对象65户150人，有利于区域内的薄皮核桃产业，文玩核桃产业，白萝卜、土豆、玉米、花生等种植产业增产增收。（实施单位：农业农村局）",
+      "first_xlsx_construction_task_excerpt": "项目总计安排资金1300万元，2024年安排资金161.946708万元。此项目为跨年度项目，2023年已安排资金1074.624403万元，不足部分2024年安排。涉及义安镇南白堡村、北白堡村、栗村，涞水镇西水北村、南涧头村、北关村、城内村、北郭下村、东租、南关，娄村镇西营房村、木井村、燕翎村，东文山镇十里铺村、西车亭、西武山、西长堤、牛各庄，王村镇东王庄",
+      "responsible_unit_raw": "农业农村局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "跨年度项目；本字段只记录2024年安排资金，非项目全周期投资。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-011",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年养鸡场建设项目（跨年度项目）",
+      "xlsx_project_name": "2024年养鸡场建设项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 3500,
+      "funding_unit": "万元",
+      "xlsx_project_no": 11,
+      "html_project_no": 7,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        14
+      ],
+      "implementation_locations_raw": [
+        "永阳镇北七山村"
+      ],
+      "html_project_text_excerpt": "7.2024年养鸡场建设项目（跨年度项目）。建设地点在永阳镇北七山村，计划投入资金4500万元，2024年安排资金3500万元，2025年计划安排1000万元。主要建设高标准肉鸡养殖鸡舍22栋及配套设施。形成的资产所有权确权到永阳镇21个村集体。按照每年5%的保底回报率收取收益，带动全县284个村，农户125067户322487人，其中脱贫户5892户10945人，防贫监测对象1714户3689人增收。管护权和经营权归永阳镇政府。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在永阳镇北七山村，计划投入资金4500万元，2024年安排资金3500万元，2025年计划安排1000万元。主要建设高标准肉鸡养殖鸡舍22栋及配套设施。形成的资产所有权确权到永阳镇21个村集体。按照每年5%的保底回报率收取收益，带动全县284个村，农户125067户322487人，其中脱贫户5892户10945人，防贫监测对象1714户3689人增收",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "跨年度项目；本字段只记录2024年安排资金，非项目全周期投资。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-012",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年设施豆芽及深加工建设项目（跨年度项目）",
+      "xlsx_project_name": "2024年设施豆芽及深加工建设项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 29.3,
+      "funding_unit": "万元",
+      "xlsx_project_no": 12,
+      "html_project_no": 8,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        15
+      ],
+      "implementation_locations_raw": [
+        "明义镇台头村"
+      ],
+      "html_project_text_excerpt": "8.2024年设施豆芽及深加工建设项目（跨年度项目）。建设地点在明义镇台头村，2024年安排资金29.3万元，2025年计划安排资金970.7万元。主要建设豆芽自动化植物工厂，购置育苗床、自动播种收割生产线、恒温设施、蔬菜加工设备等。形成的资产所有权确权到明义镇18个村集体，按照每年6%的保底回报率收取收益，带动全县284个村，农户125067户322487人，其中脱贫户5892户10945人，防贫监测对象1714户3689人增收。管护权和经营权归明义镇政府。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在明义镇台头村，2024年安排资金29.3万元，2025年计划安排资金970.7万元。主要建设豆芽自动化植物工厂，购置育苗床、自动播种收割生产线、恒温设施、蔬菜加工设备等。形成的资产所有权确权到明义镇18个村集体，按照每年6%的保底回报率收取收益，带动全县284个村，农户125067户322487人，其中脱贫户5892户10945人，防贫监测对象17",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "跨年度项目；本字段只记录2024年安排资金，非项目全周期投资。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-013",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "南关村农业机械设备采购项目",
+      "xlsx_project_name": "南关村机械设备采购项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 87.2,
+      "funding_unit": "万元",
+      "xlsx_project_no": 13,
+      "html_project_no": 9,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        16
+      ],
+      "implementation_locations_raw": [
+        "涞水镇南关村"
+      ],
+      "html_project_text_excerpt": "9.南关村农业机械设备采购项目。建设地点在涞水镇南关村，安排资金87.2万元，主要购买茎穗双收收割机、拖拉机、秸秆机、旋耕机、小麦播种机、玉米播种机、凤冷碎枝机等设备。形成的资产所有权确权到南关村集体。按照每年6%的保底回报率收取收益，带动全村1472户5270人增收；其中脱贫户13户38人；防贫监测对象10户28人。管护权和经营权归涞水镇政府。（实施单位：县委统战部、涞水镇政府）",
+      "first_xlsx_construction_task_excerpt": "建设地点在涞水镇南关村，安排资金87.2万元，主要购买茎穗双收收割机、拖拉机、秸秆机、旋耕机、小麦播种机、玉米播种机、凤冷碎枝机等设备。形成的资产所有权确权到南关村集体。按照每年6%的保底回报率收取收益，带动全村1472户5270人增收；其中脱贫户13户38人；防贫监测对象10户28人。管护权和经营权归涞水镇政府。",
+      "responsible_unit_raw": "县委统战部涞水镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-014",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "南关村道路建设项目",
+      "xlsx_project_name": "南关村道路建设",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 46.8,
+      "funding_unit": "万元",
+      "xlsx_project_no": 14,
+      "html_project_no": 24,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        17
+      ],
+      "implementation_locations_raw": [
+        "涞水镇南关村"
+      ],
+      "html_project_text_excerpt": "24.南关村道路建设项目。建设地点在涞水镇南关村，安排资金46.8万元，用于村内铺柏油路，长1000米，宽4米，预计铺设4000平米，方便全村1472户5270人出行，利于南关村产业发展。形成的资产所有权归南关村委会。(实施单位：县委统战部、涞水镇政府）",
+      "first_xlsx_construction_task_excerpt": "建设地点在涞水镇南关村，安排资金46.8万元，用于村内铺柏油路，长1000米，宽4米，预计铺设4000平米，方便全村1472户5270人出行，利于南关村产业发展。形成的资产所有权归南关村委会。",
+      "responsible_unit_raw": "县委统战部涞水镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-015",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年驻村工作队工作经费",
+      "xlsx_project_name": "2024年驻村工作队工作经费",
+      "category": "驻村工作队经费",
+      "planned_2024_funding_wan": 144,
+      "funding_unit": "万元",
+      "xlsx_project_no": 15,
+      "html_project_no": 43,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        18
+      ],
+      "implementation_locations_raw": [
+        "市级驻村工作队"
+      ],
+      "html_project_text_excerpt": "43.2024年驻村工作队工作经费。安排资金144万元，用于18个市级驻村工作队综合经费，每个工作队8万元。（实施单位：农业农村局、相关乡镇政府）",
+      "first_xlsx_construction_task_excerpt": "安排资金144万元，用于18个市级驻村工作队综合经费，每个工作队8万元。",
+      "responsible_unit_raw": "农业农村局相关乡镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-016",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年变压器安装及配套项目",
+      "xlsx_project_name": "2024年变压器安装及配套项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 11,
+      "funding_unit": "万元",
+      "xlsx_project_no": 16,
+      "html_project_no": 35,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        19
+      ],
+      "implementation_locations_raw": [
+        "九龙镇山南村"
+      ],
+      "html_project_text_excerpt": "35.2024年变压器安装及配套项目。建设地点在九龙镇山南村，安排资金11万元，安装200KW变压器及路线配套，解决50户136人生产生活用电，涉及脱贫户5户12人，防贫监测对象3户6人，形成的资产所有权归供电公司。（实施单位：农业农村局、九龙镇政府）",
+      "first_xlsx_construction_task_excerpt": "建设地点在九龙镇山南村，安排资金11万元，安装200KW变压器1台，及路线配套，解决50户136人生产生活用电，涉及脱贫户5户12人，防返贫监测对象3户6人，形成的资产所有权归供电公司。",
+      "responsible_unit_raw": "农业农村局九龙镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-017",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "九龙镇北庄村房屋建设租赁项目",
+      "xlsx_project_name": "九龙镇北庄村房屋建设租赁项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 17,
+      "html_project_no": 10,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        20
+      ],
+      "implementation_locations_raw": [
+        "九龙镇北庄村"
+      ],
+      "html_project_text_excerpt": "10.九龙镇北庄村房屋建设租赁项目。计划总投资117.55万元，其中安排财政衔接资金50万元，自筹金额67.55万元。建设地点在九龙镇北庄村。该项目为翻建集体旧房项目。建筑层数3层，建筑高度9.9m，总建筑面积372 m，建筑工程设计规模为中型，建筑结构形式为框架结构。形成的资产所有权、管护权和经营权归村集体。预计增加村集体年收入10万元，本村169户479人受益，可带动本村就业10人，村民就业直接收入每年可达5万元。（实施单位：农业农村局、九龙镇政府）",
+      "first_xlsx_construction_task_excerpt": "计划总投资117.55万元，其中安排财政衔接资金50万元，自筹金额67.55万元。建设地点在九龙镇北庄村。该项目为翻建集体旧房项目。建筑层数3层，建筑高度9.9m，总建筑面积372m，建筑工程设计规模为中型，建筑结构形式为框架结构。形成的资产所有权、管护权和经营权归北庄村委会。预计增加村集体年收入10万元，村民就业直接收入每年可达5万元。带动本村就业10人，",
+      "responsible_unit_raw": "农业农村局九龙镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-018",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "娄村镇太平庄村特色民宿项目",
+      "xlsx_project_name": "娄村镇太平庄村特色民宿项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 18,
+      "html_project_no": 11,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        21
+      ],
+      "implementation_locations_raw": [
+        "娄村镇太平庄村"
+      ],
+      "html_project_text_excerpt": "11.娄村镇太平庄村特色民宿项目。计划总投资57.65万元，其中安排财政衔接资金50万元，自筹金额7.65万元。为有效盘活闲置资源，壮大村集体经济收入，打造2套宜居民宿，产权归属通过协议的方式明确到村集体，预计增加村集体年收入2万元，村民就业直接收入每年可达10万元，带动其他相关产业30万元。带动本村就业10人，本村75户178人受益。（实施单位：农业农村局、娄村镇政府）",
+      "first_xlsx_construction_task_excerpt": "总投资57.65万元，其中安排财政衔接资金50万元，自筹金额7.65万元。为有效盘活闲置资源，壮大村集体经济收入，打造2套宜居民宿，产权归属通过协议的方式明确到村集体，预计增加村集体年收入2万元，村民就业直接收入每年可达10万元，带动其他相关产业30万元。带动本村就业10人，本村75户178人受益。",
+      "responsible_unit_raw": "农业农村局娄村镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-019",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "三坡镇沙岭西村民宿旅游种植观光项目",
+      "xlsx_project_name": "三坡镇沙岭西村民宿旅游种植观光项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 19,
+      "html_project_no": 12,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        22
+      ],
+      "implementation_locations_raw": [
+        "三坡镇沙岭西村"
+      ],
+      "html_project_text_excerpt": "12.三坡镇沙岭西村民宿旅游种植观光项目。计划总投资56.9万元，其中安排财政衔接资金50万元，自筹金额6.9万元。为有效盘活闲置资源，壮大村集体经济收入，打造3套宜居民宿,产权归属通过协议的方式明确到村集体，预计增加村集体年收入12万元，带动28名农户直接就业年收入3万元。带动本村就业18人，本村202户535人受益。（实施单位：农业农村局、三坡镇政府）",
+      "first_xlsx_construction_task_excerpt": "总投资56.9万元，其中安排财政衔接资金50万元，自筹金额6.9万元。为有效盘活闲置资源，壮大村集体经济收入，打造3套宜居民宿,产权归属通过协议的方式明确到村集体，预计增加村集体年收入12万元，带动28名农户直接就业年收入3万元。带动本村就业18人，本村202户535人受益。",
+      "responsible_unit_raw": "农业农村局三坡镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-020",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "王村镇杨家台村高油酸花生种植设备采购项目",
+      "xlsx_project_name": "王村镇杨家台村高油酸花生种植设备采购项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 20,
+      "html_project_no": 13,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        23
+      ],
+      "implementation_locations_raw": [
+        "王村镇杨台村"
+      ],
+      "html_project_text_excerpt": "13.王村镇杨家台村高油酸花生种植设备采购项目。计划总投资52.94万元，其中安排财政衔接资金50万元，自筹金额2.94万元。购买拖拉机、旋耕机、播种覆膜一体机、花生联合收获机、花生自走式捡拾机、无人扫药机等。形成的资产所有权、管护权和经营权归村集体。年村集体增收10万元，带动农户每亩土地增收500元。带动本村就业5人，本村1000户2200人受益。（实施单位：农业农村局、王村镇政府）",
+      "first_xlsx_construction_task_excerpt": "总投资52.94万元，其中安排财政衔接资金50万元，自筹金额2.94万元。购买拖拉机、旋耕机、播种覆膜一体机、花生联合收获机、花生自走式捡拾机、无人扫药机等。形成的资产所有权、管护权和经营权归村集体。年村集体增收10万元，带动农户每亩土地增收500元。带动本村就业5人，本村1000户2200人受益。",
+      "responsible_unit_raw": "农业农村局王村镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-021",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "其中口乡西角村水产养殖项目",
+      "xlsx_project_name": "其中口乡西角村水产养殖项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 21,
+      "html_project_no": 14,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        24
+      ],
+      "implementation_locations_raw": [
+        "其中口乡西角村"
+      ],
+      "html_project_text_excerpt": "14.其中口乡西角村水产养殖项目。计划总投资55.94万元，其中安排财政衔接资金50万元，自筹金额5.94万元。建设地点在其中口乡西角村。新建高标准养鱼池，购置循环泵、制氧机、水质净化机、水质检测仪、等配套设施。形成的资产所有权、管护权和经营权归村集体。每年村集体增收10万元，带动本村就业20人，本村208户469人受益。（实施单位：农业农村局、其中口乡政府）",
+      "first_xlsx_construction_task_excerpt": "总投资55.94万元，其中安排财政衔接资金50万元，自筹金额5.94万元。建设地点在其中口乡西角村。新建高标准养鱼池，购置循环泵、制氧机、水质净化机、水质检测仪、等配套设施。形成的资产所有权、管护权和经营权归村集体。每年村集体增收10万元，带动本村就业20人，本村208户469人受益。",
+      "responsible_unit_raw": "农业农村局其中口乡政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-022",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "明义镇南秋兰村中药川穹种植农机采购项目",
+      "xlsx_project_name": "明义镇南秋兰村中药川穹种植农机采购项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 22,
+      "html_project_no": 15,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        25
+      ],
+      "implementation_locations_raw": [
+        "明义镇南秋兰村"
+      ],
+      "html_project_text_excerpt": "15.明义镇南秋兰村中药川穹种植农机采购项目。计划总投资51.183万元，其中安排财政衔接资金50万元，自筹金额1.183万元。建设地点在明义镇南秋兰村，购置拖拉机带旋耕机、自走式药材收获机、植保飞防无人机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收6万元，带动本村就业20人，本村30户120人受益。（实施单位：农业农村局、明义镇政府）",
+      "first_xlsx_construction_task_excerpt": "总投资51.183万元，其中安排财政衔接资金50万元，自筹金额1.183万元。建设地点在明义镇南秋兰村，购置拖拉机带旋耕机、自走式药材收获机、植保飞防无人机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收6万元，带动本村就业20人，本村30户120人受益。",
+      "responsible_unit_raw": "农业农村局明义镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-023",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "明义镇樊家台桃园保温大棚项目",
+      "xlsx_project_name": "明义镇樊家台桃园保温大棚项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 23,
+      "html_project_no": 16,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        26
+      ],
+      "implementation_locations_raw": [
+        "明义镇樊家台村"
+      ],
+      "html_project_text_excerpt": "16.明义镇樊家台桃园保温大棚项目。计划总投资58.89万元，其中安排财政衔接资金50万元，自筹金额8.89万元。建设地点在明义镇樊家台村，建设保温大棚。形成的资产所有权、管护权和经营权归村集体。每年村集体增收7万元，带动农户80人每年每人增收2万元。带动本村就业80人，本村50户125人受益。（实施单位：农业农村局、明义镇政府）",
+      "first_xlsx_construction_task_excerpt": "总投资58.89万元，其中安排财政衔接资金50万元，自筹金额8.89万元。建设地点在明义镇樊家台村，建设保温大棚。形成的资产所有权、管护权和经营权归村集体。每年村集体增收7万元，带动农户80人每年每人增收2万元。带动本村就业80人，本村50户125人受益。",
+      "responsible_unit_raw": "农业农村局明义镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-024",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "明义镇三沟子村新建肉鸡养殖大棚项目",
+      "xlsx_project_name": "明义镇三沟子村新建肉鸡养殖大棚项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 24,
+      "html_project_no": 17,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        27
+      ],
+      "implementation_locations_raw": [
+        "明义镇三沟子村"
+      ],
+      "html_project_text_excerpt": "17.明义镇三沟子村新建肉鸡养殖大棚项目。计划总投资149.4万元，其中安排财政衔接资金50万元，自筹金额99.4万元。建设地点在明义镇三沟子村。建设养鸡大棚。形成的资产所有权、管护权和经营权归村集体。每年村集体增收5万元。带动本村就业5人，本村301户1155人受益。（实施单位：农业农村局、明义镇政府）",
+      "first_xlsx_construction_task_excerpt": "总投资149.4万元，其中安排财政衔接资金50万元，自筹金额99.4万元。建设地点在明义镇三沟子村。建设养鸡大棚。形成的资产所有权、管护权和经营权归村集体。每年村集体增收5万元。带动本村就业5人，本村301户1155人受益。",
+      "responsible_unit_raw": "农业农村局明义镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-025",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "东文山镇东长堤村薄皮核桃分拣包装设备采购",
+      "xlsx_project_name": "东文山镇东长堤村薄皮核桃分拣包装设备采购",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 25,
+      "html_project_no": 18,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        28
+      ],
+      "implementation_locations_raw": [
+        "东文山镇东长堤村"
+      ],
+      "html_project_text_excerpt": "18.东文山镇东长堤村薄皮核桃分拣包装设备采购。计划总投资50万元，其中安排财政衔接资金50万元.建设地点在东文山镇东长堤村，购买立式包装工作平台、空压机、冷干机、制氮机、喷码机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收9万元，带动本村就业40人，本村206户569人受益。（实施单位：农业农村局、东文山镇政府）",
+      "first_xlsx_construction_task_excerpt": "总投资50万元，其中安排财政衔接资金50万元.建设地点在东文山镇东长堤村，购买立式包装工作平台、空压机、冷干机、制氮机、喷码机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收9万元，带动本村就业40人，本村206户569人受益。",
+      "responsible_unit_raw": "农业农村局东文山镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-026",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "东文山镇西车亭村农机具采购项目",
+      "xlsx_project_name": "东文山镇西车亭村农机具采购项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "xlsx_project_no": 26,
+      "html_project_no": 19,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        29
+      ],
+      "implementation_locations_raw": [
+        "东文山镇西车亭村"
+      ],
+      "html_project_text_excerpt": "19.东文山镇西车亭村农机具采购项目。计划总投资54.846万元，其中安排财政衔接资金50万元，自筹金额4.846万元。建设地点在东文山镇西车亭村。购买拖拉机、旋耕机、粉碎机、播种机、收获机、无人扫药机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收10万元，带动本村就业60人，本村221户658人受益。（实施单位：农业农村局、东文山镇政府）",
+      "first_xlsx_construction_task_excerpt": "总投资54.846万元，其中安排财政衔接资金50万元，自筹金额4.846万元。建设地点在东文山镇西车亭村。购买拖拉机、旋耕机、粉碎机、播种机、收获机、无人扫药机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收10万元，带动本村就业60人，本村221户658人受益。",
+      "responsible_unit_raw": "农业农村局东文山镇政府",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-027",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "九龙镇道路硬化项目",
+      "xlsx_project_name": "九龙镇道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 587.869297,
+      "funding_unit": "万元",
+      "xlsx_project_no": 27,
+      "html_project_no": 25,
+      "xlsx_physical_row_count": 10,
+      "xlsx_rows": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "implementation_locations_raw": [
+        "九龙镇峨峪村",
+        "九龙镇北庄村",
+        "九龙镇大龙门村",
+        "九龙镇大泽村",
+        "九龙镇黑水寺村",
+        "九龙镇南湖村",
+        "九龙镇南庄村",
+        "九龙镇清泉寺村",
+        "九龙镇山南村",
+        "九龙镇镇厂村"
+      ],
+      "html_project_text_excerpt": "25.九龙镇道路硬化项目。建设地点涉及九龙镇10个村，安排资金587.869297万元，用于10个村新建和修复村内道路，方便2272户5770人出行，涉及脱贫户305户491人，防贫监测对象61户105人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在九龙镇峨峪村，安排资金39.470135万元，新建18cm水泥路面长1000m，宽3m，共计3000平米，方便全村319户780人出行，其中脱贫户22户31人，防返贫监测对象20户32人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-028",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "赵各庄镇道路硬化项目",
+      "xlsx_project_name": "赵各庄镇道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 908.676629,
+      "funding_unit": "万元",
+      "xlsx_project_no": 28,
+      "html_project_no": 26,
+      "xlsx_physical_row_count": 10,
+      "xlsx_rows": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "implementation_locations_raw": [
+        "赵各庄镇小丰口村",
+        "赵各庄镇下明峪村",
+        "赵各庄镇白涧村",
+        "赵各庄镇李各庄村",
+        "赵各庄镇南峪港村",
+        "赵各庄镇赵各庄村",
+        "赵各庄镇平峪村",
+        "赵各庄镇郭家峪村",
+        "赵各庄镇板城村",
+        "赵各庄镇菩萨峪村"
+      ],
+      "html_project_text_excerpt": "26.赵各庄镇道路硬化项目。建设地点涉及赵各庄镇10个村，安排资金908.676629万元，用于10个村新建和修复村内道路，方便4690户11388人出行，涉及脱贫户439户778人，防贫监测对象148户303人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在赵各庄镇小丰口村，安排资金78.128873万元。上庄村的通村路和通户路，长10000米，宽2米，硬化20000平米。方便全村602户1558人出行，其中脱贫户39户56人，防返贫监测对象16户26人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-029",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年度太阳能路灯安装项目",
+      "xlsx_project_name": "2024年度太阳能路灯安装项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 175.596,
+      "funding_unit": "万元",
+      "xlsx_project_no": 29,
+      "html_project_no": 34,
+      "xlsx_physical_row_count": 14,
+      "xlsx_rows": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "implementation_locations_raw": [
+        "明义镇丁家洼村",
+        "胡家庄乡西武泉村",
+        "胡家庄乡富位村",
+        "胡家庄乡南汝河村",
+        "九龙镇南庄村",
+        "九龙镇山南村",
+        "九龙镇太平村",
+        "九龙镇杏黄村",
+        "义安镇北白堡村",
+        "义安镇北郑各庄村",
+        "义安镇温辛庄村",
+        "义安镇南庄村",
+        "赵各庄镇福山口村",
+        "永阳镇南庞村"
+      ],
+      "html_project_text_excerpt": "34.2024年度太阳能路灯安装项目。建设地点涉及九龙镇4个村、赵各庄镇1个村、义安镇3个村、永阳镇1个村、明义镇1个村、胡家庄乡3个村，安排资金175.596万元，用于13个村太阳能路灯安装，方便5723户15688人夜间出行，涉及脱贫户275户488人，防贫监测对象77户164人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在明义镇丁家洼村，安排资金11.673960万元。村内太阳能路灯安装52盏。方便全417户1153人出行，其中脱贫户15户26人，防返贫监测对象5户9人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。",
+        "XLSX有14个不同实施地点；HTML正文的项目34写13个村，来源间数量不一致，按原文保留。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-030",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "三坡镇道路硬化项目",
+      "xlsx_project_name": "三坡镇道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 673.430594,
+      "funding_unit": "万元",
+      "xlsx_project_no": 30,
+      "html_project_no": 27,
+      "xlsx_physical_row_count": 5,
+      "xlsx_rows": [
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "implementation_locations_raw": [
+        "三坡镇南峪村",
+        "三坡镇都衙村",
+        "三坡镇上庄村",
+        "三坡镇下庄村",
+        "三坡镇马各庄村"
+      ],
+      "html_project_text_excerpt": "27.三坡镇道路硬化项目。建设地点涉及三坡镇5个村，安排资金673.430594万元，用于5个村新建和修复村内道路，方便2088户5456人出行，涉及脱贫户110户191人，防贫监测对象71户156人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在三坡镇南峪村，安排资金39.123314万元。新建16cm水泥路面长200m，宽6m，共计1200平米。方便全村283户682人出行，其中脱贫户35户54人，防返贫监测对象11户22人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-031",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "龙门乡-其中口乡道路硬化项目",
+      "xlsx_project_name": "龙门乡-其中口乡道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 590.351216,
+      "funding_unit": "万元",
+      "xlsx_project_no": 31,
+      "html_project_no": 28,
+      "xlsx_physical_row_count": 23,
+      "xlsx_rows": [
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "implementation_locations_raw": [
+        "龙门乡苇家峪村",
+        "龙门乡庄尔上村",
+        "龙门乡黄各庄村",
+        "龙门乡下港村",
+        "龙门乡偏道子村",
+        "龙门乡万泉庄村",
+        "龙门乡大台村",
+        "龙门乡店上村",
+        "龙门乡野孤村",
+        "龙门乡庄窠村",
+        "龙门乡牌角村",
+        "龙门乡蛟龙口村",
+        "龙门乡四家井村",
+        "龙门乡九集庄村",
+        "龙门乡赵家地村",
+        "其中口乡西交界口村",
+        "其中口乡西角村",
+        "其中口乡泡尔上村",
+        "其中口乡东河山村",
+        "其中口乡安子沟村",
+        "其中口乡金水口村",
+        "其中口乡安妥岭村",
+        "其中口乡南款村"
+      ],
+      "html_project_text_excerpt": "28.龙门乡-其中口乡道路硬化项目。建设地点涉及龙门乡15个村、其中口乡8个村，安排资金590.351216万元，用于22个村新建和修复村内道路，方便4656户7276人出行，涉及脱贫户326户535人，防贫监测对象131户253人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在龙门乡苇家峪村，安排资金27.864334万元。路长700米，宽3.5米，计2450平米。方便全村97户201人出行，其中脱贫户7户13人，防返贫监测对象3户4人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。",
+        "XLSX有23个不同实施地点；HTML正文的项目28写22个村，来源间数量不一致，按原文保留。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-032",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "涞水镇-明义镇-胡家庄乡道路硬化项目",
+      "xlsx_project_name": "涞水镇-明义镇-胡家庄乡道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 687.542767,
+      "funding_unit": "万元",
+      "xlsx_project_no": 32,
+      "html_project_no": 29,
+      "xlsx_physical_row_count": 18,
+      "xlsx_rows": [
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "implementation_locations_raw": [
+        "明义镇北封村",
+        "明义镇南封村",
+        "明义镇丁家洼村",
+        "明义镇西明义村",
+        "胡家庄乡东文泉村",
+        "胡家庄乡富位村",
+        "胡家庄乡南辛庄村",
+        "涞水镇魏村",
+        "涞水镇北郭下村",
+        "涞水镇南郭下村",
+        "涞水镇南王庄村",
+        "涞水镇南涧头村",
+        "涞水镇南关村",
+        "涞水镇西南租村",
+        "涞水镇薛家庄村",
+        "涞水镇北瓦宅村",
+        "涞水镇北关村",
+        "涞水镇东关村"
+      ],
+      "html_project_text_excerpt": "29.涞水镇-明义镇-胡家庄乡道路硬化项目。建设地点涉及涞水镇11个村、明义镇4个村、胡家庄乡3个村，安排资金687.542767万元，用于18个村新建和修复村内道路，方便10553户33527人出行，涉及脱贫户214户448人，防贫监测对象90户210人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在明义镇北封村，安排资金7.097859万元。连通学校村内道路硬化16cm水泥路，长170米，宽3米，总计510平米。方便全247户617人出行，其中脱贫户10户18人，防返贫监测对象1户2人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-033",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "一渡镇-石亭镇道路硬化项目",
+      "xlsx_project_name": "一渡镇-石亭镇道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 477.903242,
+      "funding_unit": "万元",
+      "xlsx_project_no": 33,
+      "html_project_no": 32,
+      "xlsx_physical_row_count": 5,
+      "xlsx_rows": [
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "implementation_locations_raw": [
+        "一渡镇龙安村",
+        "石亭镇许家磨村",
+        "石亭镇曲家磨村",
+        "石亭镇上庄村",
+        "石亭镇东赤土村"
+      ],
+      "html_project_text_excerpt": "32.一渡镇-石亭镇道路硬化项目。建设地点涉及石亭镇4个村、一渡镇1个村，安排资金477.903242万元，用于5个村新建和修复村内道路，方便3094户5419人出行，涉及脱贫户106户218人，防贫监测对象32户67人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在一渡镇龙安村，安排资金103.827142万元。改建东下坎道路配套排水渠700米，波纹管DN300。并恢复原路面1000平米。厚度16厘米。方便全1029户2517人出行，其中脱贫户67户148人，防返贫监测对象23户48人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-034",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "娄村镇-东文山镇-永阳镇道路硬化项目",
+      "xlsx_project_name": "娄村镇-东文山镇-永阳镇道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 697.461377,
+      "funding_unit": "万元",
+      "xlsx_project_no": 34,
+      "html_project_no": 31,
+      "xlsx_physical_row_count": 13,
+      "xlsx_rows": [
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ],
+      "implementation_locations_raw": [
+        "娄村镇燕翎村",
+        "娄村镇虎过庄村",
+        "娄村镇南安庄村",
+        "娄村镇车厂村",
+        "东文山镇下车亭村",
+        "东文山镇杜家庄村",
+        "东文山镇北西租村",
+        "东文山镇南兵上村",
+        "东文山镇上车亭村",
+        "永阳镇北七山村",
+        "永阳镇北洛平村",
+        "永阳镇周家庄村",
+        "永阳镇北秋兰村"
+      ],
+      "html_project_text_excerpt": "31.娄村镇-东文山镇-永阳镇道路硬化项目。建设地点涉及娄村镇4个村、东文山镇5个村、永阳镇4个村，安排资金697.461377万元，用于13个村新建和修复村内道路，方便7212户21485人出行，涉及脱贫户276户570人，防贫监测对象71户176人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在娄村镇燕翎村，安排资金30.644538万元。大队西街300米x6米x18厘米，挡墙长100米，高60公分，方量360m³。方便全667户1792人出行，其中脱贫户6户22人，防返贫监测对象16户30人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-035",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "义安镇-王村镇道路硬化项目",
+      "xlsx_project_name": "义安镇-王村镇道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 535.152224,
+      "funding_unit": "万元",
+      "xlsx_project_no": 35,
+      "html_project_no": 30,
+      "xlsx_physical_row_count": 17,
+      "xlsx_rows": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144
+      ],
+      "implementation_locations_raw": [
+        "王村镇杨家台村",
+        "王村镇孔村",
+        "王村镇戴家庄村",
+        "王村镇北辛庄村",
+        "义安镇庄疃村",
+        "义安镇栗村",
+        "义安镇南义安村",
+        "义安镇下庄村",
+        "义安镇聂村",
+        "义安镇南白堡村",
+        "义安镇李皇甫村",
+        "义安镇南郑各庄村",
+        "义安镇西义安村",
+        "义安镇史姑庄村",
+        "义安镇北高洛村",
+        "义安镇东义合庄村",
+        "义安镇南庄村"
+      ],
+      "html_project_text_excerpt": "30.义安镇-王村镇道路硬化项目。建设地点涉及义安镇13个村、王村镇4个村，安排资金535.152224万元，用于17个村新建和修复村内道路，方便8227户25414人出行，涉及脱贫户276户526人，防贫监测对象65户132人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在王村镇杨家台村，安排资金68.106454万元。共五条道路，道路1路长447米，路宽3.3米、道路2路长456米，路宽平均为5米，道路3路长546米，路宽5米，道路4路长360米，路宽2.4米。共计6531平方。方便全257户660人出行，其中脱贫户7户10人，防返贫监测对象3户8人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-036",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年度水利项目",
+      "xlsx_project_name": "2024年度水利项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 795.959928,
+      "funding_unit": "万元",
+      "xlsx_project_no": 36,
+      "html_project_no": 33,
+      "xlsx_physical_row_count": 10,
+      "xlsx_rows": [
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154
+      ],
+      "implementation_locations_raw": [
+        "九龙镇北庄村",
+        "九龙镇山南村",
+        "九龙镇太平村",
+        "九龙镇镇厂村",
+        "其中口乡西交界口村",
+        "其中口乡西角村",
+        "三坡镇刘家河村",
+        "三坡镇松树口村",
+        "东文山镇淮河村",
+        "东文山镇东车亭村"
+      ],
+      "html_project_text_excerpt": "33.2024年度水利项目。建设地点涉及九龙镇4个村、三坡镇2个村、东文山镇2个村、其中口乡2个村，安排资金795.959928万元，用于10个村机井配套、水渠、拦水坝、蓄水池和输水管道等水利设施建设，用于4598户11444人种植灌溉，涉及脱贫户460户784人，防贫监测对象190户377人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在九龙镇北庄村，安排资金106.809706万元。新建2000m水泥混凝土40*40cm水渠，壁厚20cm。方便全175户483人出行，其中脱贫户17户26人，防返贫监测对象1户4人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": [
+        "XLSX按实施地点分行；项目资金是这些行的和。"
+      ]
+    },
+    {
+      "project_id": "LS-2024-037",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年涞水县南汝河养鸡大棚建设项目",
+      "xlsx_project_name": "2024年涞水县南汝河养鸡大棚建设项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 102.945688,
+      "funding_unit": "万元",
+      "xlsx_project_no": 37,
+      "html_project_no": 20,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        155
+      ],
+      "implementation_locations_raw": [
+        "胡家庄乡南汝河村"
+      ],
+      "html_project_text_excerpt": "20.2024年涞水县南汝河养鸡大棚建设项目。建设地点在胡家庄乡南汝河村，安排资金102.945688万元，主要建设一栋鸡舍及配套设备，形成的资产所有权确权到南汝河村集体，按照每年5%的保底回报率收取收益，带动全村275户651人增收，其中脱贫户11户20人，防贫监测对象4户7人。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在胡家庄乡南汝河村，安排资金102.945688万元，主要建设一栋鸡舍及配套设备，形成的资产所有权确权到南汝河村集体，按照每年5%的保底回报率收取收益，带动全村带动全村275户651人增收，其中脱贫户11户20人，防贫监测对象4户7人。",
+      "responsible_unit_raw": "农业农村局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-038",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "涞水县镇厂村集体资产收益项目",
+      "xlsx_project_name": "涞水县镇厂村集体资产收益项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 46.758587,
+      "funding_unit": "万元",
+      "xlsx_project_no": 38,
+      "html_project_no": 21,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        156
+      ],
+      "implementation_locations_raw": [
+        "九龙镇镇厂村"
+      ],
+      "html_project_text_excerpt": "21.涞水县镇厂村集体资产收益项目。建设地点在九龙镇镇厂村，安排资金46.758587万元，利用村集体建设用地新建房屋600平米，不足部分村集体自筹，建成后对外出租经营，形成的资产所有权确权到镇厂村集体，带动全村120户300人增收，其中脱贫户28户49人；防贫监测对象4户11人。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在九龙镇镇厂村，安排资金46.758587万元，利用村集体建设用地新建房屋600平米，不足部分村集体自筹，建成后对外出租经营，形成的资产所有权确权到镇厂村集体，带动全村120户300人增收，其中脱贫户28户49人；防贫监测对象4户11人。",
+      "responsible_unit_raw": "农业农村局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-039",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年马各庄茶厂设备采购项目",
+      "xlsx_project_name": "2024年马各庄茶厂设备采购项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 48.2,
+      "funding_unit": "万元",
+      "xlsx_project_no": 39,
+      "html_project_no": 22,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        157
+      ],
+      "implementation_locations_raw": [
+        "三坡镇马各庄村"
+      ],
+      "html_project_text_excerpt": "22.2024年马各庄茶厂设备采购项目。建设地点在三坡镇马各庄村，安排资金48.2万元，用于茶厂设备采购，形成的资产所有权确权到马各庄村集体，按照每年6%的保底回报率收取收益，带动全村496户1496人增收，其中脱贫户11户24人；防贫监测对象8户16人。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在三坡镇马各庄村，安排资金48.2万元，用于茶厂设备采购，形成的资产所有权确权到马各庄村集体，按照每年6%的保底回报率收取收益，带动全村496户1496人增收，其中脱贫户11户24人；防贫监测对象8户16人。",
+      "responsible_unit_raw": "农业农村局",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-040",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年涞水县明义镇道路硬化项目",
+      "xlsx_project_name": "2024年涞水县明义镇道路硬化项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 340.074,
+      "funding_unit": "万元",
+      "xlsx_project_no": 40,
+      "html_project_no": 37,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        158
+      ],
+      "implementation_locations_raw": [
+        "南秋兰村、杨家庄村、北封村、冀家沟村、樊家台村、台头村、西明义村、丁家洼村、西官庄村"
+      ],
+      "html_project_text_excerpt": "37.2024年涞水县明义镇道路硬化项目。建设地点涉及明义镇9个村，安排资金340.074万元，用于新建和修复村内道路，方便3748户9749人出行，涉及脱贫户127户238人，防返贫监测对象32户68人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点涉及明义镇9个村，安排资金340.074万元，用于新建和修复村内道路，方便3748户9749人出行，涉及脱贫户127户238人，防返贫监测对象32户68人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-041",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年涞水县一渡镇龙安村桥梁建设项目",
+      "xlsx_project_name": "2024年涞水县一渡镇龙安村桥梁建设项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 248.34,
+      "funding_unit": "万元",
+      "xlsx_project_no": 41,
+      "html_project_no": 38,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        159
+      ],
+      "implementation_locations_raw": [
+        "一渡镇龙安村"
+      ],
+      "html_project_text_excerpt": "38.2024年涞水县一渡镇龙安村桥梁建设项目。建设地点在一渡镇龙安村，安排资金248.34万元，用于重建龙安沟桥梁1座，方便820户2150人出行，涉及脱贫户67户148人，防返贫监测对象22户46人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在一渡镇龙安村，安排资金248.34万元，用于重建龙安沟桥梁1座，方便820户2150人出行，涉及脱贫户67户148人，防返贫监测对象22户46人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-042",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年涞水县三坡镇邢各庄水利灌溉设施建设项目",
+      "xlsx_project_name": "2024年涞水县邢各庄水利灌溉设施建设项目",
+      "category": "基础设施",
+      "planned_2024_funding_wan": 130.51,
+      "funding_unit": "万元",
+      "xlsx_project_no": 42,
+      "html_project_no": 39,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        160
+      ],
+      "implementation_locations_raw": [
+        "三坡镇邢各庄村"
+      ],
+      "html_project_text_excerpt": "39.2024年涞水县三坡镇邢各庄水利灌溉设施建设项目。建设地点在三坡镇邢各庄村，安排资金130.51万元，用于村内水利灌溉设施建设，用于全村112户382人种植灌溉，涉及脱贫户22户34人，防返贫监测对象4户6人，形成的资产所有权归村集体。（实施单位：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "建设地点在三坡镇邢各庄村，安排资金130.51万元，用于村内水利灌溉设施建设，用于全村112户382人种植灌溉，涉及脱贫户22户34人，防返贫监测对象4户6人，形成的资产所有权归村集体。",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    },
+    {
+      "project_id": "LS-2024-043",
+      "county": "涞水县",
+      "plan_year": 2024,
+      "project_name": "2024年资产收益项目",
+      "xlsx_project_name": "2024年资产收益项目",
+      "category": "产业项目",
+      "planned_2024_funding_wan": 2018.106224,
+      "funding_unit": "万元",
+      "xlsx_project_no": 43,
+      "html_project_no": 23,
+      "xlsx_physical_row_count": 1,
+      "xlsx_rows": [
+        161
+      ],
+      "implementation_locations_raw": [
+        "义安镇"
+      ],
+      "html_project_text_excerpt": "23.2024年资产收益项目。依托河北中农农业科技有限公司实施资产收益项目，计划投入资金2018.106224万元，企业提供相应资产进行抵押，财政投入资金形成可物化资产，自收到资金之日起一周年后，其中1962.106224万元按照每年5%的保底回报率收取收益，带动全县284个村125067户322487人增收，其中脱贫户5892户10945人，防贫监测对象1714户3689人；56万元按照每年5%的保底回报率收取收益，带动赵各庄镇安北小区脱贫户和防贫监测对象增收。（实施主体：农业农村局、涞水丰瑞农业发展有限公司）",
+      "first_xlsx_construction_task_excerpt": "依托河北中农农业科技有限公司实施资产收益项目，计划投入资金2018.106224万元，企业提供相应资产进行抵押，财政投入资金形成可物化资产，自收到资金之日起一周年后，其中1962.106224万元按照每年5%的保底回报率收取收益，带动全县284个村125067户322487人增收，其中脱贫户5892户10945人，防贫监测对象1714户3689人；56万元按",
+      "responsible_unit_raw": "农业农村局涞水丰瑞农业发展有限公司",
+      "html_amount_text_confirmed": true,
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx",
+      "source_page_url": "https://www.laishui.gov.cn/index.php?a=show&c=index&catid=118&id=16947&m=content",
+      "notes": []
+    }
+  ],
+  "project_location_rows": [
+    {
+      "project_id": "LS-2024-001",
+      "xlsx_project_no": 1,
+      "xlsx_row": 4,
+      "implementation_location_raw": "涞水镇北关村",
+      "planned_2024_funding_wan": 3150,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "此项目为2023年跨年度项目，2024年安排资金3150万元。建设地点在涞水镇北关村（拱辰街北侧、泰安路东侧）,用于建设地上四层、地下一层的展销大厅、核雕及核桃加工车间、销售直播间及配套设施。形成的资产所有权确权到全县284个村集体。按照每年6%的保底回报率收取收益，带动全县284个村，农户125067户322487人；其中脱贫户5892户10945人；防返",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-002",
+      "xlsx_project_no": 2,
+      "xlsx_row": 5,
+      "implementation_location_raw": "涞水镇北关村",
+      "planned_2024_funding_wan": 1388,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "此项目为2024年跨年度项目，2024年安排资金1388万元，2025年再行安排。建设地点在涞水镇北关村和东租村（拱辰街北侧、泰安路东侧），建设期限为2024年5月至2025年5月，项目占地面积约为29.14亩，主要建设商铺和适合核农批发零售的大棚及配套实施，其中商铺建筑面积约4400平米，大棚面积约6700平米。形成的资产所有权确权到全县284个村集体。按",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-003",
+      "xlsx_project_no": 3,
+      "xlsx_row": 6,
+      "implementation_location_raw": "九龙镇黑水寺林区",
+      "planned_2024_funding_wan": 274,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "设地点在涞水县国营桑园涧林场黑水寺林区，安排资金274万元，建设产业区围栏3000米，机井一眼、150立方米蓄水池一个及节水灌溉系统配套设施；完成项目区1000亩栽植、浇水与示范区技术管理任务，发展酸枣产业，带动区域经济。带动当地农民110-150人就业增收。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-004",
+      "xlsx_project_no": 4,
+      "xlsx_row": 7,
+      "implementation_location_raw": "县内",
+      "planned_2024_funding_wan": 346.8457,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "安排衔接资金346.8457万元。用于脱贫户、防返贫监测对象种植、养殖到户补贴，计划补贴4500余户，年度补贴资金每户不超过1200元，种植业/亩200元-300元、林果业/亩200元-300元、养殖业200-300元/（只、头、羽）。用于提高脱贫户、防返贫监测对象发展种植、养殖积极性。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-005",
+      "xlsx_project_no": 5,
+      "xlsx_row": 8,
+      "implementation_location_raw": "县内",
+      "planned_2024_funding_wan": 37.029819,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "安排财政衔接资金37.029819万元，计划用于120户脱贫户、防返贫监测对象发展产业项目的小额信贷贴息，年利率3.85%或4.75%。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-006",
+      "xlsx_project_no": 6,
+      "xlsx_row": 9,
+      "implementation_location_raw": "县内",
+      "planned_2024_funding_wan": 20,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "安排财政衔接资金20万元，持续开展消费帮扶活动，通过农产品宣传推介等活动，着力畅通农副产品销售渠道，不断提高我县农特产品知名度，带动农户增收。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-007",
+      "xlsx_project_no": 7,
+      "xlsx_row": 10,
+      "implementation_location_raw": "县内",
+      "planned_2024_funding_wan": 119.5,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "预计使用财政衔接资金119.5万元。对我县约980名脱贫户和防返贫监测对象就业人员给予交通补贴。根据务工地点，按省外、市外省内两个标准给予一次性稳岗就业交通补贴：省外务工的，补贴标准为1000元；市外省内务工的，补贴标准为500元。落实脱贫劳动力稳岗就业交通补贴，提高就业能力，促进就业增收，巩固脱贫成果。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-008",
+      "xlsx_project_no": 8,
+      "xlsx_row": 11,
+      "implementation_location_raw": "县内",
+      "planned_2024_funding_wan": 109.5,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "预计使用财政衔接资金109.5万元。计划对2023年秋季学期和2024年春季学期两个学期接受中高等职业教育的400名脱贫户和防返贫监测对象学生分学期给予相应补助，每生每学期补贴1500元，减轻因学支出压力。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-009",
+      "xlsx_project_no": 9,
+      "xlsx_row": 12,
+      "implementation_location_raw": "10个乡镇66个脱贫村",
+      "planned_2024_funding_wan": 528,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "安排资金528万元，用于我县龙门乡、其中口乡、赵各庄镇、三坡镇、九龙镇、一渡镇、娄村镇、永阳镇、东文山镇、石亭镇等10个乡镇66个脱贫村县级驻村工作队综合经费，每个工作队8万元。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-010",
+      "xlsx_project_no": 10,
+      "xlsx_row": 13,
+      "implementation_location_raw": "义安镇南白堡村等8个乡镇28个村",
+      "planned_2024_funding_wan": 161.946708,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "项目总计安排资金1300万元，2024年安排资金161.946708万元。此项目为跨年度项目，2023年已安排资金1074.624403万元，不足部分2024年安排。涉及义安镇南白堡村、北白堡村、栗村，涞水镇西水北村、南涧头村、北关村、城内村、北郭下村、东租、南关，娄村镇西营房村、木井村、燕翎村，东文山镇十里铺村、西车亭、西武山、西长堤、牛各庄，王村镇东王庄",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-011",
+      "xlsx_project_no": 11,
+      "xlsx_row": 14,
+      "implementation_location_raw": "永阳镇北七山村",
+      "planned_2024_funding_wan": 3500,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在永阳镇北七山村，计划投入资金4500万元，2024年安排资金3500万元，2025年计划安排1000万元。主要建设高标准肉鸡养殖鸡舍22栋及配套设施。形成的资产所有权确权到永阳镇21个村集体。按照每年5%的保底回报率收取收益，带动全县284个村，农户125067户322487人，其中脱贫户5892户10945人，防贫监测对象1714户3689人增收",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-012",
+      "xlsx_project_no": 12,
+      "xlsx_row": 15,
+      "implementation_location_raw": "明义镇台头村",
+      "planned_2024_funding_wan": 29.3,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在明义镇台头村，2024年安排资金29.3万元，2025年计划安排资金970.7万元。主要建设豆芽自动化植物工厂，购置育苗床、自动播种收割生产线、恒温设施、蔬菜加工设备等。形成的资产所有权确权到明义镇18个村集体，按照每年6%的保底回报率收取收益，带动全县284个村，农户125067户322487人，其中脱贫户5892户10945人，防贫监测对象17",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-013",
+      "xlsx_project_no": 13,
+      "xlsx_row": 16,
+      "implementation_location_raw": "涞水镇南关村",
+      "planned_2024_funding_wan": 87.2,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇南关村，安排资金87.2万元，主要购买茎穗双收收割机、拖拉机、秸秆机、旋耕机、小麦播种机、玉米播种机、凤冷碎枝机等设备。形成的资产所有权确权到南关村集体。按照每年6%的保底回报率收取收益，带动全村1472户5270人增收；其中脱贫户13户38人；防贫监测对象10户28人。管护权和经营权归涞水镇政府。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-014",
+      "xlsx_project_no": 14,
+      "xlsx_row": 17,
+      "implementation_location_raw": "涞水镇南关村",
+      "planned_2024_funding_wan": 46.8,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇南关村，安排资金46.8万元，用于村内铺柏油路，长1000米，宽4米，预计铺设4000平米，方便全村1472户5270人出行，利于南关村产业发展。形成的资产所有权归南关村委会。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-015",
+      "xlsx_project_no": 15,
+      "xlsx_row": 18,
+      "implementation_location_raw": "市级驻村工作队",
+      "planned_2024_funding_wan": 144,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "安排资金144万元，用于18个市级驻村工作队综合经费，每个工作队8万元。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-016",
+      "xlsx_project_no": 16,
+      "xlsx_row": 19,
+      "implementation_location_raw": "九龙镇山南村",
+      "planned_2024_funding_wan": 11,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇山南村，安排资金11万元，安装200KW变压器1台，及路线配套，解决50户136人生产生活用电，涉及脱贫户5户12人，防返贫监测对象3户6人，形成的资产所有权归供电公司。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-017",
+      "xlsx_project_no": 17,
+      "xlsx_row": 20,
+      "implementation_location_raw": "九龙镇北庄村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "计划总投资117.55万元，其中安排财政衔接资金50万元，自筹金额67.55万元。建设地点在九龙镇北庄村。该项目为翻建集体旧房项目。建筑层数3层，建筑高度9.9m，总建筑面积372m，建筑工程设计规模为中型，建筑结构形式为框架结构。形成的资产所有权、管护权和经营权归北庄村委会。预计增加村集体年收入10万元，村民就业直接收入每年可达5万元。带动本村就业10人，",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-018",
+      "xlsx_project_no": 18,
+      "xlsx_row": 21,
+      "implementation_location_raw": "娄村镇太平庄村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资57.65万元，其中安排财政衔接资金50万元，自筹金额7.65万元。为有效盘活闲置资源，壮大村集体经济收入，打造2套宜居民宿，产权归属通过协议的方式明确到村集体，预计增加村集体年收入2万元，村民就业直接收入每年可达10万元，带动其他相关产业30万元。带动本村就业10人，本村75户178人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-019",
+      "xlsx_project_no": 19,
+      "xlsx_row": 22,
+      "implementation_location_raw": "三坡镇沙岭西村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资56.9万元，其中安排财政衔接资金50万元，自筹金额6.9万元。为有效盘活闲置资源，壮大村集体经济收入，打造3套宜居民宿,产权归属通过协议的方式明确到村集体，预计增加村集体年收入12万元，带动28名农户直接就业年收入3万元。带动本村就业18人，本村202户535人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-020",
+      "xlsx_project_no": 20,
+      "xlsx_row": 23,
+      "implementation_location_raw": "王村镇杨台村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资52.94万元，其中安排财政衔接资金50万元，自筹金额2.94万元。购买拖拉机、旋耕机、播种覆膜一体机、花生联合收获机、花生自走式捡拾机、无人扫药机等。形成的资产所有权、管护权和经营权归村集体。年村集体增收10万元，带动农户每亩土地增收500元。带动本村就业5人，本村1000户2200人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-021",
+      "xlsx_project_no": 21,
+      "xlsx_row": 24,
+      "implementation_location_raw": "其中口乡西角村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资55.94万元，其中安排财政衔接资金50万元，自筹金额5.94万元。建设地点在其中口乡西角村。新建高标准养鱼池，购置循环泵、制氧机、水质净化机、水质检测仪、等配套设施。形成的资产所有权、管护权和经营权归村集体。每年村集体增收10万元，带动本村就业20人，本村208户469人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-022",
+      "xlsx_project_no": 22,
+      "xlsx_row": 25,
+      "implementation_location_raw": "明义镇南秋兰村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资51.183万元，其中安排财政衔接资金50万元，自筹金额1.183万元。建设地点在明义镇南秋兰村，购置拖拉机带旋耕机、自走式药材收获机、植保飞防无人机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收6万元，带动本村就业20人，本村30户120人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-023",
+      "xlsx_project_no": 23,
+      "xlsx_row": 26,
+      "implementation_location_raw": "明义镇樊家台村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资58.89万元，其中安排财政衔接资金50万元，自筹金额8.89万元。建设地点在明义镇樊家台村，建设保温大棚。形成的资产所有权、管护权和经营权归村集体。每年村集体增收7万元，带动农户80人每年每人增收2万元。带动本村就业80人，本村50户125人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-024",
+      "xlsx_project_no": 24,
+      "xlsx_row": 27,
+      "implementation_location_raw": "明义镇三沟子村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资149.4万元，其中安排财政衔接资金50万元，自筹金额99.4万元。建设地点在明义镇三沟子村。建设养鸡大棚。形成的资产所有权、管护权和经营权归村集体。每年村集体增收5万元。带动本村就业5人，本村301户1155人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-025",
+      "xlsx_project_no": 25,
+      "xlsx_row": 28,
+      "implementation_location_raw": "东文山镇东长堤村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资50万元，其中安排财政衔接资金50万元.建设地点在东文山镇东长堤村，购买立式包装工作平台、空压机、冷干机、制氮机、喷码机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收9万元，带动本村就业40人，本村206户569人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-026",
+      "xlsx_project_no": 26,
+      "xlsx_row": 29,
+      "implementation_location_raw": "东文山镇西车亭村",
+      "planned_2024_funding_wan": 50,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "总投资54.846万元，其中安排财政衔接资金50万元，自筹金额4.846万元。建设地点在东文山镇西车亭村。购买拖拉机、旋耕机、粉碎机、播种机、收获机、无人扫药机等。形成的资产所有权、管护权和经营权归村集体。每年村集体增收10万元，带动本村就业60人，本村221户658人受益。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 30,
+      "implementation_location_raw": "九龙镇峨峪村",
+      "planned_2024_funding_wan": 39.470135,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇峨峪村，安排资金39.470135万元，新建18cm水泥路面长1000m，宽3m，共计3000平米，方便全村319户780人出行，其中脱贫户22户31人，防返贫监测对象20户32人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 31,
+      "implementation_location_raw": "九龙镇北庄村",
+      "planned_2024_funding_wan": 45.799058,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇北庄村，安排资金45.799058万元，修复长400m宽8m，铣刨挖补旧路后铺筑5cm沥青面层。共计3200平米。方便全村175户483人出行，其中脱贫户17户26人，防返贫监测对象1户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 32,
+      "implementation_location_raw": "九龙镇大龙门村",
+      "planned_2024_funding_wan": 26.013175,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇大龙门村，安排资金26.013175万元，新建条石路面长70m，宽5m，共计350平米。新建18cm水泥路面长100m，宽4.5m，共计450平米。方便全村122户303人出行，其中脱贫户13户19人，防返贫监测对象1户1人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 33,
+      "implementation_location_raw": "九龙镇大泽村",
+      "planned_2024_funding_wan": 50.354285,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇大泽村，安排资金50.354285万元，新建路面长800m，宽3m，共计2400平米。方便全村172户400人出行，其中脱贫户21户32人，防返贫监测对象9户15人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 34,
+      "implementation_location_raw": "九龙镇黑水寺村",
+      "planned_2024_funding_wan": 88.803706,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇黑水寺村，安排资金88.803706万元，河道浆砌片石挡土墙长800m，高3.5米，共计2688方。方便全村287户874人出行，其中脱贫户34户53人，防返贫监测对象9户13人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 35,
+      "implementation_location_raw": "九龙镇南湖村",
+      "planned_2024_funding_wan": 27.404121,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇南湖村，安排资金27.404121万元，村内新建16cm水泥路面，长1000m，宽2.5m，共计2500平米。方便全村123户352人出行，其中脱贫户43户83人，防返贫监测对象2户3人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 36,
+      "implementation_location_raw": "九龙镇南庄村",
+      "planned_2024_funding_wan": 89.537766,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇南庄村，安排资金89.537766万元，新建3-1.5m涵洞3道，2-1.5m涵洞2道，新建16cm水泥路面250m，宽度5m，共计1250平米。涵洞两侧护坡300m，高2.5米，共计浆砌片石406方。方便全村126户370人出行，其中脱贫户11户18人，防返贫监测对象3户5人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 37,
+      "implementation_location_raw": "九龙镇清泉寺村",
+      "planned_2024_funding_wan": 36.369027,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇清泉寺村，安排资金36.369027万元，拆除新建浆砌片石挡土墙长300m高3.5m，共计1008方。方便全村148户425人出行，其中脱贫户32户56人，防返贫监测对象4户7人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 38,
+      "implementation_location_raw": "九龙镇山南村",
+      "planned_2024_funding_wan": 66.707354,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇山南村，安排资金66.707354万元，片石混凝土防水墙，长100，高3m，共计259方。方便全村600户1353人出行，其中脱贫户84户124人，防返贫监测对象9户15人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-027",
+      "xlsx_project_no": 27,
+      "xlsx_row": 39,
+      "implementation_location_raw": "九龙镇镇厂村",
+      "planned_2024_funding_wan": 117.41067,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇镇厂村，安排资金117.410670万元。河道浆砌片石挡土墙长650m，高3.5米，共计2184方。方便全村200户530人出行，其中脱贫户28户49人，防返贫监测对象3户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 40,
+      "implementation_location_raw": "赵各庄镇小丰口村",
+      "planned_2024_funding_wan": 78.128873,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇小丰口村，安排资金78.128873万元。上庄村的通村路和通户路，长10000米，宽2米，硬化20000平米。方便全村602户1558人出行，其中脱贫户39户56人，防返贫监测对象16户26人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 41,
+      "implementation_location_raw": "赵各庄镇下明峪村",
+      "planned_2024_funding_wan": 210.84522,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇下明峪村，安排资金210.845220万元。村西道路1500米3米宽，村东道路1200米3.5米宽，村北1000米4米宽、挡土墙4.5米高，62米长，合计265立方米；3.5米高937米长，合计2530立方米；3.5米高，长44米，合计120立方米。方便全村342户763人出行，其中脱贫户53户94人，防返贫监测对象18户41人，形成的资产",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 42,
+      "implementation_location_raw": "赵各庄镇白涧村",
+      "planned_2024_funding_wan": 49.211917,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇白涧村，安排资金49.211917万元。预计2000米长，宽3米，共计6000平方米。方便全村617户1810人出行，其中脱贫户74户125人，防返贫监测对象19户43人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 43,
+      "implementation_location_raw": "赵各庄镇李各庄村",
+      "planned_2024_funding_wan": 32.974545,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇李各庄村，安排资金32.974545万元。4米宽，2000米长，8000平方米硬化路。方便全村568户1580人出行，其中脱贫户149户272人，防返贫监测对象52户96人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 44,
+      "implementation_location_raw": "赵各庄镇南峪港村",
+      "planned_2024_funding_wan": 90.9574,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇南峪港村，安排资金90.957400万元。长1300米，宽5米，沥青路面挖补罩面4cm沥青面。方便全村119户306人出行，其中脱贫户10户18人，防返贫监测对象3户8人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 45,
+      "implementation_location_raw": "赵各庄镇赵各庄村",
+      "planned_2024_funding_wan": 46.116449,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇赵各庄村，安排资金46.116449万元。挡墙高8米，长120米，共计1870立方米。方便全村1234户2409人出行，其中脱贫户21户34人，防返贫监测对象14户24人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 46,
+      "implementation_location_raw": "赵各庄镇平峪村",
+      "planned_2024_funding_wan": 96.463246,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇平峪村，安排资金96.463246万元。宽3米*长2500米，面积7500平方米。方便全村238户572人出行，其中脱贫户9户11人，防返贫监测对象3户6人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 47,
+      "implementation_location_raw": "赵各庄镇郭家峪村",
+      "planned_2024_funding_wan": 146.417281,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇郭家峪村，安排资金146.417281万元。5座道路桥涵，3座1-8m、2座1-10m小桥，3米宽。方便全村102户301人出行，其中脱贫户21户47人，防返贫监测对象7户23人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 48,
+      "implementation_location_raw": "赵各庄镇板城村",
+      "planned_2024_funding_wan": 69.667205,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇板城村，安排资金69.667205万元。长2085米，宽3米，硬化面积6250平方米。方便全村743户1794人出行，其中脱贫户22户30人，防返贫监测对象9户19人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-028",
+      "xlsx_project_no": 28,
+      "xlsx_row": 49,
+      "implementation_location_raw": "赵各庄镇菩萨峪村",
+      "planned_2024_funding_wan": 87.894493,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇菩萨峪村，安排资金87.894493万元。长120米，宽10米，硬化720平方米。方便全村125户295人出行，其中脱贫户41户91人，防返贫监测对象7户17人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 50,
+      "implementation_location_raw": "明义镇丁家洼村",
+      "planned_2024_funding_wan": 11.67396,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在明义镇丁家洼村，安排资金11.673960万元。村内太阳能路灯安装52盏。方便全417户1153人出行，其中脱贫户15户26人，防返贫监测对象5户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 51,
+      "implementation_location_raw": "胡家庄乡西武泉村",
+      "planned_2024_funding_wan": 21.888703,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在胡家庄乡西武泉村，安排资金21.888703万元。村内太阳能路灯安装100盏。方便全320户858人出行，其中脱贫户4户13人，防返贫监测对象5户14人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 52,
+      "implementation_location_raw": "胡家庄乡富位村",
+      "planned_2024_funding_wan": 14.835673,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在胡家庄乡富位村，安排资金14.835673万元。村内太阳能路灯安装66盏。方便全1484户3864人出行，其中脱贫户25户54人，防返贫监测对象19户43人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 53,
+      "implementation_location_raw": "胡家庄乡南汝河村",
+      "planned_2024_funding_wan": 21.888703,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在胡家庄乡南汝河村，安排资金21.888703万元。村内太阳能路灯安装100盏。方便全422户1157人出行，其中脱贫户11户20人，防返贫监测对象4户7人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 54,
+      "implementation_location_raw": "九龙镇南庄村",
+      "planned_2024_funding_wan": 17.510956,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇南庄村，安排资金17.510956万元。维修路灯80盏。方便全126户370人出行，其中脱贫户11户18人，防返贫监测对象3户5人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 55,
+      "implementation_location_raw": "九龙镇山南村",
+      "planned_2024_funding_wan": 10.944347,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇山南村，安排资金10.944347万元。村内太阳能路灯安装50盏。方便全600户1353人出行，其中脱贫户84户124人，防返贫监测对象9户15人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 56,
+      "implementation_location_raw": "九龙镇太平村",
+      "planned_2024_funding_wan": 4.620948,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇太平村，安排资金4.620948万元。村内太阳能路灯安装20盏。方便全366户836人出行，其中脱贫户47户84人，防返贫监测对象7户12人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 57,
+      "implementation_location_raw": "九龙镇杏黄村",
+      "planned_2024_funding_wan": 15.565305,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇杏黄村，安排资金15.565305万元。村内太阳能路灯安装70盏。方便全160户417人出行，其中脱贫户28户46人，防返贫监测对象4户5人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 58,
+      "implementation_location_raw": "义安镇北白堡村",
+      "planned_2024_funding_wan": 17.510956,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇北白堡村，安排资金17.510956万元。村内太阳能路灯安装80盏。方便全425户1678人出行，其中脱贫户13户34人，防返贫监测对象4户14人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 59,
+      "implementation_location_raw": "义安镇北郑各庄村",
+      "planned_2024_funding_wan": 4.864154,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇北郑各庄村，安排资金4.864154万元。村内太阳能路灯安装22盏。方便全97户357人出行，其中脱贫户7户14人，防返贫监测对象3户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 60,
+      "implementation_location_raw": "义安镇温辛庄村",
+      "planned_2024_funding_wan": 10.457938,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇温辛庄村，安排资金10.457938万元。村内太阳能路灯安装48盏。方便全450户986人出行，其中脱贫户7户11人，防返贫监测对象0户0人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 61,
+      "implementation_location_raw": "义安镇南庄村",
+      "planned_2024_funding_wan": 4.620949,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇南庄村，安排资金4.620949万元。村内太阳能路灯安装20盏。方便全136户523人出行，其中脱贫户1户2人，防返贫监测对象2户5人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 62,
+      "implementation_location_raw": "赵各庄镇福山口村",
+      "planned_2024_funding_wan": 8.269061,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在赵各庄镇福山口村，安排资金8.269061万元。村内太阳能路灯安装36盏。方便全445户1060人出行，其中脱贫户8户10人，防返贫监测对象8户21人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-029",
+      "xlsx_project_no": 29,
+      "xlsx_row": 63,
+      "implementation_location_raw": "永阳镇南庞村",
+      "planned_2024_funding_wan": 10.944347,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在永阳镇南庞村，安排资金10.944347万元。村内太阳能路灯安装50盏。方便全275户1076人出行，其中脱贫户14户32人，防返贫监测对象4户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-030",
+      "xlsx_project_no": 30,
+      "xlsx_row": 64,
+      "implementation_location_raw": "三坡镇南峪村",
+      "planned_2024_funding_wan": 39.123314,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇南峪村，安排资金39.123314万元。新建16cm水泥路面长200m，宽6m，共计1200平米。方便全村283户682人出行，其中脱贫户35户54人，防返贫监测对象11户22人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-030",
+      "xlsx_project_no": 30,
+      "xlsx_row": 65,
+      "implementation_location_raw": "三坡镇都衙村",
+      "planned_2024_funding_wan": 144.335083,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇都衙村，安排资金144.335083万元。新建16cm水泥路面长3500m，宽5m。共计17500平米。方便全村414户1162人出行，其中脱贫户41户75人，防返贫监测对象19户47人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-030",
+      "xlsx_project_no": 30,
+      "xlsx_row": 66,
+      "implementation_location_raw": "三坡镇上庄村",
+      "planned_2024_funding_wan": 29.587554,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇上庄村，安排资金29.587554万元。新建16cm水泥路面长500m，宽5m。共计2500平米。方便全村252户628人出行，其中脱贫户8户10人，防返贫监测对象13户25人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-030",
+      "xlsx_project_no": 30,
+      "xlsx_row": 67,
+      "implementation_location_raw": "三坡镇下庄村",
+      "planned_2024_funding_wan": 40.037436,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇下庄村，安排资金40.037436万元。新建16cm水泥路面共计100平米。新建片石混凝土挡土墙长120m，全高3m，共计311方。方便全村574户1499人出行，其中脱贫户15户28人，防返贫监测对象18户42人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-030",
+      "xlsx_project_no": 30,
+      "xlsx_row": 68,
+      "implementation_location_raw": "三坡镇马各庄村",
+      "planned_2024_funding_wan": 420.347207,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇马各庄村，安排资金420.347207万元。新建16cm水泥路面长900m，宽5m，共计4500平米。方便全村565户1485人出行，其中脱贫户11户24人，防返贫监测对象10户20人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 69,
+      "implementation_location_raw": "龙门乡苇家峪村",
+      "planned_2024_funding_wan": 27.864334,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡苇家峪村，安排资金27.864334万元。路长700米，宽3.5米，计2450平米。方便全村97户201人出行，其中脱贫户7户13人，防返贫监测对象3户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 70,
+      "implementation_location_raw": "龙门乡庄尔上村",
+      "planned_2024_funding_wan": 32.123591,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡庄尔上村，安排资金32.123591万元。村内挡墙389立方米。方便全村180户410人出行，其中脱贫户23户27人，防返贫监测对象9户17人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 71,
+      "implementation_location_raw": "龙门乡黄各庄村",
+      "planned_2024_funding_wan": 60.430888,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡黄各庄村，安排资金60.430888万元。村内挡墙长240米，高3.5米，325立方米，路面460平米。方便全村330户870人出行，其中脱贫户37户57人，防返贫监测对象4户11人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 72,
+      "implementation_location_raw": "龙门乡下港村",
+      "planned_2024_funding_wan": 11.611241,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡下港村，安排资金11.611241万元。八字墙修复两侧18立方米，4米高；村内路面2150平米。方便全村135户345人出行，其中脱贫户20户35人，防返贫监测对象2户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 73,
+      "implementation_location_raw": "龙门乡偏道子村",
+      "planned_2024_funding_wan": 31.702593,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡偏道子村，安排资金31.702593万元。道路40米长，3米宽，120平米，挡墙3米高100米长，3.5米宽，270立方。方便全村202户456人出行，其中脱贫户16户31人，防返贫监测对象5户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 74,
+      "implementation_location_raw": "龙门乡万泉庄村",
+      "planned_2024_funding_wan": 1.16211,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡万泉庄村，安排资金1.16211万元。中心庄过水道路，长100米，3米宽，300平米。方便全村106户267人出行，其中脱贫户12户22人，防返贫监测对象4户8人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 75,
+      "implementation_location_raw": "龙门乡大台村",
+      "planned_2024_funding_wan": 13.904322,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡大台村，安排资金13.904322万元。60米挡墙高7米740立方米。方便全村202户456人出行，其中脱贫户16户31人，防返贫监测对象5户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 76,
+      "implementation_location_raw": "龙门乡店上村",
+      "planned_2024_funding_wan": 28.996889,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡店上村，安排资金28.996889万元。长760米.宽3米；2280平米。方便全村260户641人出行，其中脱贫户22户36人，防返贫监测对象5户12人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 77,
+      "implementation_location_raw": "龙门乡野孤村",
+      "planned_2024_funding_wan": 36.840993,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡野孤村，安排资金36.840993万元。护堤坝长13+13+22米，高3米，顶宽2米，底宽5米，共计650立方米。方便全村319户7796人出行，其中脱贫户25户43人，防返贫监测对象12户24人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 78,
+      "implementation_location_raw": "龙门乡庄窠村",
+      "planned_2024_funding_wan": 21.506639,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡庄窠村，安排资金21.506639万元。110米*4米宽2米档墙880方。方便全村71户176人出行，其中脱贫户12户16人，防返贫监测对象4户5人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 79,
+      "implementation_location_raw": "龙门乡牌角村",
+      "planned_2024_funding_wan": 56.549951,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡牌角村，安排资金56.549951万元。村内道路3米宽*长1000米3000平米；村内挡墙840立方。方便全村127户331人出行，其中脱贫户18户28人，防返贫监测对象6户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 80,
+      "implementation_location_raw": "龙门乡蛟龙口村",
+      "planned_2024_funding_wan": 47.3016,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡蛟龙口村，安排资金47.3016万元。村内连庄路硬化长400米、宽4米.面积1600平方米。方便全村133户363人出行，其中脱贫户18户29人，防返贫监测对象8户15人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 81,
+      "implementation_location_raw": "龙门乡四家井村",
+      "planned_2024_funding_wan": 29.809828,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡四家井村，安排资金29.809828万元。修复路基砌墙518方。方便全村312户795人出行，其中脱贫户43户66人，防返贫监测对象2户8人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 82,
+      "implementation_location_raw": "龙门乡九集庄村",
+      "planned_2024_funding_wan": 6.93536,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡九集庄村，安排资金6.93536万元。道路桥涵3座，挡墙210立方米。方便全村144户330人出行，其中脱贫户26户48人，防返贫监测对象4户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 83,
+      "implementation_location_raw": "龙门乡赵家地村",
+      "planned_2024_funding_wan": 6.975123,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在龙门乡赵家地村，安排资金6.975123万元。方便全村144户330人出行，其中脱贫户26户48人，防返贫监测对象4户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 84,
+      "implementation_location_raw": "其中口乡西交界口村",
+      "planned_2024_funding_wan": 26.658847,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡西交界口村，安排资金26.658847万元。3.5米宽850米水泥路面，面积2975。方便全村103户237人出行，其中脱贫户11户15人，防返贫监测对象6户11人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 85,
+      "implementation_location_raw": "其中口乡西角村",
+      "planned_2024_funding_wan": 20.422083,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡西角村，安排资金20.422083万元。新建村内路600米长、宽3.5米，面积2100。方便全村208户490人出行，其中脱贫户12户20人，防返贫监测对象30户56人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 86,
+      "implementation_location_raw": "其中口乡泡尔上村",
+      "planned_2024_funding_wan": 17.413392,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡泡尔上村，安排资金17.413392万元。村内道路硬化2000平米（宽4米长500米）。方便全村243户547人出行，其中脱贫户20户37人，防返贫监测对象30户57人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 87,
+      "implementation_location_raw": "其中口乡东河山村",
+      "planned_2024_funding_wan": 19.463167,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡东河山村，安排资金19.463167万元。村内道路硬化3.5米宽850米长，面积2975平方米。方便全村199户443人出行，其中脱贫户23户39人，防返贫监测对象9户20人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 88,
+      "implementation_location_raw": "其中口乡安子沟村",
+      "planned_2024_funding_wan": 19.868243,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡安子沟村，安排资金19.868243万元。村内道路硬化3.5米宽600米长，面积2100平方米。方便全村269户634人出行，其中脱贫户33户64人，防返贫监测对象7户15人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 89,
+      "implementation_location_raw": "其中口乡金水口村",
+      "planned_2024_funding_wan": 24.275965,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡金水口村，安排资金24.275965万元。村内道路硬化3.5米宽600米长，面积2100平方米。方便全村312户803人出行，其中脱贫户32户45人，防返贫监测对象18户30人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 90,
+      "implementation_location_raw": "其中口乡安妥岭村",
+      "planned_2024_funding_wan": 28.878367,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡安妥岭村，安排资金28.878367万元。村内道路硬化3.5米宽800米长。面积2800平方米。方便全351户854人出行，其中脱贫户61户125人，防返贫监测对象14户31人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-031",
+      "xlsx_project_no": 31,
+      "xlsx_row": 91,
+      "implementation_location_raw": "其中口乡南款村",
+      "planned_2024_funding_wan": 19.65569,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡南款村，安排资金19.65569万元。村内道路硬化3.5米宽800米长面积2800平方米。方便全456户1074人出行，其中脱贫户52户92人，防返贫监测对象29户63人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 92,
+      "implementation_location_raw": "明义镇北封村",
+      "planned_2024_funding_wan": 7.097859,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在明义镇北封村，安排资金7.097859万元。连通学校村内道路硬化16cm水泥路，长170米，宽3米，总计510平米。方便全247户617人出行，其中脱贫户10户18人，防返贫监测对象1户2人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 93,
+      "implementation_location_raw": "明义镇南封村",
+      "planned_2024_funding_wan": 35.375435,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在明义镇南封村，安排资金35.375435万元。明阳路进村南北两条主路道路硬化长1400米，宽3米，总计4260平米。方便全501户1505人出行，其中脱贫户17户31人，防返贫监测对象2户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 94,
+      "implementation_location_raw": "明义镇丁家洼村",
+      "planned_2024_funding_wan": 19.079918,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在明义镇丁家洼村，安排资金19.079918万元。村内路面硬化长400米，宽4米，总计1600平米。方便全417户1153人出行，其中脱贫户15户26人，防返贫监测对象5户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 95,
+      "implementation_location_raw": "明义镇西明义村",
+      "planned_2024_funding_wan": 100.035953,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在明义镇西明义村，安排资金100.035953万元。村内3条主街路面硬化，长2590米，宽3.5米，总计9065平米。方便全597户1385人出行，其中脱贫户21户44人，防返贫监测对象7户16人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 96,
+      "implementation_location_raw": "胡家庄乡东文泉村",
+      "planned_2024_funding_wan": 55.106441,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在胡家庄乡东文泉村，安排资金55.106441万元。铣刨+沥青罩面，路面长1000米，宽6米，建设规模6000㎡。方便全450户1228人出行，其中脱贫户3户6人，防返贫监测对象2户3人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 97,
+      "implementation_location_raw": "胡家庄乡富位村",
+      "planned_2024_funding_wan": 32.202484,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在胡家庄乡富位村，安排资金32.202484万元。硬化路面1932平米，铺设混凝土，水泥路面，长644米，宽约3米。方便全1484户3864人出行，其中脱贫户25户54人，防返贫监测对象19户43人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 98,
+      "implementation_location_raw": "胡家庄乡南辛庄村",
+      "planned_2024_funding_wan": 44.819962,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在胡家庄乡南辛庄村，安排资金44.819962万元。铣刨+沥青罩面，面积4220平方米。方便全173户453人出行，其中脱贫户3户4人，防返贫监测对象3户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 99,
+      "implementation_location_raw": "涞水镇魏村",
+      "planned_2024_funding_wan": 39.548871,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇魏村，安排资金39.548871万元。魏村刘家街至顺达路长1250米，宽4米，5000平米。方便全698户2493人出行，其中脱贫户33户78人，防返贫监测对象13户34人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 100,
+      "implementation_location_raw": "涞水镇北郭下村",
+      "planned_2024_funding_wan": 15.536322,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇北郭下村，安排资金15.536322万元。尚睿南侧道路长500米，宽3.5米，1750平米。方便全650户2350人出行，其中脱贫户11户19人，防返贫监测对象4户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 101,
+      "implementation_location_raw": "涞水镇南郭下村",
+      "planned_2024_funding_wan": 28.79077,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇南郭下村，安排资金28.79077万元。村北街长900米，宽4米，3600平米。方便全472户1489人出行，其中脱贫户18户38人，防返贫监测对象1户1人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 102,
+      "implementation_location_raw": "涞水镇南王庄村",
+      "planned_2024_funding_wan": 40.192752,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇南王庄村，安排资金40.192752万元。路线总长为646米，路线净宽6米，共计3876平方。方便全527户2180人出行，其中脱贫户10户22人，防返贫监测对象8户21人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 103,
+      "implementation_location_raw": "涞水镇南涧头村",
+      "planned_2024_funding_wan": 63.106872,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇南涧头村，安排资金63.106872万元。共两条路线，路线1长度850米，宽5.4米，共计4590平方米；路线2长850米，宽3米，共计2550平方米。方便全446户1502人出行，其中脱贫户8户11人，防返贫监测对象4户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 104,
+      "implementation_location_raw": "涞水镇南关村",
+      "planned_2024_funding_wan": 28.025056,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇南关村，安排资金28.025056万元。清真寺街东侧（大坑南）后沟道长1200米，宽3米，3600平米。方便全1776户5172人出行，其中脱贫户13户38人，防返贫监测对象10户28人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 105,
+      "implementation_location_raw": "涞水镇西南租村",
+      "planned_2024_funding_wan": 13.736047,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇西南租村，安排资金13.736047万元。北河沟长280米，宽4米,1120平米。方便全214户812人出行，其中脱贫户6户12人，防返贫监测对象3户8人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 106,
+      "implementation_location_raw": "涞水镇薛家庄村",
+      "planned_2024_funding_wan": 42.195525,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇薛家庄村，安排资金42.195525万元。新建漫水桥20米长，净宽4米共计120平方的桥梁，两侧河道需加设挡墙，墙高5米，长度一侧10米，共计20米，共118.2立方米，无其他水毁点。方便全242户890人出行，其中脱贫户12户26人，防返贫监测对象2户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 107,
+      "implementation_location_raw": "涞水镇北瓦宅村",
+      "planned_2024_funding_wan": 30.643089,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇北瓦宅村，安排资金30.643089万元。路面长500米宽4.5米，2250平米。方便全312户998人出行，其中脱贫户3户5人，防返贫监测对象1户1人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 108,
+      "implementation_location_raw": "涞水镇北关村",
+      "planned_2024_funding_wan": 46.840058,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇北关村，安排资金46.840058万元。龙岗路、吕家沟街总长1500米，路宽3米，共计4500平，新建沥青罩面和部分49.5水泥路面。方便全620户2680人出行，其中脱贫户2户5人，防返贫监测对象4户8人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-032",
+      "xlsx_project_no": 32,
+      "xlsx_row": 109,
+      "implementation_location_raw": "涞水镇东关村",
+      "planned_2024_funding_wan": 45.209353,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在涞水镇东关村，安排资金45.209353万元。新安街总长880米，路宽3.5米，和平街路长520米、路宽3.5米，共计4900平米。方便全727户2756人出行，其中脱贫户4户11人，防返贫监测对象1户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-033",
+      "xlsx_project_no": 33,
+      "xlsx_row": 110,
+      "implementation_location_raw": "一渡镇龙安村",
+      "planned_2024_funding_wan": 103.827142,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在一渡镇龙安村，安排资金103.827142万元。改建东下坎道路配套排水渠700米，波纹管DN300。并恢复原路面1000平米。厚度16厘米。方便全1029户2517人出行，其中脱贫户67户148人，防返贫监测对象23户48人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-033",
+      "xlsx_project_no": 33,
+      "xlsx_row": 111,
+      "implementation_location_raw": "石亭镇许家磨村",
+      "planned_2024_funding_wan": 157.424328,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在石亭镇许家磨村，安排资金157.424328万元。许义路，长150米，宽4米，厚度16厘米，深10米。路面600平米，挡墙2300m³片石混凝土，填方20000m³。方便全322户355人出行，其中脱贫户12户16人，防返贫监测对象2户5人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-033",
+      "xlsx_project_no": 33,
+      "xlsx_row": 112,
+      "implementation_location_raw": "石亭镇曲家磨村",
+      "planned_2024_funding_wan": 39.510235,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在石亭镇曲家磨村，安排资金39.510235万元。修复受损道路900米，宽5.5米，厚度16厘米，共计4950平方米。方便全492户667人出行，其中脱贫户5户12人，防返贫监测对象1户2人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-033",
+      "xlsx_project_no": 33,
+      "xlsx_row": 113,
+      "implementation_location_raw": "石亭镇上庄村",
+      "planned_2024_funding_wan": 132.061831,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在石亭镇上庄村，安排资金132.061831万元。修复受损道路长2200米，宽5.5米，厚度16厘米，共计12100平方米。方便全897户1311人出行，其中脱贫户14户27人，防返贫监测对象2户3人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-033",
+      "xlsx_project_no": 33,
+      "xlsx_row": 114,
+      "implementation_location_raw": "石亭镇东赤土村",
+      "planned_2024_funding_wan": 45.079706,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在石亭镇东赤土村，安排资金45.079706万元。修复受损道路长900米，宽5.5米，厚度16厘米，共计4950平方米。方便全354户569人出行，其中脱贫户8户15人，防返贫监测对象4户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 115,
+      "implementation_location_raw": "娄村镇燕翎村",
+      "planned_2024_funding_wan": 30.644538,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在娄村镇燕翎村，安排资金30.644538万元。大队西街300米x6米x18厘米，挡墙长100米，高60公分，方量360m³。方便全667户1792人出行，其中脱贫户6户22人，防返贫监测对象16户30人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 116,
+      "implementation_location_raw": "娄村镇虎过庄村",
+      "planned_2024_funding_wan": 117.626569,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在娄村镇虎过庄村，安排资金117.626569万元。村内主街长2千米宽3.5米厚0.15米，挡墙长300米，高5米，方量1650m³。方便全797户1858人出行，其中脱贫户29户45人，防返贫监测对象5户12人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 117,
+      "implementation_location_raw": "娄村镇南安庄村",
+      "planned_2024_funding_wan": 106.968484,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在娄村镇南安庄村，安排资金106.968484万元。村内三队、二队主干道路硬化，长3000米、宽3米，共9000平米，挡墙长1000米，高70公分，方量420m³。方便全249户609人出行，其中脱贫户13户19人，防返贫监测对象8户20人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 118,
+      "implementation_location_raw": "娄村镇车厂村",
+      "planned_2024_funding_wan": 93.086075,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在娄村镇车厂村，安排资金93.086075万元。长2000米，宽4米，厚20厘米，硬化路面面积8000平方米。方便全895户2384人出行，其中脱贫户34户100人，防返贫监测对象6户20人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 119,
+      "implementation_location_raw": "东文山镇下车亭村",
+      "planned_2024_funding_wan": 78.07379,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在东文山镇下车亭村，安排资金78.07379万元。东至保野路，西至古亭路7500平米（长1500米、宽5米厚18厘米）。方便全543户1825人出行，其中脱贫户29户57人，防返贫监测对象5户14人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 120,
+      "implementation_location_raw": "东文山镇杜家庄村",
+      "planned_2024_funding_wan": 22.611384,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在东文山镇杜家庄村，安排资金22.611384万元。村内道路硬化2800平米（厚16厘米）。方便全331户986人出行，其中脱贫户13户30人，防返贫监测对象6户13人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 121,
+      "implementation_location_raw": "东文山镇北西租村",
+      "planned_2024_funding_wan": 16.775301,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在东文山镇北西租村，安排资金16.775301万元。硬化村主路路面2000平米（长500米、宽4米厚16厘米）。方便全295户670人出行，其中脱贫户11户32人，防返贫监测对象1户1人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 122,
+      "implementation_location_raw": "东文山镇南兵上村",
+      "planned_2024_funding_wan": 29.56437,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在东文山镇南兵上村，安排资金29.56437万元。硬化永富街路面约2100平米（长700米、宽3米厚16厘米）。方便全634户1402人出行，其中脱贫户20户28人，防返贫监测对象4户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 123,
+      "implementation_location_raw": "东文山镇上车亭村",
+      "planned_2024_funding_wan": 16.143298,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在东文山镇上车亭村，安排资金16.143298万元。产业路2000平米（长1000米、宽2米厚12厘米）。方便全738户2218人出行，其中脱贫户30户47人，防返贫监测对象3户9人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 124,
+      "implementation_location_raw": "永阳镇北七山村",
+      "planned_2024_funding_wan": 77.469445,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在永阳镇北七山村，安排资金77.469445万元。村内道路硬化长1250米，宽6米，共计7500平米。方便全485户2099人出行，其中脱贫户24户55人，防返贫监测对象7户21人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 125,
+      "implementation_location_raw": "永阳镇北洛平村",
+      "planned_2024_funding_wan": 54.826435,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在永阳镇北洛平村，安排资金54.826435万元。实施村内产业道路硬化长1666米，宽3米，厚度16厘米共计5000平米。方便全465户1892人出行，其中脱贫户34户76人，防返贫监测对象5户15人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 126,
+      "implementation_location_raw": "永阳镇周家庄村",
+      "planned_2024_funding_wan": 26.422761,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在永阳镇周家庄村，安排资金26.422761万元。实施村内道路硬化共计2500平米，长835米，宽3米，厚度12厘米。方便全498户1618人出行，其中脱贫户15户22人，防返贫监测对象3户6人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-034",
+      "xlsx_project_no": 34,
+      "xlsx_row": 127,
+      "implementation_location_raw": "永阳镇北秋兰村",
+      "planned_2024_funding_wan": 27.248927,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在永阳镇北秋兰村，安排资金27.248928万元。实施村内道路硬化共计2500平米，长1000米，宽2.5米，厚度12厘米。方便全615户2132人出行，其中脱贫18户37人，防返贫监测对象2户6人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 128,
+      "implementation_location_raw": "王村镇杨家台村",
+      "planned_2024_funding_wan": 68.106454,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在王村镇杨家台村，安排资金68.106454万元。共五条道路，道路1路长447米，路宽3.3米、道路2路长456米，路宽平均为5米，道路3路长546米，路宽5米，道路4路长360米，路宽2.4米。共计6531平方。方便全257户660人出行，其中脱贫户7户10人，防返贫监测对象3户8人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 129,
+      "implementation_location_raw": "王村镇孔村",
+      "planned_2024_funding_wan": 48.365314,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在王村镇孔村，安排资金48.756991万元。路宽7米，路长812米，共计5684平方米。方便全627户1841人出行，其中脱贫户29户43人，防返贫监测对象4户11人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 130,
+      "implementation_location_raw": "王村镇戴家庄村",
+      "planned_2024_funding_wan": 36.778499,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在王村镇戴家庄村，安排资金36.778499万元。进村道路路长760米，路宽6米，共计4560平方米。方便全231户619人出行，其中脱贫户7户9人，防返贫监测对象5户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 131,
+      "implementation_location_raw": "王村镇北辛庄村",
+      "planned_2024_funding_wan": 38.621459,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在王村镇北辛庄村，安排资金38.740086万元。路线位于两牌楼之间，路长910米，路宽5米，共计4550平方米。方便全494户1386人出行，其中脱贫户24户49人，防返贫监测对象7户18人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 132,
+      "implementation_location_raw": "义安镇庄疃村",
+      "planned_2024_funding_wan": 49.0583,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇庄疃村，安排资金49.0583万元。硬化路面长520米，宽4米，面积2080平方米。方便全910户2385人出行，其中脱贫户18户28人，防返贫监测对象9户13人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 133,
+      "implementation_location_raw": "义安镇栗村",
+      "planned_2024_funding_wan": 65.933482,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇栗村，安排资金65.933482万元。硬化路面长约609米，宽约3米，面积1827平方米。方便全720户2980人出行，其中脱贫户34户70人，防返贫监测对象4户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 134,
+      "implementation_location_raw": "义安镇南义安村",
+      "planned_2024_funding_wan": 33.083655,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇南义安村，安排资金33.083655万元。路基掏空19米，宽5.5米，拆除新建路面结构104.5平方米（旧路为沥青路面）、拆除新建40米长长城垛、共计40m³水泥混凝土、修建浆砌片石护坡40米长，5米高，约108立方米浆砌片石。修建挡墙4.5米高，长60米，约252m³，路面硬化宽4米，长45米，共计180平方米水泥混凝土，加修长城垛45米，",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 135,
+      "implementation_location_raw": "义安镇下庄村",
+      "planned_2024_funding_wan": 30.32432,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇下庄村，安排资金30.32432万元。路面长739米，宽4米，共计2955平米。方便全568户2462人出行，其中脱贫户20户42人，防返贫监测对象4户6人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 136,
+      "implementation_location_raw": "义安镇聂村",
+      "planned_2024_funding_wan": 27.605062,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇聂村，安排资金27.605062万元。路面长625米，宽4米，面积为2500平方米。方便全676户1870人出行，其中脱贫户44户99人，防返贫监测对象5户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 137,
+      "implementation_location_raw": "义安镇南白堡村",
+      "planned_2024_funding_wan": 15.829,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇南白堡村，安排资金15.829万元。路面长401米，宽4米，总面积1604平米。方便全277户844人出行，其中脱贫户7户2人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 138,
+      "implementation_location_raw": "义安镇李皇甫村",
+      "planned_2024_funding_wan": 6.877048,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇李皇甫村，安排资金6.877048万元。新开路延长李厚发家至张树贵家，长160米，宽3米，总面积480平米。方便全257户756人出行，其中脱贫户7户15人，防返贫监测对象4户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 139,
+      "implementation_location_raw": "义安镇南郑各庄村",
+      "planned_2024_funding_wan": 18.192981,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇南郑各庄村，安排资金18.192981万元。路面长500米，宽4米，面积为2000平方米。方便全320户1131人出行，其中脱贫户13户23人，防返贫监测对象1户3人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 140,
+      "implementation_location_raw": "义安镇西义安村",
+      "planned_2024_funding_wan": 23.480773,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇西义安村，安排资金23.480773万元。新建排水沟1.5米*1.5米，长425米，约725m³水泥混凝土。水毁路面掏空，长5米，宽4米，共计20平方米，新建沥青混凝土路面，（旧路结构为4cm沥青+20cm二灰土），加修挡墙，墙高8米，长5米，共计63.85m³。方便全860户2650人出行，其中脱贫户24户44人，防返贫监测对象2户6人，形",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 141,
+      "implementation_location_raw": "义安镇史姑庄村",
+      "planned_2024_funding_wan": 16.875089,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇史姑庄村，安排资金16.875089万元。路面长500米，宽4米，面积为2000平方米。方便全288户1049人出行，其中脱贫户12户17人，防返贫监测对象4户5人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 142,
+      "implementation_location_raw": "义安镇北高洛村",
+      "planned_2024_funding_wan": 16.94868,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇北高洛村，安排资金16.94868万元。长240米，宽6米，1440平米。方便全564户1547人出行，其中脱贫户7户11人，防返贫监测对象3户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 143,
+      "implementation_location_raw": "义安镇东义合庄村",
+      "planned_2024_funding_wan": 25.049627,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇东义合庄村，安排资金25.049627万元。路面长500米，宽4米，面积为2000平方米。方便全323户886人出行，其中脱贫户1户2人，防返贫监测对象2户3人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-035",
+      "xlsx_project_no": 35,
+      "xlsx_row": 144,
+      "implementation_location_raw": "义安镇南庄村",
+      "planned_2024_funding_wan": 14.022481,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在义安镇南庄村，安排资金14.022481万元。硬化路面化长500米，宽3米面积为1500平方米。方便全136户523人出行，其中脱贫户1户2人，防返贫监测对象2户5人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 145,
+      "implementation_location_raw": "九龙镇北庄村",
+      "planned_2024_funding_wan": 106.809706,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇北庄村，安排资金106.809706万元。新建2000m水泥混凝土40*40cm水渠，壁厚20cm。方便全175户483人出行，其中脱贫户17户26人，防返贫监测对象1户4人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 146,
+      "implementation_location_raw": "九龙镇山南村",
+      "planned_2024_funding_wan": 20.593228,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇山南村，安排资金20.593228万元。机井一眼，机井房、水泵配套设施。方便全600户1353人出行，其中脱贫户84户124人，防返贫监测对象9户15人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 147,
+      "implementation_location_raw": "九龙镇太平村",
+      "planned_2024_funding_wan": 100.238306,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇太平村，安排资金100.238306万元。新建1200m水泥混凝土60*60cm水渠，壁厚30cm。800m水泥混凝土40*40cm水渠，壁厚30cm。方便全366户836人出行，其中脱贫户47户84人，防返贫监测对象7户12人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 148,
+      "implementation_location_raw": "九龙镇镇厂村",
+      "planned_2024_funding_wan": 155.661596,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇镇厂村，安排资金155.661596万元。新建2700m水泥混凝土60*60cm水渠，壁厚30cm。方便全200户530人出行，其中脱贫户28户49人，防返贫监测对象3户10人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 149,
+      "implementation_location_raw": "其中口乡西交界口村",
+      "planned_2024_funding_wan": 37.573594,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡西交界口村，安排资金37.573594万元。新建水渠300米，原水渠被泥沙掩埋，宽10米，高2米。方便全103户237人出行，其中脱贫户11户15人，防返贫监测对象6户11人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 150,
+      "implementation_location_raw": "其中口乡西角村",
+      "planned_2024_funding_wan": 43.364232,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在其中口乡西角村，安排资金43.3642329万元。铺设输水管道1000千米及配套、蓄水池10x10、5米高、新建挡土墙15米高5米。方便全208户491人出行，其中脱贫户12户20人，防返贫监测对象30户56人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 151,
+      "implementation_location_raw": "三坡镇刘家河村",
+      "planned_2024_funding_wan": 28.717142,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇刘家河村，安排资金28.717142万元。新建灌溉水渠，长度为3500m。方便全238户682人出行，其中脱贫户8户13人，防返贫监测对象2户6人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 152,
+      "implementation_location_raw": "三坡镇松树口村",
+      "planned_2024_funding_wan": 275.740876,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇松树口村，安排资金275.740876万元。新建水泥混凝土灌溉渠，长2000米，底宽80cm，开口宽260cm，深度1.2m。壁厚20cm，共计1660方。方便全131户345人出行，其中脱贫户6户8人，防返贫监测对象1户3人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 153,
+      "implementation_location_raw": "东文山镇淮河村",
+      "planned_2024_funding_wan": 21.274333,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在东文山镇淮河村，安排资金21.274333万元。农村基础灌溉在果园村南约2000米管道（主管道pe管FN100长度1500米，支管PE管DN25长度500米）。方便全332户864人出行，其中脱贫户17户41人，防返贫监测对象5户22人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-036",
+      "xlsx_project_no": 36,
+      "xlsx_row": 154,
+      "implementation_location_raw": "东文山镇东车亭村",
+      "planned_2024_funding_wan": 5.986915,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在东文山镇东车亭村，安排资金5.986915万元。灌溉机井一眼。方便全256户696人出行，其中脱贫户8户16人，防返贫监测对象2户3人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-037",
+      "xlsx_project_no": 37,
+      "xlsx_row": 155,
+      "implementation_location_raw": "胡家庄乡南汝河村",
+      "planned_2024_funding_wan": 102.945688,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在胡家庄乡南汝河村，安排资金102.945688万元，主要建设一栋鸡舍及配套设备，形成的资产所有权确权到南汝河村集体，按照每年5%的保底回报率收取收益，带动全村带动全村275户651人增收，其中脱贫户11户20人，防贫监测对象4户7人。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-038",
+      "xlsx_project_no": 38,
+      "xlsx_row": 156,
+      "implementation_location_raw": "九龙镇镇厂村",
+      "planned_2024_funding_wan": 46.758587,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在九龙镇镇厂村，安排资金46.758587万元，利用村集体建设用地新建房屋600平米，不足部分村集体自筹，建成后对外出租经营，形成的资产所有权确权到镇厂村集体，带动全村120户300人增收，其中脱贫户28户49人；防贫监测对象4户11人。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-039",
+      "xlsx_project_no": 39,
+      "xlsx_row": 157,
+      "implementation_location_raw": "三坡镇马各庄村",
+      "planned_2024_funding_wan": 48.2,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇马各庄村，安排资金48.2万元，用于茶厂设备采购，形成的资产所有权确权到马各庄村集体，按照每年6%的保底回报率收取收益，带动全村496户1496人增收，其中脱贫户11户24人；防贫监测对象8户16人。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-040",
+      "xlsx_project_no": 40,
+      "xlsx_row": 158,
+      "implementation_location_raw": "南秋兰村、杨家庄村、北封村、冀家沟村、樊家台村、台头村、西明义村、丁家洼村、西官庄村",
+      "planned_2024_funding_wan": 340.074,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点涉及明义镇9个村，安排资金340.074万元，用于新建和修复村内道路，方便3748户9749人出行，涉及脱贫户127户238人，防返贫监测对象32户68人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-041",
+      "xlsx_project_no": 41,
+      "xlsx_row": 159,
+      "implementation_location_raw": "一渡镇龙安村",
+      "planned_2024_funding_wan": 248.34,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在一渡镇龙安村，安排资金248.34万元，用于重建龙安沟桥梁1座，方便820户2150人出行，涉及脱贫户67户148人，防返贫监测对象22户46人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-042",
+      "xlsx_project_no": 42,
+      "xlsx_row": 160,
+      "implementation_location_raw": "三坡镇邢各庄村",
+      "planned_2024_funding_wan": 130.51,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "建设地点在三坡镇邢各庄村，安排资金130.51万元，用于村内水利灌溉设施建设，用于全村112户382人种植灌溉，涉及脱贫户22户34人，防返贫监测对象4户6人，形成的资产所有权归村集体。",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    },
+    {
+      "project_id": "LS-2024-043",
+      "xlsx_project_no": 43,
+      "xlsx_row": 161,
+      "implementation_location_raw": "义安镇",
+      "planned_2024_funding_wan": 2018.106224,
+      "funding_unit": "万元",
+      "construction_task_excerpt": "依托河北中农农业科技有限公司实施资产收益项目，计划投入资金2018.106224万元，企业提供相应资产进行抵押，财政投入资金形成可物化资产，自收到资金之日起一周年后，其中1962.106224万元按照每年5%的保底回报率收取收益，带动全县284个村125067户322487人增收，其中脱贫户5892户10945人，防贫监测对象1714户3689人；56万元按",
+      "source_url": "https://www.laishui.gov.cn/uploadfile/2025/0612/407795562290887859.xlsx"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}统计核验 · 832 证据管理{% endblock %}
+{% block body %}
+<h1 class="page-title">统计与核验</h1>
+<p class="page-sub">以下每一块都由一条真实 SQL 在服务端执行，对应教材中的连接、分组、嵌套与聚合查询。</p>
+
+<div class="two-col">
+  <section class="card">
+    <h2>各省公开报道篇数（GROUP BY）</h2>
+    <table>
+      <thead><tr><th>省份</th><th>报道篇数</th></tr></thead>
+      <tbody>
+      {% for r in province_rows %}<tr><td>{{ r['province_raw'] }}</td><td>{{ r['report_count'] }}</td></tr>{% endfor %}
+      </tbody>
+    </table>
+    <p class="hint">统计到的是报道篇数，不能当作 832 县的覆盖率。</p>
+  </section>
+
+  <section class="card">
+    <h2>同时采用就业与土地流转的案例（HAVING）</h2>
+    {% if dual_rows %}
+    <table>
+      <thead><tr><th>编号</th><th>案例</th><th>县域</th></tr></thead>
+      <tbody>
+      {% for r in dual_rows %}
+        <tr><td><a href="{{ url_for('case_detail', case_id=r['case_id']) }}">{{ r['case_id'] }}</a></td><td>{{ r['title'] }}</td><td>{{ r['county_name_raw'] }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="empty">没有同时具备两种方式的已发布案例。</p>{% endif %}
+    <p class="hint">多对多关系 + <code>HAVING COUNT(DISTINCT 方式) = 2</code>。</p>
+  </section>
+</div>
+
+<section class="card">
+  <h2>涞水 2024 年计划资金按类别汇总（JOIN + SUM）</h2>
+  <table>
+    <thead><tr><th>项目类别</th><th>项目数</th><th>计划资金（万元）</th></tr></thead>
+    <tbody>
+    {% for r in category_rows %}
+      <tr><td>{{ r['category'] }}</td><td>{{ r['project_count'] }}</td><td>{{ r['planned_funding_wan'] }}</td></tr>
+    {% endfor %}
+      <tr class="total"><td>合计</td><td></td><td>{{ total_funding }}</td></tr>
+    </tbody>
+  </table>
+  <p class="hint">口径：2024 年度计划安排资金，不是实际支出，也不是农户收入。</p>
+</section>
+
+<div class="two-col">
+  <section class="card">
+    <h2>项目金额与实施行合计不一致（HAVING 差值）</h2>
+    {% if mismatch_rows %}
+    <table>
+      <thead><tr><th>项目</th><th>计划</th><th>行合计</th></tr></thead>
+      <tbody>
+      {% for r in mismatch_rows %}<tr><td>{{ r['project_name'] }}</td><td>{{ r['budget_wan'] }}</td><td>{{ r['row_sum_wan'] }}</td></tr>{% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+      <p class="ok-text">0 处不一致：43 个项目的计划金额与 158 条实施地点行合计全部吻合。</p>
+    {% endif %}
+    <p class="hint">零行只表示本次金额核对通过，不代表项目效果已被验证。</p>
+  </section>
+
+  <section class="card">
+    <h2>整理缺口与逾期</h2>
+    <table>
+      <tbody>
+        <tr><td>尚未整理成案例的报道</td><td><b>{{ no_case }}</b> 篇</td></tr>
+        <tr><td>逾期未交指定材料的任务</td><td><b>{{ overdue_rows|length }}</b> 个</td></tr>
+      </tbody>
+    </table>
+    {% if overdue_rows %}
+    <table>
+      <thead><tr><th>任务</th><th>县域</th><th>负责人</th><th>截止</th></tr></thead>
+      <tbody>
+      {% for r in overdue_rows %}<tr><td>{{ r['task_id'] }}</td><td>{{ r['county_name_raw'] }}</td><td>{{ r['lead_name'] }}</td><td class="warn">{{ r['due_at'] }}</td></tr>{% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+  </section>
+</div>
+
+<section class="card">
+  <h2>需要人工核对的证据（{{ issues|length }} 条）</h2>
+  <table>
+    <thead><tr><th>编号</th><th>项目原名</th><th>库内使用方式</th><th>禁止推断</th><th>状态</th></tr></thead>
+    <tbody>
+    {% for i in issues %}
+      <tr>
+        <td class="nowrap">{{ i['issue_id'] }}</td>
+        <td>{{ i['project_name_raw'] }}</td>
+        <td>{{ i['database_use'] }}</td>
+        <td>{{ i['do_not_infer'] }}</td>
+        <td><span class="tag muted">{{ i['review_status'] }}</span></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

@@ -1,0 +1,80 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            使用方法：一条案例从草稿到发布，五步都留痕
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 16 }} />
+
+        <Box style={{ position: 'relative', height: 150 }}>
+            <Box style={{ position: 'absolute', top: 9, left: 24, width: 1112, height: 2, background: '#D6DCE5' }} />
+            <Box style={{ flexDirection: 'row', gap: 14, position: 'relative' }}>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Box style={{ width: 20, height: 20, borderRadius: 10, background: '#1E4FA8', marginBottom: 12 }} />
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0E3F8C' }}>草稿</Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>队员新建，必须挂至少一条出处摘录</Text>
+                    <Text style={{ fontSize: 14, color: '#1E4FA8', fontFamily: 'Consolas', marginTop: 6 }}>INSERT case_evidence</Text>
+                </Box>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Box style={{ width: 20, height: 20, borderRadius: 10, background: '#1E4FA8', marginBottom: 12 }} />
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0E3F8C' }}>待审核</Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>提交后修改、删除按钮同时消失</Text>
+                    <Text style={{ fontSize: 14, color: '#1E4FA8', fontFamily: 'Consolas', marginTop: 6 }}>UPDATE status</Text>
+                </Box>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Box style={{ width: 20, height: 20, borderRadius: 10, background: '#D9534F', marginBottom: 12 }} />
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#D9534F' }}>退回补正</Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>理由留空直接拦下，回到可改状态</Text>
+                    <Text style={{ fontSize: 14, color: '#1E4FA8', fontFamily: 'Consolas', marginTop: 6 }}>CHECK decision≠退回</Text>
+                </Box>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Box style={{ width: 20, height: 20, borderRadius: 10, background: '#1E4FA8', marginBottom: 12 }} />
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0E3F8C' }}>已审核</Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>只有队长能继续，审核员到此为止</Text>
+                    <Text style={{ fontSize: 14, color: '#1E4FA8', fontFamily: 'Consolas', marginTop: 6 }}>roles_required('leader')</Text>
+                </Box>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Box style={{ width: 20, height: 20, borderRadius: 10, background: '#1E4FA8', marginBottom: 12 }} />
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#0E3F8C' }}>已发布</Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>未登录访客这时才看得到这一条</Text>
+                    <Text style={{ fontSize: 14, color: '#1E4FA8', fontFamily: 'Consolas', marginTop: 6 }}>status='已发布'</Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', gap: 26, marginTop: 6, flex: 1 }}>
+            <Box style={{ width: 420, flexDirection: 'column' }}>
+                <Box style={{ border: '1px solid #D6DCE5', borderRadius: 4, padding: 5, background: '#F7F9FC' }}>
+                    <Image src="assets/shot_case_detail.png" style={{ width: 408, height: 320, objectFit: 'cover' }} />
+                </Box>
+                <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 8 }}>图 5　案例详情页：状态、出处摘录、操作记录</Text>
+            </Box>
+
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 12, justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E4FA8', width: 22 }}>1</Text>
+                    <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.6, flex: 1 }}>
+                        改状态和写审计日志放在<span style={{ fontWeight: 'bold' }}>同一个事务</span>里，任一步失败整体回滚，不会出现"状态变了但没记录"。
+                    </Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E4FA8', width: 22 }}>2</Text>
+                    <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.6, flex: 1 }}>
+                        页面底部的"操作记录"就是 audit_log 的投影：谁、什么时间、做了什么，连退回理由一起留。
+                    </Text>
+                </Box>
+                <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E4FA8', width: 22 }}>3</Text>
+                    <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.6, flex: 1 }}>
+                        非法跳转不靠页面隐藏按钮：直接 POST 一个不该做的动作，路由层 403，CHECK 与触发器再兜一层。
+                    </Text>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>12</Text>
+    </Box>
+</Slide>

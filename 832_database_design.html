@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>832 工程特色产业案例与指标核验系统｜数据库课程设计原型</title>
+  <style>
+    :root {
+      --ink: #17342e;
+      --ink-2: #2d4b43;
+      --muted: #65766f;
+      --forest: #123e34;
+      --forest-2: #1a5749;
+      --mint: #dcece4;
+      --paper: #f5f5ef;
+      --white: #fffefa;
+      --line: #dfe5dd;
+      --amber: #c77d3c;
+      --amber-soft: #fff0dd;
+      --red: #ad6048;
+      --red-soft: #faede8;
+      --shadow: 0 16px 36px rgba(18, 62, 52, .07);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif; line-height: 1.55; }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    a { color: var(--forest-2); text-underline-offset: 3px; }
+    a:hover { color: #0a7560; }
+    .app { display: grid; grid-template-columns: 252px minmax(0, 1fr); min-height: 100vh; }
+    .sidebar { background: #113b32; color: #e7f1ea; padding: 30px 20px 24px; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; overflow-y: auto; }
+    .brand { display: flex; align-items: center; gap: 13px; margin: 2px 8px 34px; }
+    .brand-mark { width: 45px; height: 45px; border: 1px solid rgba(255,255,255,.25); border-radius: 12px; display: grid; place-items: center; font-family: Georgia, serif; font-size: 21px; font-weight: 700; color: #fff; background: rgba(255,255,255,.08); }
+    .brand strong { display: block; font-size: 15px; letter-spacing: .035em; line-height: 1.4; }
+    .brand small { display: block; font-size: 11px; opacity: .65; margin-top: 3px; letter-spacing: .08em; }
+    .nav-label { margin: 8px 13px 11px; font-size: 10px; font-weight: 700; letter-spacing: .18em; color: #82afa0; }
+    .nav { display: grid; gap: 5px; }
+    .nav button { width: 100%; border: 0; border-radius: 11px; background: transparent; color: #b9d0c6; display: flex; align-items: center; gap: 13px; text-align: left; padding: 11px 14px; font-size: 13px; transition: .18s; }
+    .nav button:hover, .nav button.active { background: rgba(255,255,255,.1); color: white; }
+    .nav button.active { box-shadow: inset 3px 0 #a9d4bb; }
+    .nav-icon { width: 19px; text-align: center; font-size: 16px; color: #9cc6b4; }
+    .sidebar-bottom { margin-top: auto; padding: 19px 12px 2px; border-top: 1px solid rgba(255,255,255,.13); font-size: 11px; color: #96b9aa; }
+    .sidebar-bottom strong { display: block; color: #dcece3; font-size: 12px; margin-bottom: 6px; }
+    .main { min-width: 0; padding: 0 clamp(20px, 4vw, 58px) 54px; max-width: 1640px; width: 100%; margin: 0 auto; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 94px; border-bottom: 1px solid var(--line); }
+    .topbar h1 { font-family: Georgia, "Songti SC", "SimSun", serif; font-weight: 700; font-size: clamp(24px, 2.5vw, 34px); letter-spacing: -.025em; margin: 1px 0 0; line-height: 1.25; }
+    .eyebrow { color: #7b978b; font-size: 10px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    .top-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: end; }
+    .top-tag { border: 1px solid #cbdcd2; background: #edf5ee; color: #39715e; padding: 7px 11px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+    .top-tag.plain { background: #fffefa; color: var(--muted); border-color: var(--line); }
+    .page { display: none; animation: rise .28s ease both; }
+    .page.active { display: block; }
+    @keyframes rise { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+    .section { margin-top: 30px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 16px; }
+    .section-head h2 { margin: 3px 0 0; font-family: Georgia, "Songti SC", "SimSun", serif; font-size: clamp(21px, 2.1vw, 27px); line-height: 1.3; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 12px; max-width: 580px; }
+    .hero { margin-top: 28px; border-radius: 22px; background: radial-gradient(circle at 80% 20%, #286657 0, transparent 31%), linear-gradient(125deg, #133d33, #1d5345 75%); color: #f2f7ef; padding: clamp(28px, 3.8vw, 48px); display: grid; grid-template-columns: 1.02fr .98fr; gap: 34px; overflow: hidden; position: relative; box-shadow: var(--shadow); }
+    .hero::after { content: ""; position: absolute; width: 340px; height: 340px; border: 1px solid rgba(255,255,255,.07); border-radius: 50%; right: -90px; top: -140px; pointer-events: none; }
+    .hero h2 { margin: 9px 0 15px; font-family: Georgia, "Songti SC", "SimSun", serif; font-size: clamp(30px, 3.2vw, 46px); line-height: 1.17; letter-spacing: -.03em; max-width: 620px; }
+    .hero p { color: #c9ded2; font-size: 13px; max-width: 560px; margin: 0 0 22px; line-height: 1.9; }
+    .hero .eyebrow { color: #b5d6bd; }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .button { border: 1px solid transparent; border-radius: 10px; padding: 10px 15px; font-weight: 700; font-size: 12px; transition: .18s; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+    .button.primary { background: #e4b878; color: #2d3328; }
+    .button.primary:hover { background: #f0c788; }
+    .button.ghost { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.21); color: #fff; }
+    .button.ghost:hover { background: rgba(255,255,255,.15); }
+    .button.outline { color: var(--forest); border-color: #b8cec2; background: white; }
+    .button.outline:hover { background: #ecf5ef; }
+    .flow-visual { border: 1px solid rgba(255,255,255,.17); background: rgba(9,38,30,.25); border-radius: 17px; padding: 24px; align-self: stretch; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+    .flow-caption { color: #bed8ca; font-size: 10px; font-weight: 700; letter-spacing: .1em; margin-bottom: 1px; }
+    .flow-row { display: grid; grid-template-columns: 1fr 24px 1fr; align-items: center; gap: 9px; }
+    .flow-node { padding: 12px 10px; border: 1px solid rgba(255,255,255,.17); background: rgba(255,255,255,.08); border-radius: 9px; font-size: 12px; text-align: center; }
+    .flow-node strong { display: block; color: white; font-size: 13px; margin-bottom: 2px; }
+    .flow-node small { color: #b7cfc3; font-size: 10px; }
+    .flow-arrow { text-align: center; color: #d8c08c; font-size: 18px; }
+    .flow-join { align-self: center; margin-top: 5px; border-radius: 999px; padding: 8px 12px; background: #e8f0df; color: #235545; font-weight: 800; font-size: 11px; text-align: center; }
+    .stats { margin-top: 17px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
+    .stat { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: 0 4px 16px rgba(13,53,41,.025); }
+    .stat .number { font-family: Georgia, serif; font-size: 31px; line-height: 1; color: var(--forest); }
+    .stat .label { margin-top: 9px; font-size: 12px; font-weight: 700; }
+    .stat .sub { margin-top: 4px; color: var(--muted); font-size: 10px; }
+    .grid-2 { display: grid; grid-template-columns: 1.06fr .94fr; gap: 16px; }
+    .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: 0 6px 22px rgba(18,62,52,.035); }
+    .card h3 { margin: 0 0 12px; font-size: 16px; line-height: 1.35; }
+    .card p { color: var(--muted); font-size: 12px; line-height: 1.85; }
+    .card-subtitle { font-size: 11px; font-weight: 700; color: var(--muted); margin-top: -6px; }
+    .trend { display: grid; gap: 13px; margin-top: 20px; }
+    .trend-row { display: grid; grid-template-columns: 68px 45px 1fr 56px; gap: 9px; align-items: center; font-size: 11px; color: var(--ink-2); }
+    .trend-track { height: 16px; background: #e9eee7; border-radius: 999px; overflow: hidden; }
+    .trend-fill { height: 100%; border-radius: 999px; background: #2f7461; min-width: 3px; }
+    .trend-fill.alt { background: #d89b62; }
+    .trend-row strong { font-size: 12px; text-align: right; font-variant-numeric: tabular-nums; }
+    .mini-note { margin-top: 16px; border-radius: 10px; background: #f3f7f1; border: 1px solid #e0ebe1; padding: 11px 13px; color: #527062; font-size: 11px; line-height: 1.7; }
+    .task-list { display: grid; gap: 11px; }
+    .task-item { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid #edf0e9; }
+    .task-item:last-child { border-bottom: 0; }
+    .task-num { flex: 0 0 27px; width: 27px; height: 27px; border-radius: 8px; background: #e8f2e9; color: #2e6955; display: grid; place-items: center; font-family: Georgia, serif; font-weight: 700; font-size: 12px; }
+    .task-item strong { display: block; font-size: 12px; }
+    .task-item span { display: block; color: var(--muted); font-size: 11px; line-height: 1.65; margin-top: 2px; }
+    .intro-line { margin: 16px 0 0; max-width: 800px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .toolbar { background: var(--white); border: 1px solid var(--line); border-radius: 15px; padding: 14px; display: flex; gap: 9px; flex-wrap: wrap; align-items: center; }
+    .field { display: grid; gap: 5px; min-width: 130px; flex: 1 1 150px; }
+    .field.wide { flex: 2 1 260px; }
+    .field label { color: #66796e; font-size: 10px; font-weight: 800; padding-left: 1px; }
+    .field input, .field select { width: 100%; height: 39px; border: 1px solid #d7e0d7; border-radius: 9px; background: #fff; color: var(--ink); padding: 0 11px; font-size: 12px; outline: none; }
+    .field input:focus, .field select:focus { border-color: #5f9b7e; box-shadow: 0 0 0 3px rgba(90,147,111,.13); }
+    .result-count { color: var(--muted); font-size: 11px; margin: 15px 2px 13px; }
+    .case-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .case-card { background: var(--white); border: 1px solid var(--line); border-radius: 15px; padding: 20px; display: flex; flex-direction: column; min-height: 244px; transition: border .18s, transform .18s, box-shadow .18s; }
+    .case-card:hover { border-color: #adcbba; transform: translateY(-2px); box-shadow: var(--shadow); }
+    .case-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .case-location { color: #5c8d70; font-size: 10px; font-weight: 800; letter-spacing: .07em; }
+    .case-card h3 { font-family: Georgia, "Songti SC", "SimSun", serif; font-size: 19px; margin: 9px 0 7px; }
+    .case-card p { color: var(--muted); font-size: 11px; line-height: 1.75; margin: 0 0 12px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+    .pill { background: #edf4ec; color: #326c56; border-radius: 999px; padding: 4px 8px; font-size: 10px; white-space: nowrap; }
+    .pill.amber { background: var(--amber-soft); color: #98622f; }
+    .pill.red { background: var(--red-soft); color: #99543e; }
+    .case-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 12px; border-top: 1px solid #edf0ea; font-size: 10px; color: var(--muted); gap: 10px; }
+    .text-button { color: #28705b; border: none; background: none; padding: 0; font-weight: 800; font-size: 11px; }
+    .text-button:hover { text-decoration: underline; }
+    .table-card { overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: 15px; }
+    .table-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; background: #f0f4ee; color: #557265; font-size: 10px; letter-spacing: .025em; font-weight: 800; white-space: nowrap; padding: 12px 14px; }
+    td { padding: 13px 14px; border-top: 1px solid #edf0e9; font-size: 11px; vertical-align: middle; }
+    td strong { color: var(--ink); }
+    tbody tr:hover { background: #fbfdf9; }
+    .nowrap { white-space: nowrap; }
+    .num-cell { font-family: Georgia, serif; font-weight: 700; font-size: 17px; color: var(--forest); white-space: nowrap; }
+    .status { display: inline-block; border-radius: 999px; padding: 4px 8px; background: #eaf3e9; color: #3b7656; font-size: 10px; font-weight: 700; white-space: nowrap; }
+    .status.warn { background: #faeee5; color: #a56839; }
+    .source-link { font-size: 10px; font-weight: 700; text-decoration: none; border-bottom: 1px solid #a8cabc; white-space: nowrap; }
+    .empty { padding: 42px 20px; color: var(--muted); text-align: center; font-size: 12px; }
+    .callout { background: #e8f1ea; border: 1px solid #c8dbcc; border-radius: 13px; padding: 15px 18px; color: #2b5946; font-size: 12px; line-height: 1.8; }
+    .callout.warn { background: #fff5e9; border-color: #ecd6b9; color: #76502c; }
+    .callout strong { display: block; font-size: 12px; margin-bottom: 3px; }
+    .conflict-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .conflict-card { background: var(--white); border: 1px solid #eadccc; border-top: 3px solid #c8864c; border-radius: 13px; padding: 21px; }
+    .conflict-card .source-type { color: #9b744f; font-size: 10px; font-weight: 800; }
+    .conflict-card h3 { margin: 7px 0 18px; font-size: 15px; }
+    .conflict-numbers { display: flex; gap: 18px; flex-wrap: wrap; padding: 14px 0; border-top: 1px solid #f0e7dd; border-bottom: 1px solid #f0e7dd; }
+    .conflict-numbers div { min-width: 106px; }
+    .conflict-numbers strong { display: block; color: #9e5c34; font-family: Georgia, serif; font-size: 28px; line-height: 1.15; }
+    .conflict-numbers span { color: var(--muted); font-size: 10px; }
+    .conflict-card p { color: var(--muted); font-size: 11px; line-height: 1.75; margin: 13px 0 0; }
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+    .step { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+    .step b { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 7px; color: #356b55; background: #e8f2e9; font-family: Georgia, serif; font-size: 11px; }
+    .step strong { display: block; margin: 12px 0 5px; font-size: 12px; }
+    .step p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.65; }
+    .er-board { background: #f9fbf7; border: 1px solid #d7e2d8; border-radius: 17px; padding: 22px; overflow-x: auto; }
+    .er-layer { display: grid; grid-template-columns: repeat(3,minmax(155px,1fr)); align-items: stretch; gap: 14px; min-width: 600px; }
+    .er-layer + .er-layer { margin-top: 12px; }
+    .er-node { background: white; border: 1px solid #b7cfbf; border-radius: 11px; padding: 13px 15px; min-height: 80px; box-shadow: 0 5px 12px rgba(15,60,42,.04); }
+    .er-node.amber { border-color: #d8c49f; background: #fffbf4; }
+    .er-node strong { display: block; font-size: 12px; }
+    .er-node span { display: block; color: var(--muted); font-size: 10px; margin-top: 3px; }
+    .er-node em { display: inline-block; font-style: normal; color: #3b7860; background: #ecf5ed; font-size: 9px; padding: 2px 5px; border-radius: 4px; margin-top: 7px; }
+    .er-connector { text-align: center; color: #6a9480; font-size: 11px; font-weight: 800; margin: 7px 0; min-width: 600px; letter-spacing: .015em; }
+    .entity-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+    .entity { background: var(--white); border: 1px solid var(--line); border-radius: 11px; padding: 13px 15px; }
+    .entity strong { display: block; font-size: 12px; margin-bottom: 4px; }
+    .entity code { display: block; color: #557468; font-size: 10px; white-space: normal; line-height: 1.55; font-family: Consolas, "Courier New", monospace; }
+    .entity small { color: #87998e; font-size: 9px; }
+    .relation-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+    .relation { border-left: 3px solid #7cb197; background: #f3f7f1; padding: 11px 12px; font-size: 11px; }
+    .relation b { color: #245944; }
+    .relation span { display: block; color: var(--muted); font-size: 10px; margin-top: 4px; }
+    .tech-stack { display: grid; grid-template-columns: repeat(3,1fr); gap: 11px; }
+    .tech { border: 1px solid var(--line); background: var(--white); border-radius: 12px; padding: 16px; }
+    .tech .tech-no { color: #7d9d8b; font-family: Georgia, serif; font-size: 11px; }
+    .tech strong { display: block; margin: 7px 0 4px; font-size: 13px; }
+    .tech span { display: block; color: var(--muted); font-size: 10px; line-height: 1.65; }
+    .sql-tabs { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
+    .sql-tabs button { background: #e9eee7; border: 1px solid transparent; border-radius: 8px; padding: 8px 11px; color: #52665a; font-size: 10px; font-weight: 800; }
+    .sql-tabs button.active { background: #dbeee0; border-color: #afd3b7; color: #245c42; }
+    .sql-box { background: #152a26; color: #dbe8d9; border-radius: 12px; overflow: hidden; }
+    .sql-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid #315047; color: #9bc3a6; font-size: 10px; }
+    .sql-bar button { background: transparent; color: #c3dcca; border: 1px solid #536c5e; border-radius: 5px; padding: 3px 8px; font-size: 10px; }
+    pre { margin: 0; overflow-x: auto; padding: 17px; font-size: 11px; line-height: 1.72; font-family: Consolas, "Courier New", monospace; }
+    .source-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+    .source-card { background: var(--white); border: 1px solid var(--line); border-radius: 11px; padding: 14px 16px; }
+    .source-card .meta { color: #85988c; font-size: 9px; font-weight: 800; letter-spacing: .06em; }
+    .source-card strong { display: block; font-size: 12px; line-height: 1.55; margin: 6px 0 9px; }
+    .source-card a { display: inline-block; font-size: 10px; text-decoration: none; font-weight: 800; }
+    .source-card a:hover { text-decoration: underline; }
+    .deliverables { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+    .deliverable { border: 1px solid var(--line); border-radius: 10px; padding: 13px 15px; background: var(--white); }
+    .deliverable strong { font-size: 12px; display: block; }
+    .deliverable span { color: var(--muted); font-size: 10px; display: block; margin-top: 4px; }
+    .footnote { color: #7b8e80; font-size: 10px; margin: 28px 0 0; line-height: 1.8; }
+    dialog { border: 1px solid #d3e0d4; border-radius: 17px; padding: 0; width: min(640px, calc(100vw - 28px)); max-height: min(85vh, 760px); box-shadow: 0 25px 75px rgba(5,42,26,.24); color: var(--ink); }
+    dialog::backdrop { background: rgba(8,29,24,.48); }
+    .dialog-inner { padding: 24px; overflow-y: auto; max-height: min(85vh, 760px); }
+    .dialog-head { display: flex; justify-content: space-between; gap: 15px; align-items: start; }
+    .dialog-head h2 { margin: 4px 0 0; font-family: Georgia, "Songti SC", "SimSun", serif; font-size: 22px; }
+    .close { border: 0; background: #eef4ef; color: #315e49; border-radius: 7px; width: 29px; height: 29px; font-size: 18px; line-height: 1; }
+    .dialog-body { margin-top: 19px; font-size: 12px; color: #435c50; line-height: 1.8; }
+    .dialog-body h3 { color: var(--ink); margin: 21px 0 7px; font-size: 12px; }
+    .dialog-body ul { padding-left: 20px; margin: 7px 0; }
+    .dialog-body li { margin: 5px 0; }
+    .dialog-source { display: block; border: 1px solid #dbe9dd; background: #f5f9f3; border-radius: 9px; padding: 12px; margin-top: 10px; font-size: 11px; }
+    .dialog-source strong { display: block; }
+    @media (max-width: 1080px) {
+      .app { grid-template-columns: 76px minmax(0,1fr); }
+      .sidebar { padding: 26px 10px; }
+      .brand { margin: 0 auto 30px; }
+      .brand div:last-child, .nav-label, .nav-text, .sidebar-bottom { display: none; }
+      .nav button { justify-content: center; padding: 12px; }
+      .nav-icon { width: auto; }
+      .hero { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 740px) {
+      .app { display: block; }
+      .sidebar { position: relative; height: auto; padding: 10px 14px; flex-direction: row; align-items: center; gap: 14px; overflow-x: auto; }
+      .brand { margin: 0; flex: 0 0 auto; }
+      .brand-mark { width: 34px; height: 34px; font-size: 15px; }
+      .nav { display: flex; white-space: nowrap; gap: 3px; }
+      .nav button { min-width: 38px; }
+      .main { padding: 0 14px 32px; }
+      .topbar { min-height: 83px; align-items: start; padding: 15px 0; }
+      .top-actions .plain { display: none; }
+      .stats { grid-template-columns: repeat(2,1fr); }
+      .grid-2, .case-grid, .conflict-grid, .source-grid, .deliverables, .relation-list { grid-template-columns: 1fr; }
+      .steps, .tech-stack { grid-template-columns: repeat(2,1fr); }
+      .entity-grid { grid-template-columns: repeat(2,1fr); }
+      .section-head { display: block; }
+      .section-head p { margin-top: 7px; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 23px; }
+      .flow-visual { padding: 15px; }
+      .flow-node { font-size: 10px; }
+      .stats, .steps, .tech-stack, .entity-grid { grid-template-columns: 1fr; }
+      .topbar h1 { font-size: 24px; }
+      .top-tag { font-size: 9px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="主导航">
+      <div class="brand">
+        <div class="brand-mark">832</div>
+        <div><strong>产业案例档案库</strong><small>DATABASE BLUEPRINT</small></div>
+      </div>
+      <div class="nav-label">原型导航</div>
+      <nav class="nav" id="mainNav">
+        <button class="active" data-page="overview" aria-current="page"><span class="nav-icon">◫</span><span class="nav-text">系统总览</span></button>
+        <button data-page="cases"><span class="nav-icon">▤</span><span class="nav-text">案例检索</span></button>
+        <button data-page="metrics"><span class="nav-icon">▥</span><span class="nav-text">产业指标库</span></button>
+        <button data-page="audit"><span class="nav-icon">◇</span><span class="nav-text">出处核验</span></button>
+        <button data-page="schema"><span class="nav-icon">▦</span><span class="nav-text">E-R 与关系表</span></button>
+        <button data-page="delivery"><span class="nav-icon">⌘</span><span class="nav-text">实现与作业要求</span></button>
+        <button data-page="sources"><span class="nav-icon">↗</span><span class="nav-text">数据来源</span></button>
+      </nav>
+      <div class="sidebar-bottom"><strong>课程设计 · 本地演示</strong>内置公开资料样本，筛选和弹窗可操作。当前页面尚未连接后端数据库。</div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><div class="eyebrow">832 PROJECT / RELATIONAL DATABASE</div><h1 id="pageTitle">系统总览</h1></div>
+        <div class="top-actions"><span class="top-tag">真实公开样本</span><span class="top-tag plain">静态交互原型 · 非已交付系统</span></div>
+      </header>
+
+      <section id="overview" class="page active">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">设计对象 · 中国人民大学“832工程”</div>
+            <h2>把帮扶做法和产业数据，连到可追溯的原文</h2>
+            <p>研究员查一个县的产业实践时，能看到具体基地做了什么、采用哪些帮扶方式、县域产业年度指标如何变化，以及每个说法出自哪篇公开材料。</p>
+            <div class="hero-actions">
+              <button class="button primary" data-go="cases">看真实案例 <span>↗</span></button>
+              <button class="button ghost" data-go="schema">看数据库结构 <span>↗</span></button>
+            </div>
+          </div>
+          <div class="flow-visual" aria-label="两条公开资料证据链在县域和产业层面汇合">
+            <div class="flow-caption">两条证据链，分别保存原文</div>
+            <div class="flow-row"><div class="flow-node"><strong>人大调研报道</strong><small>地点 · 主体 · 做法</small></div><div class="flow-arrow">→</div><div class="flow-node"><strong>帮扶案例</strong><small>就业 · 流转 · 分红</small></div></div>
+            <div class="flow-row"><div class="flow-node"><strong>政府公开材料</strong><small>工作报告 · 部门总结</small></div><div class="flow-arrow">→</div><div class="flow-node"><strong>年度指标</strong><small>年份 · 口径 · 数值</small></div></div>
+            <div class="flow-join">按“县域＋产业”关联，指标只作县域背景</div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="number" id="countyCount">—</div><div class="label">县区样本</div><div class="sub">本页内置数据，非全国覆盖数</div></div>
+          <div class="stat"><div class="number" id="caseCount">—</div><div class="label">具体案例</div><div class="sub">公开调研报道中提取</div></div>
+          <div class="stat"><div class="number" id="metricCount">—</div><div class="label">年度指标记录</div><div class="sub">一来源一条指标记录</div></div>
+          <div class="stat"><div class="number" id="conflictCount">—</div><div class="label">冲突指标组</div><div class="sub">同名指标出现不同数值</div></div>
+        </div>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">真实样本</div><h2>从指标看趋势，从案例看做法</h2></div><p>同一个县的年度数据可作趋势查询；跨县比较前，还要核查统计口径。</p></div>
+          <div class="grid-2">
+            <div class="card">
+              <h3>茶叶一产产值 · 同县年度记录</h3>
+              <div class="card-subtitle">单位：亿元｜原型展示金寨、舒城两县 2023—2024 年数据</div>
+              <div class="trend" id="trendChart"></div>
+              <div class="mini-note">图中各条数据来自对应年份的公开材料。相同名称不自动代表两县采用完全一致的核算办法。</div>
+            </div>
+            <div class="card">
+              <h3>用户要完成的事</h3>
+              <div class="task-list">
+                <div class="task-item"><div class="task-num">01</div><div><strong>资料员录入</strong><span>登记报道与政府材料，网址去重，从报道拆分具体案例与帮扶方式。</span></div></div>
+                <div class="task-item"><div class="task-num">02</div><div><strong>审核员核对</strong><span>逐条查看原文、数字年份与口径，保留冲突版本，记录审核意见。</span></div></div>
+                <div class="task-item"><div class="task-num">03</div><div><strong>研究员检索</strong><span>按县、产业、年份、做法查询；打开案例和指标各自的出处。</span></div></div>
+                <div class="task-item"><div class="task-num">04</div><div><strong>公众查看</strong><span>浏览已审核的公开案例、指标与原文链接。</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section callout"><strong>统计边界</strong>“县域特色产业年度产值”是产业背景数据。它不等于某个村、企业或帮扶案例带来的产值，也不能单凭产值证明农户增收。案例受益人数、分红和工资等，应依据原文另存为受益记录。</div>
+      </section>
+
+      <section id="cases" class="page">
+        <p class="intro-line">从人大“832工程”公开调研报道中，把一个基地、一种经营模式整理为一条案例。点击案例可查看具体做法、帮扶方式和原文；同县同产业指标只显示为背景。</p>
+        <div class="section">
+          <div class="toolbar">
+            <div class="field wide"><label for="caseSearch">搜索具体对象或做法</label><input id="caseSearch" type="search" placeholder="例如：莲藕、金米村、土地流转"></div>
+            <div class="field"><label for="caseCounty">县区</label><select id="caseCounty"><option value="">全部县区</option></select></div>
+            <div class="field"><label for="caseMechanism">帮扶方式</label><select id="caseMechanism"><option value="">全部方式</option></select></div>
+          </div>
+          <div class="result-count" id="caseResultCount"></div>
+          <div class="case-grid" id="caseGrid"></div>
+        </div>
+      </section>
+
+      <section id="metrics" class="page">
+        <p class="intro-line">每一行表示“某篇来源文献对某县某产业某年度指标的一次公开表述”。同县、同年、同指标的不同来源允许并存；点“详情”查看原文口径。</p>
+        <div class="section">
+          <div class="toolbar">
+            <div class="field"><label for="metricCounty">县区</label><select id="metricCounty"><option value="">全部县区</option></select></div>
+            <div class="field"><label for="metricIndustry">产业</label><select id="metricIndustry"><option value="">全部产业</option></select></div>
+            <div class="field"><label for="metricYear">统计年份</label><select id="metricYear"><option value="">全部年份</option></select></div>
+            <div class="field"><label for="metricType">指标口径</label><select id="metricType"><option value="">全部口径</option></select></div>
+            <div class="field"><label for="metricReview">审核状态</label><select id="metricReview"><option value="">全部状态</option><option value="待核验">待核验</option><option value="原文已对照">原文已对照</option></select></div>
+          </div>
+          <div class="result-count" id="metricResultCount"></div>
+          <div class="table-card"><div class="table-scroll"><table><thead><tr><th>县区 / 产业</th><th>统计年</th><th>原文指标名</th><th>数值</th><th>来源</th><th>审核状态</th><th>查看</th></tr></thead><tbody id="metricBody"></tbody></table></div></div>
+          <div class="mini-note">表中“原文已对照”仅表示已对上公开页面中的表述，并不保证不同来源采用相同统计方法。来源页的发布日期与指标年份分别保存。</div>
+        </div>
+      </section>
+
+      <section id="audit" class="page">
+        <p class="intro-line">这个页面演示系统最有实际价值的一类问题：同一个县、同一年、同一产业、同名指标，两个公开来源给出了不同数值。</p>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">真实冲突样本</div><h2>裕安区 · 2023 年茶产业</h2></div><span class="status warn">原因尚未查明 · 待核验</span></div>
+          <div class="conflict-grid">
+            <div class="conflict-card"><div class="source-type">来源 A · 政府网站规划征求意见稿</div><h3>《裕安区茶产业发展规划（2025—2030年）》</h3><div class="conflict-numbers"><div><strong>17.7</strong><span>茶叶“产值” · 亿元</span></div><div><strong>65.2</strong><span>综合产值 · 亿元</span></div></div><p>原文同时写 2023 年干茶总产量 1.18 万吨。<a href="https://www.yuan.gov.cn/content/article/25726848" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></p></div>
+            <div class="conflict-card"><div class="source-type">来源 B · 省茶业协会转载区政府供稿</div><h3>2024 年六安瓜片开茶节报道</h3><div class="conflict-numbers"><div><strong>19.7</strong><span>茶叶“产值” · 亿元</span></div><div><strong>78.2</strong><span>综合产值 · 亿元</span></div></div><p>原文也写 2023 年干茶总产量 1.18 万吨。<a href="https://www.aticoc.com/news/info.aspx?itemid=5040" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></p></div>
+          </div>
+          <div class="section callout warn"><strong>数据库应如何处理</strong>同时保存四条指标记录及各自来源，在“同县＋产业＋年度＋指标口径＋范围”上检测数值差异；审核员可补充核对意见。系统不会自动选择较大的数，也不会把 2024 年裕安区数据与这两组冲突值直接算同比。</div>
+          <button class="button outline" data-go="metrics" data-filter-conflicts="1" style="margin-top:14px">在指标库查看冲突记录 ↗</button>
+        </div>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">核验流程</div><h2>从原文到可检索记录</h2></div></div>
+          <div class="steps">
+            <div class="step"><b>1</b><strong>登记文献</strong><p>保存网址、标题、发布机构、发布日期；网址唯一，避免重复录入。</p></div>
+            <div class="step"><b>2</b><strong>抽取记录</strong><p>报道拆为具体案例；数值拆为一条条年度指标，保留原文措辞。</p></div>
+            <div class="step"><b>3</b><strong>核查口径</strong><p>核对县或乡镇范围、统计年、是否实绩，以及“一产”“综合”等定义。</p></div>
+            <div class="step"><b>4</b><strong>发布检索</strong><p>已审核内容供公众查看；冲突值并列保留并显示核验状态。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="schema" class="page">
+        <p class="intro-line">关系型设计把调研事实、案例做法、年度指标和来源文献分开存储。下图是可用于报告中的概念关系示意；正式作业再据此绘制教材式 E-R 图与关系模式。</p>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">概念关系</div><h2>两条事实链，共用县域、产业与来源</h2></div></div>
+          <div class="er-board">
+            <div class="er-layer"><div class="er-node"><strong>调研队</strong><span>谁在何时到访</span><em>team_id PK</em></div><div class="er-node"><strong>县域</strong><span>832 县名录与行政代码</span><em>county_id PK</em></div><div class="er-node"><strong>产业</strong><span>茶叶、木耳、莲藕等</span><em>industry_id PK</em></div></div>
+            <div class="er-connector">1 对多：调研队、县域 → 调研活动　　县域、产业 → 案例与指标</div>
+            <div class="er-layer"><div class="er-node"><strong>调研活动 → 公开报道</strong><span>一次活动可发布多篇报道；一篇报道可整理多条案例</span><em>fieldwork_id / report_id</em></div><div class="er-node amber"><strong>帮扶案例 ↔ 帮扶方式</strong><span>通过“案例方式”关联表形成多对多</span><em>case_id / mechanism_id</em></div><div class="er-node"><strong>产业指标记录</strong><span>某来源给出的一个数值说法</span><em>metric_id PK · source_id FK</em></div></div>
+            <div class="er-connector">报道与案例由“案例证据”连到来源；指标直接引用来源；相同口径的不同数值都保留</div>
+            <div class="er-layer"><div class="er-node"><strong>经营主体</strong><span>企业、合作社；可能缺失，不能臆造</span><em>organization_id PK</em></div><div class="er-node"><strong>来源文献</strong><span>标题、机构、时间、唯一 URL、原文摘录</span><em>source_id PK · URL UNIQUE</em></div><div class="er-node"><strong>指标定义</strong><span>一产、综合、全产业链等口径</span><em>metric_def_id PK</em></div></div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">关系模式草案</div><h2>建议的数据表与关键字段</h2></div><p>PK 为主键，FK 为外键。字段是课程设计草案，实施时可据选定数据库调整类型。</p></div>
+          <div class="entity-grid">
+            <div class="entity"><strong>01 县域 county</strong><code>county_id PK · name · province · admin_code UNIQUE</code></div>
+            <div class="entity"><strong>02 产业 industry</strong><code>industry_id PK · industry_name UNIQUE</code></div>
+            <div class="entity"><strong>03 调研队 survey_team</strong><code>team_id PK · team_name · institution</code></div>
+            <div class="entity"><strong>04 调研活动 fieldwork</strong><code>fieldwork_id PK · county_id FK · team_id FK · visit_date</code></div>
+            <div class="entity"><strong>05 来源文献 source_document</strong><code>source_id PK · title · publisher · published_at · url UNIQUE</code></div>
+            <div class="entity"><strong>06 公开报道 public_report</strong><code>report_id PK · fieldwork_id FK · source_id FK</code></div>
+            <div class="entity"><strong>07 经营主体 organization</strong><code>organization_id PK · county_id FK · name · org_type</code></div>
+            <div class="entity"><strong>08 帮扶案例 practice_case</strong><code>case_id PK · title · county_id FK · industry_id FK · report_id FK · organization_id FK NULL · review_status</code></div>
+            <div class="entity"><strong>09 帮扶方式 mechanism</strong><code>mechanism_id PK · name UNIQUE</code></div>
+            <div class="entity"><strong>10 案例方式 case_mechanism</strong><code>(case_id FK, mechanism_id FK) 复合 PK</code></div>
+            <div class="entity"><strong>11 案例证据 case_evidence</strong><code>(case_id FK, source_id FK) 复合 PK · excerpt</code></div>
+            <div class="entity"><strong>12 指标定义 metric_definition</strong><code>metric_def_id PK · name · unit · definition_note</code></div>
+            <div class="entity"><strong>13 产业指标 industry_metric</strong><code>metric_id PK · county_id FK · industry_id FK · metric_def_id FK · source_id FK · stat_year · geo_scope · value · qualifier · data_kind · review_status</code></div>
+            <div class="entity"><strong>14 系统用户 app_user</strong><code>user_id PK · login_name UNIQUE · password_hash · role</code></div>
+            <div class="entity"><strong>15 审核记录 review_log</strong><code>review_id PK · reviewer_id FK · case_id FK NULL · metric_id FK NULL · decision · reviewed_at</code><small>CHECK：案例或指标恰有一个被审核</small></div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="grid-2">
+            <div class="card"><h3>必须能解释的表间关系</h3><div class="relation-list"><div class="relation"><b>公开报道 1 → N 帮扶案例</b><span>一篇调研报道写多个基地。</span></div><div class="relation"><b>案例 N ↔ M 帮扶方式</b><span>霍邱莲藕案例同时涉及土地流转和就业。</span></div><div class="relation"><b>来源文献 1 → N 指标记录</b><span>一份年度总结含多个产业指标。</span></div><div class="relation"><b>县域＋产业 → N 年度指标</b><span>同一年允许不同来源说法并存。</span></div><div class="relation"><b>系统用户 1 → N 审核记录</b><span>记录是谁、何时、对哪条数据作出决定。</span></div></div></div>
+            <div class="card"><h3>约束与范式取舍</h3><div class="task-list"><div class="task-item"><div class="task-num">PK</div><div><strong>实体独立主键</strong><span>行政代码、网页网址另设唯一约束；桥表使用复合主键。</span></div></div><div class="task-item"><div class="task-num">FK</div><div><strong>外键保证引用完整</strong><span>删除来源前先检查案例证据和指标引用；审核记录建议保留。</span></div></div><div class="task-item"><div class="task-num">3N</div><div><strong>按第三范式拆分</strong><span>县名、产业名、来源标题只在各自主表保存，避免更新不一致。</span></div></div><div class="task-item"><div class="task-num">!</div><div><strong>冲突记录不能被唯一约束抹掉</strong><span>一条指标记录代表一个来源说法，不能只用“县＋产业＋年份”做唯一键。</span></div></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="delivery" class="page">
+        <p class="intro-line">这份 HTML 展示要做的系统。正式大作业还须实现真实关系数据库和后端查询；所有统计、筛选、审核记录最终应落到数据库中执行。</p>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">实现路线</div><h2>从静态原型到可运行数据库系统</h2></div></div>
+          <div class="tech-stack"><div class="tech"><div class="tech-no">01 / 存储</div><strong>PostgreSQL 或 SQLite</strong><span>执行 DDL、PK/FK/UNIQUE/CHECK 约束；保存案例、指标、来源及审核记录。</span></div><div class="tech"><div class="tech-no">02 / 服务</div><strong>Python 后端 API</strong><span>实现登录角色、录入、更新、审核和 SQL 查询；统计由数据库执行。</span></div><div class="tech"><div class="tech-no">03 / 界面</div><strong>动态网页</strong><span>把本原型中的筛选、详情、核验台接到后端接口，展示数据库结果。</span></div></div>
+        </div>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">需求拆解示范</div><h2>每项功能都能写清输入与输出</h2></div></div>
+          <div class="table-card"><div class="table-scroll"><table><thead><tr><th>功能</th><th>输入 / 前置条件</th><th>输出</th><th>涉及表与 SQL</th></tr></thead><tbody>
+            <tr><td><strong>登记来源</strong></td><td>资料员登录；标题、网址、机构、日期</td><td>文献编号或“网址已存在”</td><td>source_document · INSERT · UNIQUE</td></tr>
+            <tr><td><strong>整理案例</strong></td><td>已有报道；县、产业、地点、方式、摘录</td><td>待审核案例详情</td><td>practice_case / case_mechanism / case_evidence · 事务 INSERT</td></tr>
+            <tr><td><strong>录入年度指标</strong></td><td>已有来源；统计年、范围、原文口径、数值</td><td>待审核指标，可能提示冲突</td><td>industry_metric · INSERT + GROUP BY/HAVING</td></tr>
+            <tr><td><strong>审核与检索</strong></td><td>审核员核对原文；研究员选择筛选条件</td><td>可追溯的案例、指标、状态和原文</td><td>UPDATE / JOIN / EXISTS / 分页查询</td></tr>
+          </tbody></table></div></div>
+        </div>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">可写入报告的 SQL</div><h2>四个有业务意义的查询</h2></div><p>以下以 PostgreSQL 语法示意。点击切换查看查询目标与 SQL。</p></div>
+          <div class="sql-tabs" id="sqlTabs"></div>
+          <div class="sql-box"><div class="sql-bar"><span id="sqlTitle">SQL 示例</span><button id="copySql" type="button">复制 SQL</button></div><pre id="sqlCode"></pre></div>
+          <div class="mini-note" id="sqlExplain"></div>
+        </div>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">作业说明对应</div><h2>报告与演示要交付什么</h2></div></div>
+          <div class="deliverables"><div class="deliverable"><strong>场景与需求</strong><span>服务目标、用户角色、真实数据来源、真实/模拟标记、CRUD 与统计需求。</span></div><div class="deliverable"><strong>数据模型</strong><span>教材式 E-R 图、关系模式、范式分析、主外键及一致性约束。</span></div><div class="deliverable"><strong>运行系统</strong><span>真实关系库、DDL、后端 SQL、权限与审核流程、功能截图。</span></div><div class="deliverable"><strong>提交材料</strong><span>源代码、运行说明、课程报告、演示视频与汇报 PPT。</span></div></div>
+          <div class="mini-note">按照作业说明，选择“传统动态网站”路线即可；无需同时做大模型 API 与 Text2SQL。本页是设计展示，不是上述交付物的替代品。</div>
+        </div>
+      </section>
+
+      <section id="sources" class="page">
+        <p class="intro-line">下面列出本原型实际使用的公开资料。人大调研报道主要提供案例做法；政府或媒体公开材料主要提供年度指标。指标的年份和网页发布时间分别存储。</p>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">资料渠道</div><h2>从哪里获得可入库的数据</h2></div></div>
+          <div class="steps"><div class="step"><b>A</b><strong>832 县名录</strong><p>深圳市政府公开附件提供 832 个国家级贫困县名单，可作县域主数据。</p></div><div class="step"><b>B</b><strong>人大调研报道</strong><p>逐篇提取调研地点、经营主体、具体案例、帮扶方式与原文证据。</p></div><div class="step"><b>C</b><strong>地方年度材料</strong><p>县政府工作报告、农业农村局年度总结与政府部门文章提供指标。</p></div><div class="step"><b>D</b><strong>人工复核</strong><p>核准统计年份、地域范围、指标口径、约数或目标值，再发布查询。</p></div></div>
+          <div class="mini-note">采集范围建议：先用本页的 8 个县区、6 条案例、20 条指标记录建立数据库；再扩至约 15—20 个县区。832 名录可完整导入，但没有查到 832 县统一的历年产业产值数据包，年度指标须逐县收集。</div>
+        </div>
+        <div class="section">
+          <div class="section-head"><div><div class="eyebrow">直接链接</div><h2>本原型引用的原文</h2></div><p>点击可前往发布页面；本地 HTML 的筛选和结构展示无需联网。</p></div>
+          <div class="source-grid" id="sourceGrid"></div>
+        </div>
+        <p class="footnote">资料边界：人大网页是公开整理后的调研报道，不能当成原始访谈逐字稿。除明确同一对象和同一口径外，县域产值、基地数据及农户受益数据不得互相代替。</p>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="detailDialog" aria-label="记录详情"><div class="dialog-inner"><div class="dialog-head"><div><div class="eyebrow" id="dialogEyebrow"></div><h2 id="dialogTitle"></h2></div><button class="close" id="dialogClose" aria-label="关闭">×</button></div><div class="dialog-body" id="dialogBody"></div></div></dialog>
+  <script>
+    "use strict";
+
+    // 原型内置的公开资料。每个数值在 industryMetrics 中仍逐条保留 sourceId。
+    const sourceDocs = {
+      countyList: { type: "县域主数据", publisher: "深圳市人民政府", title: "附件 1：832 个国家级贫困县名单", url: "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/post_7834343.html", use: "县域名录与行政范围" },
+      rucHuo: { type: "人大调研报道", publisher: "中国人民大学应用经济学院", title: "“832工程”专题｜安徽线在霍邱县", url: "https://ae.ruc.edu.cn/xwzx/xydt/fba7a54b0346410884e7eee36bd3bbc7.htm", use: "城西湖莲藕基地、牧翔禽业等案例" },
+      rucShu: { type: "人大调研报道", publisher: "中国人民大学应用经济学院", title: "“832工程”专题｜田间地头队在舒城县", url: "https://ae.ruc.edu.cn/xwzx/xydt/ce93c1378c18443ab064c12cc35b01b7.htm", use: "舒茶镇茶产业、三月畈示范园等案例" },
+      rucZha: { type: "人大调研报道", publisher: "中国人民大学应用经济学院", title: "“832工程”专题｜秦岭风栖队在柞水县", url: "https://ae.ruc.edu.cn/xwzx/xydt/c9da52ef58f847e9b1a06c72c6428539.htm", use: "金米村木耳案例" },
+      rucJin: { type: "人大调研报道", publisher: "中国人民大学应用经济学院", title: "“832工程”专题｜传承队在金寨县", url: "https://ae.ruc.edu.cn/xwzx/xydt/1c90b10c99a840f3a16db2aaca631cca.htm", use: "高畈村灵芝与铁冲乡香菇案例" },
+      rucPua: { type: "人大调研报道", publisher: "中国人民大学应用经济学院", title: "“832工程”专题｜普安县调研报道", url: "https://ae.ruc.edu.cn/xwzx/xydt/f31c96aa1af0421f887c06779e15dfd1.htm", use: "2023 年普安茶产业年度指标与做法" },
+      rucQian: { type: "人大调研报道", publisher: "中国人民大学应用经济学院", title: "“832工程”专题｜千阳县调研报道", url: "https://ae.ruc.edu.cn/xwzx/xydt/ef1579a1f3e8457eb9ce113ff0bae60b.htm", use: "千阳县苹果产业的调研背景，原型尚未提取为案例" },
+      rucTai: { type: "人大调研报道", publisher: "中国人民大学应用经济学院", title: "“832工程”专题｜太白县调研报道", url: "https://ae.ruc.edu.cn/xwzx/xydt/c0f9c6d055cf43a59bd0fb0ea84f16f5.htm", use: "太白县蔬菜产业的调研背景，原型尚未提取为案例" },
+      rucYua: { type: "人大调研报道", publisher: "中国人民大学应用经济学院", title: "“832工程”专题｜裕安区调研报道", url: "https://ae.ruc.edu.cn/xwzx/xydt/c2ad0d83064e475b8a510edbf3c7364c.htm", use: "裕安区调研背景，原型尚未提取为案例" },
+      jin23: { type: "政府公开材料", publisher: "金寨县委督查办", title: "金寨县：茶香富茶乡，产业致富旺", url: "https://www.ahjinzhai.gov.cn/zwzx/shdt/37229799.html", use: "金寨县 2023 年茶叶一产与综合产值" },
+      jin24: { type: "政府网站转载访谈", publisher: "金寨县人民政府网站", title: "金寨县副县长谈茶产业发展", url: "https://www.ahjinzhai.gov.cn/zwzx/jzyw/38029610.html", use: "金寨县 2024 年茶叶一产与综合产值" },
+      shu23: { type: "政府公开材料", publisher: "舒城县农业农村局", title: "舒城县农业农村局 2023 年工作总结", url: "https://www.shucheng.gov.cn/public/6598821/36894936.html", use: "舒城县 2023 年茶叶实绩；文中另有 2024 年目标值" },
+      shu24: { type: "政府公开材料", publisher: "舒城县农业农村局", title: "舒城县 2024 年农业农村工作总结", url: "https://www.shucheng.gov.cn/public/6598821/37692780.html", use: "舒城县 2024 年茶叶一产与综合产值实绩" },
+      qian23: { type: "政府公开材料", publisher: "宝鸡市人民政府网站", title: "支持千阳创建国家现代农业产业园的提案答复", url: "https://www.baoji.gov.cn/col9816/col9817/col9839/202407/t20240715_571328.html", use: "千阳县 2023 年苹果全产业链产值" },
+      tai23: { type: "政府公开材料", publisher: "宝鸡市农业农村局", title: "太白县绿色农业发展报道", url: "https://nyncj.baoji.gov.cn/zzzb/xqdt/202311/t20231123_754340.html", use: "太白县 2023 年蔬菜产值" },
+      zha23: { type: "媒体原文的政府转载", publisher: "国家林业和草原局网站", title: "《人民日报》特色产业报道：陕西柞水木耳", url: "https://www.forestry.gov.cn/c/www/xxyd/590135.jhtml", use: "柞水县 2023 年木耳产值" },
+      huo24: { type: "政府工作报告", publisher: "霍邱县人民政府", title: "霍邱县政府工作报告（2024 年工作回顾）", url: "https://www.huoqiu.gov.cn/public/6596251/37752931.html", use: "霍邱县 2024 年鹅肥肝产值" },
+      yua23Plan: { type: "政府规划征求意见稿", publisher: "裕安区人民政府网站", title: "裕安区茶产业发展规划（2025—2030 年）征求意见稿", url: "https://www.yuan.gov.cn/content/article/25726848", use: "裕安区 2023 年茶叶产值的一组说法" },
+      yua23News: { type: "协会转载区政府供稿", publisher: "安徽省茶业协会网站", title: "2024 年六安瓜片开茶节报道", url: "https://www.aticoc.com/news/info.aspx?itemid=5040", use: "裕安区 2023 年茶叶产值的另一组说法" },
+      yua24: { type: "政府公开材料", publisher: "裕安区政府办", title: "裕安区多点发力助力茶产业“绿叶”变“金叶”", url: "https://www.luan.gov.cn/zwzx/dtxx/10630464.html", use: "裕安区 2024 年茶叶产值与综合产值" }
+    };
+
+    // 报道中的案例。案例层级数据不与县域年度指标合并成同一事实。
+    const practiceCases = [
+      {
+        id: "C-001", county: "霍邱县", province: "安徽", industry: "莲藕",
+        title: "城西湖乡万亩莲藕种植基地", location: "城西湖乡",
+        organization: "安徽徽莲农业科技发展有限公司",
+        mechanisms: ["土地流转", "就业", "企业帮扶", "旅游带动"],
+        summary: "公司以“公司＋基地＋农户”组织莲藕种植、加工与销售，报道提到多种助农增收方式。",
+        benefit: "人大报道记载：基地种植面积 2.3 万亩，带动 4000 多户农户增收。这里是报道中的案例数据，并非全县莲藕年产值。",
+        sourceId: "rucHuo"
+      },
+      {
+        id: "C-002", county: "柞水县", province: "陕西", industry: "木耳",
+        title: "小岭镇金米村木耳基地", location: "小岭镇金米村",
+        organization: "",
+        mechanisms: ["菌包认领", "设施借用", "产业链延伸"],
+        summary: "推行“借袋还耳”“借棚还耳”，把菌包和木耳大棚认领到户，并建设加工环节。",
+        benefit: "人大报道记载：村里引进 5 家农业龙头企业，建设年产 2000 万袋菌包厂和 1000 吨分拣包装线；企业名称未在该段报道中列出。",
+        sourceId: "rucZha"
+      },
+      {
+        id: "C-003", county: "舒城县", province: "安徽", industry: "茶叶",
+        title: "舒茶镇茶产业“两免三保一分红”", location: "舒茶镇",
+        organization: "",
+        mechanisms: ["免费茶种", "就业", "保障销路", "土地流转", "集体分红"],
+        summary: "报道介绍给贫困户提供优质茶种和栽种管护，保障茶园管理、务工与销路，并按土地流转面积参与分红。",
+        benefit: "人大报道转述：这一做法每年可帮助贫困户增收两万余元。这是采访中的说法；舒城县 2023—2024 年全县茶产值仅作为同县同产业背景展示。",
+        sourceId: "rucShu"
+      },
+      {
+        id: "C-004", county: "舒城县", province: "安徽", industry: "现代农业",
+        title: "五显镇上河村三月畈示范园", location: "五显镇上河村",
+        organization: "",
+        mechanisms: ["基础设施支持", "就业", "集体收益"],
+        summary: "扶贫专项财政建设基础设施，村集体引入企业家组织生产和销售，农户在园区务工。",
+        benefit: "人大报道介绍“集体＋公司＋农户”模式，并提到企业每年向村集体上缴部分利润；未把具体年产值写进本原型。",
+        sourceId: "rucShu"
+      },
+      {
+        id: "C-005", county: "金寨县", province: "安徽", industry: "灵芝",
+        title: "铁冲乡高畈村灵芝药旅基地", location: "铁冲乡高畈村",
+        organization: "安徽康希药业有限公司",
+        mechanisms: ["土地流转", "就业", "集体分红", "药旅融合"],
+        summary: "“公司＋基地＋农户”经营灵芝基地，结合药旅融合，形成土地流转、务工和村集体分红。",
+        benefit: "人大报道列有基地总产值 300 多万元、村集体分红 12 万余元、土地流转费 4 万多元、灵活就业 120 余人和工资 30 余万元；该段未明确这些数字的统计年份。",
+        sourceId: "rucJin"
+      },
+      {
+        id: "C-006", county: "金寨县", province: "安徽", industry: "香菇",
+        title: "铁冲乡香菇基地", location: "铁冲乡",
+        organization: "安徽农耕年华农业发展有限公司",
+        mechanisms: ["风险分担", "技术指导", "统购统销"],
+        summary: "公司承担前期菌棒风险，合作社提供技术指导并统购统销。",
+        benefit: "人大报道中，企业负责人介绍该模式基本能使每户每年净增收 1.5 万元。这是采访中的说法，应与全县其他产业产值分开存储。",
+        sourceId: "rucJin"
+      }
+    ];
+
+    // 同县同年同指标允许多来源并存。value 为数值字段，rawMetric 保留原文名称。
+    const industryMetrics = [
+      { id:"M-001", county:"金寨县", province:"安徽", industry:"茶叶", year:2023, rawMetric:"一产产值", value:15.93, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"jin23", review:"原文已对照" },
+      { id:"M-002", county:"金寨县", province:"安徽", industry:"茶叶", year:2023, rawMetric:"综合产值", value:57.1, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"jin23", review:"原文已对照" },
+      { id:"M-003", county:"金寨县", province:"安徽", industry:"茶叶", year:2024, rawMetric:"一产产值", value:18.3, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"jin24", review:"原文已对照" },
+      { id:"M-004", county:"金寨县", province:"安徽", industry:"茶叶", year:2024, rawMetric:"综合产值", value:62.5, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"jin24", review:"原文已对照" },
+      { id:"M-005", county:"舒城县", province:"安徽", industry:"茶叶", year:2023, rawMetric:"一产产值", value:8.05, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"shu23", review:"原文已对照" },
+      { id:"M-006", county:"舒城县", province:"安徽", industry:"茶叶", year:2023, rawMetric:"综合产值", value:26, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"shu23", review:"原文已对照" },
+      { id:"M-007", county:"舒城县", province:"安徽", industry:"茶叶", year:2024, rawMetric:"一产产值", value:9.2, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"shu24", review:"原文已对照" },
+      { id:"M-008", county:"舒城县", province:"安徽", industry:"茶叶", year:2024, rawMetric:"综合产值", value:30, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"shu24", review:"原文已对照" },
+      { id:"M-009", county:"普安县", province:"贵州", industry:"茶叶", year:2023, rawMetric:"干茶产值", value:12.95, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"rucPua", review:"原文已对照" },
+      { id:"M-010", county:"普安县", province:"贵州", industry:"茶叶", year:2023, rawMetric:"综合产值", value:17.59, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"rucPua", review:"原文已对照" },
+      { id:"M-011", county:"千阳县", province:"陕西", industry:"苹果", year:2023, rawMetric:"全产业链产值", value:25, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"qian23", review:"原文已对照" },
+      { id:"M-012", county:"太白县", province:"陕西", industry:"蔬菜", year:2023, rawMetric:"产值", value:4.97, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"tai23", review:"原文已对照" },
+      { id:"M-013", county:"柞水县", province:"陕西", industry:"木耳", year:2023, rawMetric:"产值", value:6.5, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"zha23", review:"原文已对照" },
+      { id:"M-014", county:"霍邱县", province:"安徽", industry:"鹅肥肝", year:2024, rawMetric:"产值", value:20, unit:"亿元", scope:"全县", kind:"实绩", sourceId:"huo24", review:"原文已对照" },
+      { id:"M-015", county:"裕安区", province:"安徽", industry:"茶叶", year:2023, rawMetric:"产值", value:17.7, unit:"亿元", scope:"全区", kind:"实绩", sourceId:"yua23Plan", review:"待核验" },
+      { id:"M-016", county:"裕安区", province:"安徽", industry:"茶叶", year:2023, rawMetric:"综合产值", value:65.2, unit:"亿元", scope:"全区", kind:"实绩", sourceId:"yua23Plan", review:"待核验" },
+      { id:"M-017", county:"裕安区", province:"安徽", industry:"茶叶", year:2023, rawMetric:"产值", value:19.7, unit:"亿元", scope:"全区", kind:"实绩", sourceId:"yua23News", review:"待核验" },
+      { id:"M-018", county:"裕安区", province:"安徽", industry:"茶叶", year:2023, rawMetric:"综合产值", value:78.2, unit:"亿元", scope:"全区", kind:"实绩", sourceId:"yua23News", review:"待核验" },
+      { id:"M-019", county:"裕安区", province:"安徽", industry:"茶叶", year:2024, rawMetric:"产值", value:18.6, unit:"亿元", scope:"全区", kind:"实绩", sourceId:"yua24", review:"原文已对照" },
+      { id:"M-020", county:"裕安区", province:"安徽", industry:"茶叶", year:2024, rawMetric:"综合产值", value:75, unit:"亿元", scope:"全区", kind:"实绩", sourceId:"yua24", review:"原文已对照" }
+    ];
+
+    const sqlExamples = [
+      {
+        label: "双帮扶方式案例",
+        title: "找出同时涉及“就业”和“土地流转”的案例及报道出处",
+        explain: "展示多对多关联表、JOIN、GROUP BY 与 HAVING。原型中的霍邱莲藕案例符合条件。",
+        code: [
+          "SELECT c.case_id, c.title, s.title AS source_title, s.url",
+          "FROM practice_case AS c",
+          "JOIN case_mechanism AS cm ON cm.case_id = c.case_id",
+          "JOIN mechanism AS m ON m.mechanism_id = cm.mechanism_id",
+          "JOIN public_report AS r ON r.report_id = c.report_id",
+          "JOIN source_document AS s ON s.source_id = r.source_id",
+          "WHERE c.review_status = 'approved'",
+          "  AND m.name IN ('就业', '土地流转')",
+          "GROUP BY c.case_id, c.title, s.title, s.url",
+          "HAVING COUNT(DISTINCT m.name) = 2;"
+        ].join("\n")
+      },
+      {
+        label: "同指标冲突",
+        title: "查找同县同年同产业同口径，却出现不同数值的记录",
+        explain: "按统计范围和单位一起分组，避免把乡镇与全县、万元与亿元误判为冲突。裕安区 2023 年茶产业会出现两组冲突。",
+        code: [
+          "SELECT co.name AS county, i.industry_name, im.stat_year,",
+          "       md.name AS metric_name, im.geo_scope, md.unit,",
+          "       COUNT(DISTINCT im.value) AS different_values",
+          "FROM industry_metric AS im",
+          "JOIN county AS co ON co.county_id = im.county_id",
+          "JOIN industry AS i ON i.industry_id = im.industry_id",
+          "JOIN metric_definition AS md ON md.metric_def_id = im.metric_def_id",
+          "WHERE im.data_kind = 'actual'",
+          "GROUP BY co.name, i.industry_name, im.stat_year,",
+          "         md.name, im.geo_scope, md.unit",
+          "HAVING COUNT(DISTINCT im.value) > 1;"
+        ].join("\n")
+      },
+      {
+        label: "有案例缺指标",
+        title: "找出已整理案例、但缺少 2024 年同产业指标的县",
+        explain: "展示 NOT EXISTS 的实际用途。霍邱莲藕案例不能用鹅肥肝产值来补空缺。",
+        code: [
+          "SELECT DISTINCT co.name AS county, i.industry_name",
+          "FROM practice_case AS c",
+          "JOIN county AS co ON co.county_id = c.county_id",
+          "JOIN industry AS i ON i.industry_id = c.industry_id",
+          "WHERE NOT EXISTS (",
+          "  SELECT 1 FROM industry_metric AS im",
+          "  WHERE im.county_id = c.county_id",
+          "    AND im.industry_id = c.industry_id",
+          "    AND im.stat_year = 2024",
+          "    AND im.data_kind = 'actual'",
+          ");"
+        ].join("\n")
+      },
+      {
+        label: "同县年度趋势",
+        title: "查询同一县同一产业同一指标口径的年度记录",
+        explain: "先限定县、产业、指标名称、统计范围和已审核实绩，再看年份变化。该查询适合展示舒城茶叶一产产值 2023—2024 年记录。",
+        code: [
+          "SELECT im.stat_year, im.value, md.unit, s.title, s.url",
+          "FROM industry_metric AS im",
+          "JOIN metric_definition AS md ON md.metric_def_id = im.metric_def_id",
+          "JOIN source_document AS s ON s.source_id = im.source_id",
+          "WHERE im.county_id = :county_id",
+          "  AND im.industry_id = :industry_id",
+          "  AND md.name = '一产产值'",
+          "  AND im.geo_scope = '全县'",
+          "  AND im.data_kind = 'actual'",
+          "  AND im.review_status = 'approved'",
+          "ORDER BY im.stat_year;"
+        ].join("\n")
+      },
+      {
+        label: "建表与约束",
+        title: "产业指标表的主外键、取值约束与多来源设计",
+        explain: "这里只展示一张表的 DDL 结构；正式提交还须给出全部建表 SQL。没有设置“县＋产业＋年度＋指标”唯一约束，因为冲突来源必须能并存。",
+        code: [
+          "CREATE TABLE industry_metric (",
+          "  metric_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,",
+          "  county_id BIGINT NOT NULL REFERENCES county(county_id),",
+          "  industry_id BIGINT NOT NULL REFERENCES industry(industry_id),",
+          "  metric_def_id BIGINT NOT NULL",
+          "      REFERENCES metric_definition(metric_def_id),",
+          "  source_id BIGINT NOT NULL REFERENCES source_document(source_id),",
+          "  stat_year SMALLINT NOT NULL CHECK (stat_year BETWEEN 1990 AND 2100),",
+          "  geo_scope VARCHAR(80) NOT NULL,",
+          "  value NUMERIC(18, 4) NOT NULL CHECK (value >= 0),",
+          "  qualifier VARCHAR(20),",
+          "  data_kind VARCHAR(12) NOT NULL",
+          "      CHECK (data_kind IN ('actual', 'target', 'estimate')),",
+          "  review_status VARCHAR(12) NOT NULL",
+          "      CHECK (review_status IN ('pending', 'approved', 'conflict')),",
+          "  UNIQUE (county_id, industry_id, metric_def_id, source_id,",
+          "          stat_year, geo_scope, data_kind)",
+          ");"
+        ].join("\n")
+      }
+    ];
+
+    function escapeHtml(value) {
+      return String(value == null ? "" : value).replace(/[&<>"']/g, function(ch) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+      });
+    }
+    function uniqueSorted(values) {
+      return Array.from(new Set(values)).sort(function(a, b) { return String(a).localeCompare(String(b), "zh-CN"); });
+    }
+    function addOptions(selectId, values) {
+      var select = document.getElementById(selectId);
+      uniqueSorted(values).forEach(function(value) {
+        var option = document.createElement("option");
+        option.value = String(value);
+        option.textContent = String(value);
+        select.appendChild(option);
+      });
+    }
+    function sourceLink(sourceId, label) {
+      var doc = sourceDocs[sourceId];
+      return '<a href="' + escapeHtml(doc.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(label || "查看原文 ↗") + "</a>";
+    }
+    function showPage(pageId, updateHash) {
+      if (!document.getElementById(pageId) || !document.getElementById(pageId).classList.contains("page")) pageId = "overview";
+      document.querySelectorAll(".page").forEach(function(page) { page.classList.toggle("active", page.id === pageId); });
+      document.querySelectorAll("#mainNav button").forEach(function(button) {
+        var active = button.dataset.page === pageId;
+        button.classList.toggle("active", active);
+        if (active) button.setAttribute("aria-current", "page");
+        else button.removeAttribute("aria-current");
+      });
+      var activeButton = document.querySelector('#mainNav button[data-page="' + pageId + '"]');
+      document.getElementById("pageTitle").textContent = activeButton ? activeButton.querySelector(".nav-text").textContent : "系统总览";
+      if (updateHash && location.hash !== "#" + pageId) history.replaceState(null, "", "#" + pageId);
+      window.scrollTo(0, 0);
+    }
+    function updateCounts() {
+      document.getElementById("countyCount").textContent = uniqueSorted(industryMetrics.map(function(item) { return item.county; })).length;
+      document.getElementById("caseCount").textContent = practiceCases.length;
+      document.getElementById("metricCount").textContent = industryMetrics.length;
+      var groups = {};
+      industryMetrics.forEach(function(item) {
+        var key = [item.county, item.industry, item.year, item.rawMetric, item.scope, item.unit].join("|");
+        if (!groups[key]) groups[key] = new Set();
+        groups[key].add(item.value);
+      });
+      document.getElementById("conflictCount").textContent = Object.values(groups).filter(function(group) { return group.size > 1; }).length;
+    }
+    function renderTrend() {
+      var chart = document.getElementById("trendChart");
+      var rows = industryMetrics.filter(function(item) {
+        return (item.county === "金寨县" || item.county === "舒城县") && item.industry === "茶叶" && item.rawMetric === "一产产值";
+      });
+      var max = Math.max.apply(null, rows.map(function(item) { return item.value; }));
+      chart.innerHTML = rows.map(function(item) {
+        var width = (item.value / max * 100).toFixed(1);
+        var color = item.county === "舒城县" ? " alt" : "";
+        return '<div class="trend-row"><span>' + escapeHtml(item.county) + '</span><span>' + item.year + '</span><div class="trend-track"><div class="trend-fill' + color + '" style="width:' + width + '%"></div></div><strong>' + item.value + '</strong></div>';
+      }).join("");
+    }
+    function renderCases() {
+      var q = document.getElementById("caseSearch").value.trim().toLowerCase();
+      var county = document.getElementById("caseCounty").value;
+      var mechanism = document.getElementById("caseMechanism").value;
+      var filtered = practiceCases.filter(function(item) {
+        var haystack = [item.title, item.county, item.industry, item.location, item.organization, item.summary, item.mechanisms.join(" ")].join(" ").toLowerCase();
+        return (!q || haystack.includes(q)) && (!county || item.county === county) && (!mechanism || item.mechanisms.includes(mechanism));
+      });
+      document.getElementById("caseResultCount").textContent = "找到 " + filtered.length + " 条案例 · 均有公开调研报道出处";
+      document.getElementById("caseGrid").innerHTML = filtered.length ? filtered.map(function(item) {
+        var related = industryMetrics.filter(function(metric) { return metric.county === item.county && metric.industry === item.industry; }).length;
+        var pills = item.mechanisms.map(function(x) { return '<span class="pill">' + escapeHtml(x) + "</span>"; }).join("");
+        return '<article class="case-card"><div class="case-top"><span class="case-location">' + escapeHtml(item.province + " · " + item.county + " · " + item.location) + '</span><span class="pill amber">' + escapeHtml(item.industry) + '</span></div><h3>' + escapeHtml(item.title) + '</h3><p>' + escapeHtml(item.summary) + '</p><div class="pill-row">' + pills + '</div><div class="case-foot"><span>同县同产业年度指标：' + related + ' 条（背景）</span><button class="text-button" data-open-case="' + item.id + '">查看案例与出处 ↗</button></div></article>';
+      }).join("") : '<div class="empty" style="grid-column:1/-1">没有符合条件的案例。可清空筛选后重试。</div>';
+    }
+    function renderMetrics() {
+      var county = document.getElementById("metricCounty").value;
+      var industry = document.getElementById("metricIndustry").value;
+      var year = document.getElementById("metricYear").value;
+      var type = document.getElementById("metricType").value;
+      var review = document.getElementById("metricReview").value;
+      var filtered = industryMetrics.filter(function(item) {
+        return (!county || item.county === county) && (!industry || item.industry === industry) &&
+          (!year || String(item.year) === year) && (!type || item.rawMetric === type) &&
+          (!review || item.review === review);
+      });
+      document.getElementById("metricResultCount").textContent = "显示 " + filtered.length + " / " + industryMetrics.length + " 条指标记录 · 同一来源的不同指标分别保存";
+      document.getElementById("metricBody").innerHTML = filtered.length ? filtered.map(function(item) {
+        var source = sourceDocs[item.sourceId];
+        var statusClass = item.review === "待核验" ? "status warn" : "status";
+        return '<tr><td class="nowrap"><strong>' + escapeHtml(item.county) + '</strong><br><span style="color:#839489">' + escapeHtml(item.industry) + '</span></td><td class="nowrap">' + item.year + '</td><td class="nowrap">' + escapeHtml(item.rawMetric) + '</td><td class="num-cell">' + item.value + '<span style="font-size:10px;font-family:inherit;font-weight:400;color:#7c8f80"> ' + escapeHtml(item.unit) + '</span></td><td>' + '<a class="source-link" href="' + escapeHtml(source.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(source.publisher) + ' ↗</a></td><td><span class="' + statusClass + '">' + escapeHtml(item.review) + '</span></td><td><button class="text-button" data-open-metric="' + item.id + '">详情</button></td></tr>';
+      }).join("") : '<tr><td colspan="7" class="empty">没有符合条件的年度指标。</td></tr>';
+    }
+    function renderSources() {
+      var order = ["县域主数据", "人大调研报道", "政府公开材料", "政府工作报告", "政府网站转载访谈", "政府规划征求意见稿", "协会转载区政府供稿", "媒体原文的政府转载"];
+      var docs = Object.values(sourceDocs).sort(function(a,b) {
+        var ai = order.indexOf(a.type), bi = order.indexOf(b.type);
+        return ai - bi || a.title.localeCompare(b.title, "zh-CN");
+      });
+      document.getElementById("sourceGrid").innerHTML = docs.map(function(doc) {
+        return '<article class="source-card"><div class="meta">' + escapeHtml(doc.type + " / " + doc.publisher) + '</div><strong>' + escapeHtml(doc.title) + '</strong><div style="font-size:10px;color:#73897a;margin-bottom:9px">' + escapeHtml(doc.use) + '</div><a href="' + escapeHtml(doc.url) + '" target="_blank" rel="noopener noreferrer">打开公开页面 ↗</a></article>';
+      }).join("");
+    }
+    function openDialog(eyebrow, title, body) {
+      document.getElementById("dialogEyebrow").textContent = eyebrow;
+      document.getElementById("dialogTitle").textContent = title;
+      document.getElementById("dialogBody").innerHTML = body;
+      var dialog = document.getElementById("detailDialog");
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else dialog.setAttribute("open", "");
+    }
+    function openCase(id) {
+      var item = practiceCases.find(function(x) { return x.id === id; });
+      if (!item) return;
+      var related = industryMetrics.filter(function(x) { return x.county === item.county && x.industry === item.industry; });
+      var source = sourceDocs[item.sourceId];
+      var body = '<p>' + escapeHtml(item.summary) + '</p><h3>对象与地点</h3><p>' + escapeHtml(item.province + item.county + " · " + item.location) + '<br>经营主体：' + escapeHtml(item.organization || "报道未明确列名") + '</p>';
+      body += '<h3>帮扶方式（案例方式关联表）</h3><div class="pill-row">' + item.mechanisms.map(function(x) { return '<span class="pill">' + escapeHtml(x) + "</span>"; }).join("") + "</div>";
+      body += '<h3>报道中可记录的事实</h3><p>' + escapeHtml(item.benefit) + '</p>';
+      body += '<div class="dialog-source"><strong>案例原文 · ' + escapeHtml(source.publisher) + '</strong>' + escapeHtml(source.title) + '<br>' + sourceLink(item.sourceId, "打开报道 ↗") + "</div>";
+      body += '<h3>同县同产业的年度指标</h3>';
+      if (related.length) {
+        body += '<div class="callout">以下是县域产业背景，不是本案例或经营主体产生的产值。</div><ul>' + related.map(function(m) {
+          return '<li>' + m.year + " 年 " + escapeHtml(m.rawMetric) + " " + m.value + " " + escapeHtml(m.unit) + " · " + sourceLink(m.sourceId, "指标来源 ↗") + "</li>";
+        }).join("") + "</ul>";
+      } else {
+        body += '<p>原型暂未录入该县该产业的年度指标；系统不会拿同县其他产业数值填补。</p>';
+      }
+      openDialog(item.id + " / 公开调研报道案例", item.title, body);
+    }
+    function openMetric(id) {
+      var item = industryMetrics.find(function(x) { return x.id === id; });
+      if (!item) return;
+      var source = sourceDocs[item.sourceId];
+      var body = '<div class="callout"><strong>' + item.value + " " + escapeHtml(item.unit) + "</strong>" + escapeHtml(item.year + " 年 · " + item.county + " · " + item.industry + " · " + item.rawMetric) + "</div>";
+      body += '<h3>指标字段</h3><ul><li>统计对象：' + escapeHtml(item.scope + " / " + item.industry) + '</li><li>统计年份：' + item.year + '</li><li>原文指标名：' + escapeHtml(item.rawMetric) + '</li><li>数据性质：' + escapeHtml(item.kind) + '</li><li>审核状态：' + escapeHtml(item.review) + "</li></ul>";
+      if (item.review === "待核验") body += '<div class="callout warn">同县同年同名指标存在另一来源的不同数值。请并列核对原文，尚不选定唯一结果。</div>';
+      body += '<div class="dialog-source"><strong>指标来源 · ' + escapeHtml(source.publisher) + '</strong>' + escapeHtml(source.title) + '<br>' + sourceLink(item.sourceId, "打开公开页面 ↗") + "</div>";
+      openDialog(item.id + " / 来源绑定指标记录", item.county + " · " + item.industry, body);
+    }
+    function renderSql(index) {
+      var item = sqlExamples[index] || sqlExamples[0];
+      document.getElementById("sqlTabs").innerHTML = sqlExamples.map(function(x, i) {
+        return '<button type="button" class="' + (i === index ? "active" : "") + '" data-sql="' + i + '">' + escapeHtml(x.label) + "</button>";
+      }).join("");
+      document.getElementById("sqlTitle").textContent = item.title;
+      document.getElementById("sqlCode").textContent = item.code;
+      document.getElementById("sqlExplain").textContent = item.explain;
+      document.getElementById("copySql").dataset.sqlIndex = String(index);
+    }
+    function init() {
+      addOptions("caseCounty", practiceCases.map(function(x) { return x.county; }));
+      addOptions("caseMechanism", practiceCases.flatMap(function(x) { return x.mechanisms; }));
+      addOptions("metricCounty", industryMetrics.map(function(x) { return x.county; }));
+      addOptions("metricIndustry", industryMetrics.map(function(x) { return x.industry; }));
+      addOptions("metricYear", industryMetrics.map(function(x) { return x.year; }).sort().reverse());
+      addOptions("metricType", industryMetrics.map(function(x) { return x.rawMetric; }));
+      updateCounts();
+      renderTrend();
+      renderCases();
+      renderMetrics();
+      renderSources();
+      renderSql(0);
+      showPage(location.hash.slice(1) || "overview", false);
+      document.querySelectorAll("#mainNav button").forEach(function(button) {
+        button.addEventListener("click", function() { showPage(button.dataset.page, true); });
+      });
+      document.querySelectorAll("#caseSearch, #caseCounty, #caseMechanism").forEach(function(control) {
+        control.addEventListener(control.tagName === "INPUT" ? "input" : "change", renderCases);
+      });
+      document.querySelectorAll("#metricCounty, #metricIndustry, #metricYear, #metricType, #metricReview").forEach(function(control) {
+        control.addEventListener("change", renderMetrics);
+      });
+      document.addEventListener("click", function(event) {
+        var go = event.target.closest("[data-go]");
+        if (go) {
+          if (go.dataset.filterConflicts === "1") {
+            document.getElementById("metricReview").value = "待核验";
+            renderMetrics();
+          }
+          showPage(go.dataset.go, true);
+        }
+        var caseButton = event.target.closest("[data-open-case]");
+        if (caseButton) openCase(caseButton.dataset.openCase);
+        var metricButton = event.target.closest("[data-open-metric]");
+        if (metricButton) openMetric(metricButton.dataset.openMetric);
+        var sqlButton = event.target.closest("[data-sql]");
+        if (sqlButton) renderSql(Number(sqlButton.dataset.sql));
+      });
+      document.getElementById("dialogClose").addEventListener("click", function() { document.getElementById("detailDialog").close(); });
+      document.getElementById("detailDialog").addEventListener("click", function(event) {
+        if (event.target === this) this.close();
+      });
+      document.getElementById("copySql").addEventListener("click", function() {
+        var self = this;
+        var code = sqlExamples[Number(self.dataset.sqlIndex || 0)].code;
+        function copied() {
+          self.textContent = "已复制";
+          setTimeout(function() { self.textContent = "复制 SQL"; }, 1600);
+        }
+        function fallbackCopy() {
+          var area = document.createElement("textarea");
+          area.value = code;
+          area.style.position = "fixed";
+          area.style.left = "-9999px";
+          document.body.appendChild(area);
+          area.select();
+          var ok = document.execCommand && document.execCommand("copy");
+          area.remove();
+          if (ok) copied();
+          else {
+            self.textContent = "可选中下方代码复制";
+            setTimeout(function() { self.textContent = "复制 SQL"; }, 1800);
+          }
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(copied).catch(fallbackCopy);
+        } else {
+          fallbackCopy();
+        }
+      });
+      window.addEventListener("hashchange", function() { showPage(location.hash.slice(1), false); });
+      window.addEventListener("load", function() {
+        if (location.hash) setTimeout(function() { window.scrollTo(0, 0); }, 30);
+      });
+    }
+    init();
+  </script>
+</body>
+</html>

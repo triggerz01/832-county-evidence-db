@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ code }} · 832 证据管理{% endblock %}
+{% block body %}
+<div class="card error-card">
+  <h1>{{ code }}</h1>
+  <p>{{ message }}</p>
+  {% if code == 403 %}
+    <p class="hint">例如：队员不能修改别人的案例，审核员不能审核自己提交的版本，草稿只有本人能删。</p>
+  {% endif %}
+  <a class="btn primary" href="{{ url_for('dashboard') }}">返回总览</a>
+</div>
+{% endblock %}

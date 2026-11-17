@@ -1,0 +1,80 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '60px' }}>
+    <Box style={{ position: 'absolute', top: 60, left: 0, width: 1280, height: 8, background: '#1E4FA8' }} />
+    <Box style={{ flexDirection: 'column', width: 1160, height: 600 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.2 }}>
+            每项需求都能落到一张表、一条 SQL、一个函数
+        </Text>
+        <Box style={{ height: 1, background: '#D6DCE5', marginTop: 12, marginBottom: 16 }} />
+
+        <Box style={{ width: 1160, height: 424 }}>
+            <Table
+                style={{ width: 1160, height: 424 }}
+                defaultTextStyle={{ fontSize: 16, textAlign: 'left', color: '#1A2230' }}
+                defaultCellStyle={{
+                    border: {
+                        left: { width: 0, color: '#FFFFFF' },
+                        right: { width: 0, color: '#FFFFFF' },
+                        top: { width: 0, color: '#FFFFFF' },
+                        bottom: { width: 1, color: '#E5E7EB' },
+                    },
+                }}
+                cells={[
+                    [
+                        { text: '功能', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+                        { text: '输入 → 输出', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+                        { text: '关键 SQL / 数据库对象', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+                        { text: '实现位置（文件 · 函数）', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#1E4FA8' } } },
+                    ],
+                    [
+                        { text: '口令登录与角色', textStyle: { bold: true, color: '#0E3F8C' } },
+                        '账号 + 口令 → 会话身份',
+                        { text: 'SELECT user_account + check_password_hash', textStyle: { fontFamily: 'Consolas', fontSize: 14, color: '#1E4FA8' } },
+                        { text: 'app.py · login()', textStyle: { fontFamily: 'Consolas', fontSize: 14 } },
+                    ],
+                    [
+                        { text: '可见范围收窄', textStyle: { bold: true, color: '#0E3F8C' }, cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '当前用户 → 行级过滤', cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: "WHERE status='已发布' OR owner_id=?", textStyle: { fontFamily: 'Consolas', fontSize: 14, color: '#1E4FA8' }, cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: 'case_scope() / task_scope()', textStyle: { fontFamily: 'Consolas', fontSize: 14 }, cellStyle: { background: { color: '#F7F9FC' } } },
+                    ],
+                    [
+                        { text: '公开资料检索', textStyle: { bold: true, color: '#0E3F8C' } },
+                        '关键词 / 省份 → 报道列表',
+                        { text: '三表 JOIN + 关联案例计数子查询 + LIMIT 200', textStyle: { fontFamily: 'Consolas', fontSize: 14, color: '#1E4FA8' } },
+                        { text: 'reports()', textStyle: { fontFamily: 'Consolas', fontSize: 14 } },
+                    ],
+                    [
+                        { text: '案例提交与审核', textStyle: { bold: true, color: '#0E3F8C' }, cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '草稿 + 出处 → 待审核', cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: 'UPDATE industry_case + INSERT audit_log（同一事务）', textStyle: { fontFamily: 'Consolas', fontSize: 14, color: '#1E4FA8' }, cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: 'case_submit() / case_review()', textStyle: { fontFamily: 'Consolas', fontSize: 14 }, cellStyle: { background: { color: '#F7F9FC' } } },
+                    ],
+                    [
+                        { text: '任务交付与版本', textStyle: { bold: true, color: '#0E3F8C' } },
+                        '材料标题与说明 → 第 n 版',
+                        { text: 'INSERT deliverable_version，版本号取 MAX + 1', textStyle: { fontFamily: 'Consolas', fontSize: 14, color: '#1E4FA8' } },
+                        { text: 'task_submit()', textStyle: { fontFamily: 'Consolas', fontSize: 14 } },
+                    ],
+                    [
+                        { text: '统计与核验', textStyle: { bold: true, color: '#0E3F8C' }, cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: '无输入 → 五组指标', cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: 'GROUP BY / HAVING COUNT(DISTINCT) / NOT EXISTS / SUM', textStyle: { fontFamily: 'Consolas', fontSize: 14, color: '#1E4FA8' }, cellStyle: { background: { color: '#F7F9FC' } } },
+                        { text: 'stats()', textStyle: { fontFamily: 'Consolas', fontSize: 14 }, cellStyle: { background: { color: '#F7F9FC' } } },
+                    ],
+                ]}
+            />
+        </Box>
+
+        <Box style={{ marginTop: 16, flexDirection: 'row', gap: 18, alignItems: 'center' }}>
+            <Box style={{ width: 3, height: 46, background: '#1E4FA8' }} />
+            <Text style={{ fontSize: 19, color: '#0E3F8C', lineHeight: 1.5, flex: 1 }}>
+                "实现位置"这一列都能在源码里点到具体函数，不写"由后端完成"这种话——这也是报告中需求拆解表的骨架。
+            </Text>
+        </Box>
+    </Box>
+
+    <Box style={{ position: 'absolute', top: 670, left: 60, width: 1160, flexDirection: 'row', justifyContent: 'space-between' }}>
+        <Text style={{ fontSize: 14, color: '#8B97A8' }}>832 县域产业证据管理数据库 · 课程阶段汇报</Text>
+        <Text style={{ fontSize: 14, color: '#1E4FA8', fontWeight: 'bold' }}>13</Text>
+    </Box>
+</Slide>

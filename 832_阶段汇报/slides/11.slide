@@ -1,0 +1,25 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: '0px' }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column', justifyContent: 'center', paddingLeft: 100, paddingRight: 100 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 48 }}>
+            <Text style={{ fontSize: 180, fontWeight: 'bold', color: '#E8EFF8', lineHeight: 1 }}>03</Text>
+            <Box style={{ width: 2, height: 200, background: '#1E4FA8' }} />
+            <Box style={{ flexDirection: 'column', gap: 18, flex: 1 }}>
+                <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold', letterSpacing: 3 }}>CHAPTER THREE</Text>
+                <Text style={{ fontSize: 46, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.25 }}>功能实现</Text>
+                <Text style={{ fontSize: 20, color: '#4A5568', lineHeight: 1.7 }}>
+                    作业要求每项功能都写清"输入输出 / 关键 SQL / 实现位置"，
+                    <br />
+                    这一章就按这个格式一条条过。
+                </Text>
+                <Box style={{ flexDirection: 'row', gap: 10, marginTop: 6 }}>
+                    <Box style={{ paddingTop: 5, paddingBottom: 5, paddingLeft: 12, paddingRight: 12, background: '#F0F5FC', borderRadius: 3 }}>
+                        <Text style={{ fontSize: 14, color: '#1E4FA8' }}>流程：草稿到发布 5 状态</Text>
+                    </Box>
+                    <Box style={{ paddingTop: 5, paddingBottom: 5, paddingLeft: 12, paddingRight: 12, background: '#F0F5FC', borderRadius: 3 }}>
+                        <Text style={{ fontSize: 14, color: '#1E4FA8' }}>落点：路由 → 函数 → SQL</Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

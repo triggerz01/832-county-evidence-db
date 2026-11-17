@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}832 工程 · 县域产业证据管理{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="dot"></span>832 工程 · 调研任务与县域产业证据管理</div>
+  <nav>
+    <a href="{{ url_for('dashboard') }}">总览</a>
+    <a href="{{ url_for('reports') }}">资料检索</a>
+    <a href="{{ url_for('cases') }}">案例</a>
+    <a href="{{ url_for('tasks') }}">任务</a>
+    <a href="{{ url_for('stats') }}">统计核验</a>
+  </nav>
+  <div class="who">
+    {% if current_user %}
+      <span>{{ current_user['display_name'] }}</span>
+      <span class="badge">{{ role_names[current_user['role']] }}</span>
+      <a class="btn ghost" href="{{ url_for('logout') }}">退出</a>
+    {% else %}
+      <span class="badge muted">公众访问</span>
+      <a class="btn ghost" href="{{ url_for('login') }}">登录</a>
+    {% endif %}
+  </div>
+</header>
+<main>
+  {% with msgs = get_flashed_messages(with_categories=true) %}
+    {% if msgs %}
+      <div class="flash-wrap">
+      {% for cat, m in msgs %}<div class="flash {{ cat }}">{{ m }}</div>{% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+  {% block body %}{% endblock %}
+</main>
+<footer>SQLite 样本库 · 数据来源：人大 832 工程公开报道、地方财政衔接资金项目计划</footer>
+</body>
+</html>
