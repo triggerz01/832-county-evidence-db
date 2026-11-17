@@ -323,7 +323,7 @@ def cases():
 
 
 @app.route("/cases/new", methods=["GET", "POST"])
-@login_required
+@roles_required("admin", "leader", "member", "reviewer")
 def case_new():
     if g.user["role"] not in ("admin", "leader", "member", "reviewer"):
         abort(403)
